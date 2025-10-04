@@ -2,19 +2,16 @@
  * Action
  */
 enum Action {
-  ADVANCE_FAVOR = 'advance-favor',
-  ADVANCE_SCORING_CATEGORY = 'advance-scoring-category',
-  GAIN_ACTIVATION_DIE = 'gain-activation-die',
-  GAIN_FATE_DIE = 'gain-fate-die',
-  GAIN_VP = 'gain-vp',
-  PERFORM_MIGRATION = 'perform-migration',
-  PERFORM_PROCREATION = 'perform-procreation',
-  PERFORM_PROVISION = 'perform-provision',
-  PLACE_EVOLUTION_MARKER = 'place-evolution-marker',
-  PLACE_HUNTING_TOKEN = 'place-hunting-token',
-  PLACE_PROSPERITY_MARKER = 'place-prosperity-marker',
-  PLACE_STATUE = 'place-statue',
-  REMOVE_CARD = 'remove-card',
-  REVEAL_SITES = 'reveal-sites'
+  BUILD_SHIP_SEGMENTS = 'build-ship-segments',
+  DRAW_AGENDA_CARDS = 'draw-agenda-cards',
+  REFILL_AGENDA_CARDS = 'refill-agenda-cards',
+  GAIN_RESOURCES = 'gain-resources',
+  REFILL_STORAGE_SILO = 'refill-storage-silo',
+  ADVERTISE_CRUISE = 'advertise-cruise',
+  BUILD_DEVELOPMENT_NETWORK = 'build-development-network',
+  BUILD_DEVELOPMENT_TECHNOLOGY = 'build-development-technology',
+  HIRE_EXPERT_WORKER = 'hire-expert-worker',
+  REFRESH_BLUEPRINTS = 'refresh-blueprints',
+  LAUNCH_SHIP = 'launch-ship'
 }
 export default Action

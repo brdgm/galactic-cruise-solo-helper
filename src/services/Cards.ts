@@ -8,11 +8,99 @@ import Action from './enum/Action'
 const cards : Card[] = [
   {
     id: 1,
-    action: Action.ADVANCE_FAVOR
+    actions: [
+      { action: Action.LAUNCH_SHIP, shipSize: 2 },
+      { action: Action.BUILD_SHIP_SEGMENTS }
+    ],
+    numbers: [1,4]
   },
   {
     id: 2,
-    action: Action.ADVANCE_FAVOR
+    actions: [
+      { action: Action.LAUNCH_SHIP, shipSize: 3 },
+      { action: Action.BUILD_SHIP_SEGMENTS }
+    ],
+    numbers: [2,3]
+  },
+  {
+    id: 3,
+    actions: [
+      { action: Action.BUILD_SHIP_SEGMENTS },
+      { action: Action.REFRESH_BLUEPRINTS }
+    ],
+    numbers: [3,2]
+  },
+  {
+    id: 4,
+    actions: [
+      { action: Action.HIRE_EXPERT_WORKER },
+      { action: Action.BUILD_DEVELOPMENT_NETWORK }
+    ],
+    numbers: [4,1]
+  },
+  {
+    id: 5,
+    actions: [
+      { action: Action.HIRE_EXPERT_WORKER },
+      { action: Action.BUILD_DEVELOPMENT_NETWORK }
+    ],
+    numbers: [5,4]
+  },
+  {
+    id: 6,
+    actions: [
+      { action: Action.HIRE_EXPERT_WORKER },
+      { action: Action.BUILD_DEVELOPMENT_TECHNOLOGY }
+    ],
+    numbers: [6,3]
+  },
+  {
+    id: 7,
+    actions: [
+      { action: Action.DRAW_AGENDA_CARDS },
+      { action: Action.BUILD_SHIP_SEGMENTS }
+    ],
+    numbers: [1,2]
+  },
+  {
+    id: 8,
+    actions: [
+      { action: Action.DRAW_AGENDA_CARDS },
+      { action: Action.REFILL_AGENDA_CARDS }
+    ],
+    numbers: [2,1]
+  },
+  {
+    id: 9,
+    actions: [
+      { action: Action.DRAW_AGENDA_CARDS },
+      { action: Action.REFILL_AGENDA_CARDS }
+    ],
+    numbers: [3,4]
+  },
+  {
+    id: 10,
+    actions: [
+      { action: Action.GAIN_RESOURCES },
+      { action: Action.REFILL_STORAGE_SILO }
+    ],
+    numbers: [4,3]
+  },
+  {
+    id: 11,
+    actions: [
+      { action: Action.GAIN_RESOURCES },
+      { action: Action.REFILL_STORAGE_SILO }
+    ],
+    numbers: [5,2]
+  },
+  {
+    id: 12,
+    actions: [
+      { action: Action.ADVERTISE_CRUISE },
+      { action: Action.BUILD_SHIP_SEGMENTS }
+    ],
+    numbers: [6,1]
   },
 ]
 
