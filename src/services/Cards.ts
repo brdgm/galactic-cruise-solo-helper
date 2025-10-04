@@ -1,6 +1,6 @@
 import findMandatory from '@brdgm/brdgm-commons/src/util/map/findMandatory'
 import Card from './Card'
-import Action from './enum/Action'
+import BotAction from './enum/BotAction'
 import WorkerLocation from './enum/WorkerLocation'
 
 /**
@@ -10,8 +10,8 @@ const cards : Card[] = [
   {
     id: 1,
     actions: [
-      { action: Action.LAUNCH_SHIP, shipSize: 2 },
-      { action: Action.BUILD_SHIP_SEGMENTS }
+      { action: BotAction.LAUNCH_SHIP, shipSize: 2 },
+      { action: BotAction.BUILD_SHIP_SEGMENTS }
     ],
     number6: 1,
     number4: 4,
@@ -20,8 +20,8 @@ const cards : Card[] = [
   {
     id: 2,
     actions: [
-      { action: Action.LAUNCH_SHIP, shipSize: 3 },
-      { action: Action.BUILD_SHIP_SEGMENTS }
+      { action: BotAction.LAUNCH_SHIP, shipSize: 3 },
+      { action: BotAction.BUILD_SHIP_SEGMENTS }
     ],
     number6: 2,
     number4: 3,
@@ -30,8 +30,8 @@ const cards : Card[] = [
   {
     id: 3,
     actions: [
-      { action: Action.BUILD_SHIP_SEGMENTS },
-      { action: Action.REFRESH_BLUEPRINTS }
+      { action: BotAction.BUILD_SHIP_SEGMENTS },
+      { action: BotAction.REFRESH_BLUEPRINTS }
     ],
     number6: 3,
     number4: 2,
@@ -40,8 +40,8 @@ const cards : Card[] = [
   {
     id: 4,
     actions: [
-      { action: Action.HIRE_EXPERT_WORKER },
-      { action: Action.BUILD_DEVELOPMENT_NETWORK }
+      { action: BotAction.HIRE_EXPERT_WORKER_BOT },
+      { action: BotAction.BUILD_DEVELOPMENT_NETWORK }
     ],
     number6: 4,
     number4: 1,
@@ -50,8 +50,8 @@ const cards : Card[] = [
   {
     id: 5,
     actions: [
-      { action: Action.HIRE_EXPERT_WORKER },
-      { action: Action.BUILD_DEVELOPMENT_NETWORK }
+      { action: BotAction.HIRE_EXPERT_WORKER_BOT },
+      { action: BotAction.BUILD_DEVELOPMENT_NETWORK }
     ],
     number6: 5,
     number4: 4,
@@ -60,8 +60,8 @@ const cards : Card[] = [
   {
     id: 6,
     actions: [
-      { action: Action.HIRE_EXPERT_WORKER },
-      { action: Action.BUILD_DEVELOPMENT_TECHNOLOGY }
+      { action: BotAction.HIRE_EXPERT_WORKER_BOT },
+      { action: BotAction.BUILD_DEVELOPMENT_TECHNOLOGY }
     ],
     number6: 6,
     number4: 3,
@@ -70,8 +70,8 @@ const cards : Card[] = [
   {
     id: 7,
     actions: [
-      { action: Action.DRAW_AGENDA_CARDS },
-      { action: Action.BUILD_SHIP_SEGMENTS }
+      { action: BotAction.DRAW_AGENDA_CARDS },
+      { action: BotAction.BUILD_SHIP_SEGMENTS }
     ],
     number6: 1,
     number4: 2,
@@ -80,8 +80,8 @@ const cards : Card[] = [
   {
     id: 8,
     actions: [
-      { action: Action.DRAW_AGENDA_CARDS },
-      { action: Action.REFILL_AGENDA_CARDS }
+      { action: BotAction.DRAW_AGENDA_CARDS },
+      { action: BotAction.REFILL_AGENDA_CARDS }
     ],
     number6: 2,
     number4: 1,
@@ -90,8 +90,8 @@ const cards : Card[] = [
   {
     id: 9,
     actions: [
-      { action: Action.DRAW_AGENDA_CARDS },
-      { action: Action.REFILL_AGENDA_CARDS }
+      { action: BotAction.DRAW_AGENDA_CARDS },
+      { action: BotAction.REFILL_AGENDA_CARDS }
     ],
     number6: 3,
     number4: 4,
@@ -100,8 +100,8 @@ const cards : Card[] = [
   {
     id: 10,
     actions: [
-      { action: Action.GAIN_RESOURCES },
-      { action: Action.REFILL_STORAGE_SILO }
+      { action: BotAction.GAIN_RESOURCES },
+      { action: BotAction.REFILL_STORAGE_SILO }
     ],
     number6: 4,
     number4: 3,
@@ -110,8 +110,8 @@ const cards : Card[] = [
   {
     id: 11,
     actions: [
-      { action: Action.GAIN_RESOURCES },
-      { action: Action.REFILL_STORAGE_SILO }
+      { action: BotAction.GAIN_RESOURCES },
+      { action: BotAction.REFILL_STORAGE_SILO }
     ],
     number6: 5,
     number4: 2,
@@ -120,8 +120,8 @@ const cards : Card[] = [
   {
     id: 12,
     actions: [
-      { action: Action.ADVERTISE_CRUISE },
-      { action: Action.BUILD_SHIP_SEGMENTS }
+      { action: BotAction.ADVERTISE_CRUISE },
+      { action: BotAction.BUILD_SHIP_SEGMENTS }
     ],
     number6: 6,
     number4: 1,

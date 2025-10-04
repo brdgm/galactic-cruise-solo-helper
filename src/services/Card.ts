@@ -1,4 +1,4 @@
-import Action from './enum/Action'
+import BotAction from './enum/BotAction'
 import WorkerLocation from './enum/WorkerLocation'
 
 export default interface Card {
@@ -10,6 +10,6 @@ export default interface Card {
 }
 
 export interface CardAction {
-  action: Action
+  action: BotAction
   shipSize?: number
 }
