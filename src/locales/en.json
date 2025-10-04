@@ -12,6 +12,11 @@
       "title": "Difficulty Level",
       "easy": "Easy",
       "hard": "Hard"
+    },
+    "expansions": {
+      "title": "Expansions",
+      "advancements": "Advancements",
+      "accommodations": "Accommodations"
     }
   },
   "setupGame": {

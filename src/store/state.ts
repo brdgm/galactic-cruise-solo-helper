@@ -2,6 +2,8 @@ import { defineStore } from 'pinia'
 import { name } from '@/../package.json'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import Player from '@/services/enum/Player'
+import Expansion from '@/services/enum/Expansion'
+import toggleArrayItem from '@brdgm/brdgm-commons/src/util/array/toggleArrayItem'
 
 export const useStateStore = defineStore(`${name}.state`, {
   state: () => {
@@ -9,7 +11,8 @@ export const useStateStore = defineStore(`${name}.state`, {
       language: 'en',
       baseFontSize: 1,
       setup: {
-        difficultyLevel: DifficultyLevel.EASY
+        difficultyLevel: DifficultyLevel.EASY,
+        expansions: []
       },
       turns: []
     } as State
@@ -18,6 +21,9 @@ export const useStateStore = defineStore(`${name}.state`, {
     resetGame() {
       this.turns = []
       this.setup.initialCardDeck = undefined
+    },
+    setupToggleExpansion(expansion: Expansion) : void {
+      toggleArrayItem(this.setup.expansions, expansion)
     },
     storeTurn(turn : Turn) : void {
       this.turns = this.turns.filter(item => item.turn < turn.turn)
@@ -35,6 +41,7 @@ export interface State {
 }
 export interface Setup {
   difficultyLevel: DifficultyLevel
+  expansions: Expansion[]
   initialCardDeck?: CardDeckPersistence
   debugMode?: boolean
 }

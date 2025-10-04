@@ -12,6 +12,11 @@
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
       "hard": "Schwer"
+    },
+    "expansions": {
+      "title": "Erweiterungen",
+      "advancements": "Errungenschaften",
+      "accommodations": "Unterkünfte"
     }
   },
   "setupGame": {
