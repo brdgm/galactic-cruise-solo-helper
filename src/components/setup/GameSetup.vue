@@ -4,7 +4,7 @@
     <li v-html="t('setupGame.gameBoard.twoPlayerGame')"></li>
     <li>
       <span v-html="t('setupGame.gameBoard.neutralDevelopments')"></span><br/>
-      <DevelopmentsDisplay :position="neutralDevelopment.developmentPos" />
+      <TechnologySelection :position="neutralDevelopment.developmentPos" />
       <NetworkLocationDisplay :networkLocations="neutralDevelopment.networkLocations"/>
     </li>
     <li>
@@ -36,7 +36,10 @@
       <span v-html="t('setupGame.bot.firstDevelopment')"></span><br/>
       <NetworkLocationDisplay :networkLocation="botFirstDevelopmentNetworkLocation" />
     </li>
-    <li v-html="t('setupGame.bot.discardBlueprint', {blueprint:supportCard.number4})"></li>
+    <li>
+      <span v-html="t('setupGame.bot.discardBlueprint')"></span>
+      <BlueprintSelection :position="blueprintNumber" />
+    </li>
   </ol>
 </template>
 
@@ -52,15 +55,18 @@ import AppIcon from '../structure/AppIcon.vue'
 import getDifficultyLevelSettings, { DifficultyLevelSettings } from '@/util/getDifficultyLevelSettings'
 import DevelopmentTile from '@/services/DevelopmentTile'
 import getDevelopmentSetup from '@/util/getDevelopmentSetup'
-import DevelopmentsDisplay from '../structure/DevelopmentsDisplay.vue'
+import TechnologySelection from '../structure/TechnologySelection.vue'
 import WorkerLocationDisplay from '../structure/WorkerLocationDisplay.vue'
+import BlueprintSelection from '../structure/BlueprintSelection.vue'
+import getCardNumber from '@/util/getCardNumber'
 
 export default defineComponent({
   name: 'GameSetup',
   components: {
-    DevelopmentsDisplay,
+    TechnologySelection,
     NetworkLocationDisplay,
     WorkerLocationDisplay,
+    BlueprintSelection,
     AppIcon
   },
   setup() {
@@ -88,7 +94,7 @@ export default defineComponent({
       return this.developmentSetup.npc[0]
     },
     botFirstDevelopmentNetworkLocation() : number {
-      let location = this.supportCard.number6
+      let location = getCardNumber(this.supportCard, 6)
       while (this.neutralDevelopment.networkLocations.includes(location)) {
         location++
         if (location > 6) {
@@ -96,6 +102,9 @@ export default defineComponent({
         }
       }
       return location
+    },
+    blueprintNumber() : number {
+      return getCardNumber(this.supportCard, 5)
     }
   }
 })

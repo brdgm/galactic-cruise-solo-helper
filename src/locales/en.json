@@ -43,7 +43,7 @@
       },
       "soloWorkerCard": "Place the <b>Solo Worker Card</b> of your chosen difficulty next to the Action Cards (this will help you to remember to Call a Meeting if she has no Workers). This is her Break Room—place her Workers here instead of on her Player Board.",
       "firstDevelopment": "Rachel places her <b>first Development</b> (from the Food row) in the Network. This placement must be in an area with no other Developments as usual.",
-      "discardBlueprint": "She then <b>discards Blueprint #{blueprint}</b>."
+      "discardBlueprint": "She then discards this <b>Blueprint</b>:"
     }
   },
   "difficultyLevel": {

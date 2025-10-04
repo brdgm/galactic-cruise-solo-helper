@@ -12,7 +12,7 @@ import { defineComponent } from 'vue'
 import AppIcon from './AppIcon.vue'
 
 export default defineComponent({
-  name: 'DevelopmentsDisplay',
+  name: 'TechnologySelection',
   components: {
     AppIcon
   },
