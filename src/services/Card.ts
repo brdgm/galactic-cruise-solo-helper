@@ -1,11 +1,11 @@
 import Action from './enum/Action'
-import NetworkPosition from './enum/NetworkPosition'
+import WorkerLocation from './enum/WorkerLocation'
 
 export default interface Card {
   id: number
   actions: CardAction[]
   numbers: number[]
-  networkPosition: NetworkPosition
+  workerLocation: WorkerLocation
 }
 
 export interface CardAction {

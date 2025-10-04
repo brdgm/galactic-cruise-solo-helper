@@ -1,7 +1,7 @@
 import findMandatory from '@brdgm/brdgm-commons/src/util/map/findMandatory'
 import Card from './Card'
 import Action from './enum/Action'
-import NetworkPosition from './enum/NetworkPosition'
+import WorkerLocation from './enum/WorkerLocation'
 
 /**
  * Solo cards.
@@ -14,7 +14,7 @@ const cards : Card[] = [
       { action: Action.BUILD_SHIP_SEGMENTS }
     ],
     numbers: [1,4],
-    networkPosition: NetworkPosition.TOP_LEFT
+    workerLocation: WorkerLocation.TOP_LEFT
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const cards : Card[] = [
       { action: Action.BUILD_SHIP_SEGMENTS }
     ],
     numbers: [2,3],
-    networkPosition: NetworkPosition.TOP_CENTER
+    workerLocation: WorkerLocation.TOP_CENTER
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const cards : Card[] = [
       { action: Action.REFRESH_BLUEPRINTS }
     ],
     numbers: [3,2],
-    networkPosition: NetworkPosition.TOP_RIGHT
+    workerLocation: WorkerLocation.TOP_RIGHT
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const cards : Card[] = [
       { action: Action.BUILD_DEVELOPMENT_NETWORK }
     ],
     numbers: [4,1],
-    networkPosition: NetworkPosition.BOTTOM_RIGHT
+    workerLocation: WorkerLocation.BOTTOM_RIGHT
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const cards : Card[] = [
       { action: Action.BUILD_DEVELOPMENT_NETWORK }
     ],
     numbers: [5,4],
-    networkPosition: NetworkPosition.BOTTOM_CENTER
+    workerLocation: WorkerLocation.BOTTOM_CENTER
   },
   {
     id: 6,
@@ -59,7 +59,7 @@ const cards : Card[] = [
       { action: Action.BUILD_DEVELOPMENT_TECHNOLOGY }
     ],
     numbers: [6,3],
-    networkPosition: NetworkPosition.BOTTOM_LEFT
+    workerLocation: WorkerLocation.BOTTOM_LEFT
   },
   {
     id: 7,
@@ -68,7 +68,7 @@ const cards : Card[] = [
       { action: Action.BUILD_SHIP_SEGMENTS }
     ],
     numbers: [1,2],
-    networkPosition: NetworkPosition.TOP_LEFT
+    workerLocation: WorkerLocation.TOP_LEFT
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ const cards : Card[] = [
       { action: Action.REFILL_AGENDA_CARDS }
     ],
     numbers: [2,1],
-    networkPosition: NetworkPosition.TOP_CENTER
+    workerLocation: WorkerLocation.TOP_CENTER
   },
   {
     id: 9,
@@ -86,7 +86,7 @@ const cards : Card[] = [
       { action: Action.REFILL_AGENDA_CARDS }
     ],
     numbers: [3,4],
-    networkPosition: NetworkPosition.TOP_RIGHT
+    workerLocation: WorkerLocation.TOP_RIGHT
   },
   {
     id: 10,
@@ -95,7 +95,7 @@ const cards : Card[] = [
       { action: Action.REFILL_STORAGE_SILO }
     ],
     numbers: [4,3],
-    networkPosition: NetworkPosition.BOTTOM_RIGHT
+    workerLocation: WorkerLocation.BOTTOM_RIGHT
   },
   {
     id: 11,
@@ -104,7 +104,7 @@ const cards : Card[] = [
       { action: Action.REFILL_STORAGE_SILO }
     ],
     numbers: [5,2],
-    networkPosition: NetworkPosition.BOTTOM_CENTER
+    workerLocation: WorkerLocation.BOTTOM_CENTER
   },
   {
     id: 12,
@@ -113,7 +113,7 @@ const cards : Card[] = [
       { action: Action.BUILD_SHIP_SEGMENTS }
     ],
     numbers: [6,1],
-    networkPosition: NetworkPosition.BOTTOM_LEFT
+    workerLocation: WorkerLocation.BOTTOM_LEFT
   },
 ]
 
