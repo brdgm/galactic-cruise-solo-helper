@@ -49,6 +49,6 @@ export interface BotPersistence {
   cardDeck: CardDeckPersistence
 }
 export interface CardDeckPersistence {
-  pile: string[]
-  discard: string[]
+  pile: number[]
+  discard: number[]
 }
