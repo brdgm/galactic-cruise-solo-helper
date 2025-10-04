@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80" height="50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red circle -->
+  <circle cx="25" cy="25" r="25" fill="#d00" />
+  
+  <!-- Red triangle arrow pointing right -->
+  <polygon points="60,5 60,45 80,25" fill="#d00" />
+</svg>

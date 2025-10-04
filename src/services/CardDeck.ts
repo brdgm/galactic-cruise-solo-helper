@@ -17,8 +17,18 @@ export default class CardDeck {
     this._discard = ref(discard)
   }
 
+  /**
+   * The current card is the last drawn card.
+   */
   public get currentCard() : Card|undefined {
     return this._discard.value[0]
+  }
+
+  /**
+   * The support card is the next card to be drawn, or if the pile is empty, the last discarded card.
+   */
+  public get supportCard() : Card {
+    return this._pile.value[0] ?? this._discard.value[this._discard.value.length-1]
   }
 
   public get pile() : readonly Card[] {

@@ -2,7 +2,7 @@
   <h1>{{t('setupGame.title')}}</h1>
 
   <div class="instructions mt-4">
-    <p>...</p>
+    <GameSetup/>
   </div>
 
   <button class="btn btn-primary btn-lg mt-4" @click="startGame()">
@@ -18,11 +18,13 @@ import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRouter } from 'vue-router'
+import GameSetup from '@/components/setup/GameSetup.vue'
 
 export default defineComponent({
   name: 'SetupGame',
   components: {
-    FooterButtons
+    FooterButtons,
+    GameSetup
   },
   setup() {
     const { t } = useI18n()
