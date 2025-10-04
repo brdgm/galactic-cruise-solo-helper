@@ -21,22 +21,30 @@
   },
   "setupGame": {
     "title": "Setup Game",
-    "twoPlayerGame": "Set up the game for a <b>2-player game</b> (including the NPC setup).",
-    "playerBoard": "Rachel receives a <b>Player Board</b> and sets up all the usual pieces that a player would use. She does NOT need Resource trackers and always uses the base game Upgrade Tokens.",
-    "reputation": "She will be the <b>2nd player</b>, so place her Reputation tracker on the “1” space of the Reputation Track.",
-    "soloTokens": {
-      "title": "Place the <b>Solo Tokens</b> (Rachel's Company Goal threshold reminders) on the appropriate spaces:",
-      "development": {
-        "7": "Place this onto her <b>rightmost</b> Fuel Development.",
-        "6": "Place this onto her <b>middle</b> Fuel Development.",
-        "5": "Place this onto her <b>leftmost</b> Fuel Development."
-      },
-      "segment": "Place this around the area where Rachel's <b>Segment #{segment}</b> will be built.",
-      "ship": "Place this above the area where Rachel's <b>Ship #{ship}</b> will be."
+    "gameBoard": {
+      "title": "Game Board",
+      "twoPlayerGame": "Set up the game for a <b>2-player game</b>.",
+      "neutralDevelopments": "Place the <b>neutral Developments</b> in these areas, covering the Reputation icon:",
+      "npcWorkers": "Place <b>2 NPC Workers</b> on this locations:"
     },
-    "soloWorkerCard": "Place the <b>Solo Worker Card</b> of your chosen difficulty next to the Action Cards (this will help you to remember to Call a Meeting if she has no Workers). This is her Break Room—place her Workers here instead of on her Player Board.",
-    "firstDevelopment": "Rachel places her <b>first Development</b> (from the Food row) in the Network. This placement must be in an area with no other Developments as usual.",
-    "discardBlueprint": "She then <b>discards Blueprint #{blueprint}</b>."
+    "bot": {
+      "title": "Rachel",
+      "playerBoard": "Rachel receives a <b>Player Board</b> and sets up all the usual pieces that a player would use. She does NOT need Resource trackers and always uses the base game Upgrade Tokens.",
+      "reputation": "She will be the <b>2nd player</b>, so place her Reputation tracker on the “1” space of the Reputation Track.",
+      "soloTokens": {
+        "title": "Place the <b>Solo Tokens</b> (Rachel's Company Goal threshold reminders) on the appropriate spaces:",
+        "development": {
+          "7": "Place this onto her <b>rightmost</b> Fuel Development.",
+          "6": "Place this onto her <b>middle</b> Fuel Development.",
+          "5": "Place this onto her <b>leftmost</b> Fuel Development."
+        },
+        "segment": "Place this around the area where Rachel's <b>Segment #{segment}</b> will be built.",
+        "ship": "Place this above the area where Rachel's <b>Ship #{ship}</b> will be."
+      },
+      "soloWorkerCard": "Place the <b>Solo Worker Card</b> of your chosen difficulty next to the Action Cards (this will help you to remember to Call a Meeting if she has no Workers). This is her Break Room—place her Workers here instead of on her Player Board.",
+      "firstDevelopment": "Rachel places her <b>first Development</b> (from the Food row) in the Network. This placement must be in an area with no other Developments as usual.",
+      "discardBlueprint": "She then <b>discards Blueprint #{blueprint}</b>."
+    }
   },
   "difficultyLevel": {
     "1": "Easy",

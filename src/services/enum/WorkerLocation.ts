@@ -2,11 +2,11 @@
  * Worker location
  */
 enum WorkerLocation {
-  TOP_LEFT = 'top-left',
-  TOP_CENTER = 'top-center',
-  TOP_RIGHT = 'top-right',
-  BOTTOM_LEFT = 'bottom-left',
-  BOTTOM_CENTER = 'bottom-center',
-  BOTTOM_RIGHT = 'bottom-right'
+  TOP_RIGHT = 1,
+  BOTTOM_LEFT = 2,
+  BOTTOM_CENTER = 3,
+  BOTTOM_RIGHT = 4,
+  TOP_LEFT = 5,
+  TOP_CENTER = 6
 }
 export default WorkerLocation

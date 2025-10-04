@@ -10,32 +10,32 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import AppIcon from './AppIcon.vue'
-import NetworkLocation from '@/services/enum/NetworkLocation'
+import WorkerLocation from '@/services/enum/WorkerLocation'
 import getAllEnumValues from '@brdgm/brdgm-commons/src/util/enum/getAllEnumValues'
 
 export default defineComponent({
-  name: 'NetworkLocationDisplay',
+  name: 'WorkerLocationDisplay',
   components: {
     AppIcon
   },
   props: {
-    networkLocation: {
-      type: Number as PropType<NetworkLocation>,
+    workerLocation: {
+      type: Number as PropType<WorkerLocation>,
       required: false
     },
-    networkLocations: {
-      type: Array as PropType<NetworkLocation[]>,
+    workerLocations: {
+      type: Array as PropType<WorkerLocation[]>,
       required: false
     }
   },
   computed: {
-    allLocations() : NetworkLocation[] {
-      return getAllEnumValues(NetworkLocation)
+    allLocations() : WorkerLocation[] {
+      return getAllEnumValues(WorkerLocation)
     }
   },
   methods: {
-    hasLocation(location: NetworkLocation) : boolean {
-      return (this.networkLocation == location) || (this.networkLocations?.includes(location) ?? false)
+    hasLocation(location: WorkerLocation) : boolean {
+      return ((this.workerLocation == location) || (this.workerLocations?.includes(location) ?? false))
     }
   }
 })
@@ -58,12 +58,12 @@ export default defineComponent({
   .position {
     position: absolute;
     width: 30px;
-    &.pos1 { transform: translate(35px, 10px) rotate(0deg); }
-    &.pos2 { transform: translate(86px, 10px) rotate(0deg); }
-    &.pos3 { transform: translate(106px, 44px) rotate(90deg); }
-    &.pos4 { transform: translate(75px, 66px) rotate(180deg); }
-    &.pos5 { transform: translate(24px, 66px) rotate(180deg); }
-    &.pos6 { transform: translate(5px, 32px) rotate(270deg); }
+    &.pos1 { transform: translate(61px, 10px) rotate(0deg); }
+    &.pos2 { transform: translate(106px, 16px) rotate(90deg); }
+    &.pos3 { transform: translate(100px, 64px) rotate(180deg); }
+    &.pos4 { transform: translate(50px, 64px) rotate(180deg); }
+    &.pos5 { transform: translate(4px, 59px) rotate(270deg); }
+    &.pos6 { transform: translate(10px, 10px) rotate(0deg); }
   }
 }
 </style>

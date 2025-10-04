@@ -21,22 +21,30 @@
   },
   "setupGame": {
     "title": "Spielaufbau",
-    "twoPlayerGame": "Bereite das Spiel wie für <b>2 Personen</b> vor (inklusive NPC-Aufbau).",
-    "playerBoard": "Rachel erhält ein <b>Tableau</b> und das gesamte Spielmaterial wie eine reguläre Person. Sie benötigt jedoch keine Ressourcen-Anzeiger und verwendet ausschließlich die Aufwertungsmarker des Grundspiels.",
-    "reputation": "Rachel wird an <b>2. Position der Zugreihenfolge</b> sein, setze ihren Reputationsmarker daher auf Feld 1.",
-    "soloTokens": {
-      "title": "Platziere Rachels <b>Solo-Plättchen</b> als Erinnerung für ihre Unternehmensziele auf die entsprechenden Plätze:",
-      "development": {
-        "7": "Lege dieses Plättchen auf die Entwicklung in ihrer Nahrungs-Reihe <b>ganz rechts</b>.",
-        "6": "Lege dieses Plättchen auf die <b>mittlere</b> Entwicklung der Treibstoff-Reihe.",
-        "5": "Lege dieses Plättchen auf die Entwicklung in ihrer Nahrungs-Reihe <b>ganz links</b>."
-      },
-      "segment": "Lege dieses Plättchen in der Nähe des Bereichs, in dem Rachels <b>Segment #{segment}</b> gebaut wird",
-      "ship": "Lege dieses Plättchen in die Nähe des Platzes, wo Rachels <b>Schiff #{ship}</b> gebaut wird."
+    "gameBoard": {
+      "title": "Spielbrett",
+      "twoPlayerGame": "Bereite das Spiel wie für <b>2 Personen</b> vor.",
+      "neutralDevelopments": "Lege die <b>neutralen Entwicklungen</b> in diese Bereiche jeweils auf den Platz mit dem Reputations-Symbol:",
+      "npcWorkers": "Platziere <b>2 NPC-Angestellte</b> auf diesen Orten:"
     },
-    "soloWorkerCard": "Lege die <b>Solo-Angestellten-Karte</b> des gewählten Schwierigkeitsgrades neben die Aktionskarten. Sie dient als Rachels Pausenraum und hilft dir dabei, keine Aktionskarte aufzudecken, wenn Rachel keine verfügbaren Angestellten hat. Stelle ihre Angestellten hier ab, anstatt sie auf ihrem Tableau zu platzieren.",
-    "firstDevelopment": "Rachel platziert ihre <b>erste Entwicklung</b> (aus der Nahrungs-Reihe) im Hauptquartier. Die Entwicklung muss in ein leeres Areal gebaut werden.",
-    "discardBlueprint": "Anschließend wirft sie <b>Blaupause #{blueprint}</b> ab."
+    "bot": {
+      "title": "Rachel",
+      "playerBoard": "Rachel erhält ein <b>Tableau</b> und das gesamte Spielmaterial wie eine reguläre Person. Sie benötigt jedoch keine Ressourcen-Anzeiger und verwendet ausschließlich die Aufwertungsmarker des Grundspiels.",
+      "reputation": "Rachel wird an <b>2. Position der Zugreihenfolge</b> sein, setze ihren Reputationsmarker daher auf Feld 1.",
+      "soloTokens": {
+        "title": "Platziere Rachels <b>Solo-Plättchen</b> als Erinnerung für ihre Unternehmensziele auf die entsprechenden Plätze:",
+        "development": {
+          "7": "Lege dieses Plättchen auf die Entwicklung in ihrer Nahrungs-Reihe <b>ganz rechts</b>.",
+          "6": "Lege dieses Plättchen auf die <b>mittlere</b> Entwicklung der Treibstoff-Reihe.",
+          "5": "Lege dieses Plättchen auf die Entwicklung in ihrer Nahrungs-Reihe <b>ganz links</b>."
+        },
+        "segment": "Lege dieses Plättchen in der Nähe des Bereichs, in dem Rachels <b>Segment #{segment}</b> gebaut wird",
+        "ship": "Lege dieses Plättchen in die Nähe des Platzes, wo Rachels <b>Schiff #{ship}</b> gebaut wird."
+      },
+      "soloWorkerCard": "Lege die <b>Solo-Angestellten-Karte</b> des gewählten Schwierigkeitsgrades neben die Aktionskarten. Sie dient als Rachels Pausenraum und hilft dir dabei, keine Aktionskarte aufzudecken, wenn Rachel keine verfügbaren Angestellten hat. Stelle ihre Angestellten hier ab, anstatt sie auf ihrem Tableau zu platzieren.",
+      "firstDevelopment": "Rachel platziert ihre <b>erste Entwicklung</b> (aus der Nahrungs-Reihe) im Hauptquartier. Die Entwicklung muss in ein leeres Areal gebaut werden.",
+      "discardBlueprint": "Anschließend wirft sie <b>Blaupause #{blueprint}</b> ab."
+    }
   },
   "difficultyLevel": {
     "1": "Einfach",

@@ -20,6 +20,8 @@ import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
 import { useRouter } from 'vue-router'
 import ExpansionsSetup from '@/components/setup/ExpansionsSetup.vue'
 import CardDeck from '@/services/CardDeck'
+import getActionSetup from '@/util/getActionSetup'
+import getDevelopmentSetup from '@/util/getDevelopmentSetup'
 
 export default defineComponent({
   name: 'SetupApp',
@@ -39,6 +41,8 @@ export default defineComponent({
     setupGame() : void {
       this.state.resetGame()
       this.state.setup.initialCardDeck = CardDeck.new().toPersistence()
+      this.state.setup.actionSetup = getActionSetup()
+      this.state.setup.developmentSetup = getDevelopmentSetup()
       this.router.push('/setupGame')
     }
   }
