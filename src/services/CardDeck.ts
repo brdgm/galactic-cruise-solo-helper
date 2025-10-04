@@ -28,7 +28,7 @@ export default class CardDeck {
    * The support card is the next card to be drawn, or if the pile is empty, the last discarded card.
    */
   public get supportCard() : Card {
-    return this._pile.value[0] ?? this._discard.value[this._discard.value.length-1]
+    return this._pile.value[0] ?? this._discard.value.at(-1)
   }
 
   public get pile() : readonly Card[] {

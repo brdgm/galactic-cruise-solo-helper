@@ -1,12 +1,12 @@
 <template>
   <div class="network">
     <AppIcon name="network" class="background" />
-    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos1" v-if="networkLocation == 1" />
-    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos2" v-if="networkLocation == 2"/>
-    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos3" v-if="networkLocation == 3"/>
-    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos4" v-if="networkLocation == 4"/>
-    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos5" v-if="networkLocation == 5"/>
-    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos6" v-if="networkLocation == 6"/>
+    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos1" alt="" v-if="networkLocation == 1"/>
+    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos2" alt="" v-if="networkLocation == 2"/>
+    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos3" alt="" v-if="networkLocation == 3"/>
+    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos4" alt="" v-if="networkLocation == 4"/>
+    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos5" alt="" v-if="networkLocation == 5"/>
+    <img src="@/assets/icons/red-circle-arrow.svg" class="position pos6" alt="" v-if="networkLocation == 6"/>
   </div>
 </template>
 
