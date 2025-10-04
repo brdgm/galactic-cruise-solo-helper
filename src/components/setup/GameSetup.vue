@@ -1,29 +1,29 @@
 <template>
   <ol>
-    <li>Set up the game for a <b>2-player game</b> (including the NPC setup).</li>
-    <li>Rachel receives a <b>Player Board</b> and sets up all the usual pieces that a player would use. She does NOT need Resource trackers and always uses the base game Upgrade Tokens.</li>
-    <li>She will be the <b>2nd player</b>, so place her Reputation tracker on the “1” space of the Reputation Track.</li>
-    <li>Place the <b>Solo Tokens</b> (Rachel's Company Goal threshold reminders) on the appropriate spaces:</li>
+    <li v-html="t('setupGame.twoPlayerGame')"></li>
+    <li v-html="t('setupGame.playerBoard')"></li>
+    <li v-html="t('setupGame.reputation')"></li>
+    <li v-html="t('setupGame.soloTokens.title')"></li>
     <ul class="soloTokens">
       <li>
         <AppIcon type="solo-token" name="development" class="icon"/>
-        <span>Place this onto her <b>middle</b> Fuel Development.</span>
+        <span v-html="t(`setupGame.soloTokens.development.${difficultyLevelSettings.developmentsBuildGoal}`)"></span>
       </li>
       <li>
         <AppIcon type="solo-token" name="segment" class="icon"/>
-        <span>Place this around the area where Rachel's <b>Xth Segment</b> will be built.</span>
+        <span v-html="t('setupGame.soloTokens.segment', {segment:difficultyLevelSettings.segmentsBuildGoal})"></span>
       </li>
       <li>
         <AppIcon type="solo-token" name="ship" class="icon"/>
-        <span>Place this above the area where Rachel's <b>third Ship</b> will be.</span>
+        <span v-html="t('setupGame.soloTokens.ship', {ship:difficultyLevelSettings.differentShipsLaunchedGoal})"></span>
       </li>
     </ul>
-    <li>Place the <b>Solo Worker Card</b> of your chosen difficulty next to the Action Cards (this will help you to remember to Call a Meeting if she has no Workers). This is her Break Room—place her Workers here instead of on her Player Board.</li>
+    <li v-html="t('setupGame.soloWorkerCard')"></li>
     <li>
-      <span>Rachel places her <b>first Development</b> (from the Food row) in the Network. This placement must be in an area with no other Developments as usual.</span><br/>
+      <span v-html="t('setupGame.firstDevelopment')"></span><br/>
       <NetworkLocationDisplay :networkLocation="supportCard.number6" />
     </li>
-    <li>She then <b>discards Blueprint #0</b> based on the Number System.</li>
+    <li v-html="t('setupGame.discardBlueprint', {blueprint:supportCard.number4})"></li>
   </ol>
 </template>
 
@@ -36,6 +36,7 @@ import Card from '@/services/Card'
 import CardDeck from '@/services/CardDeck'
 import NetworkLocationDisplay from '../structure/NetworkLocationDisplay.vue'
 import AppIcon from '../structure/AppIcon.vue'
+import getDifficultyLevelSettings, { DifficultyLevelSettings } from '@/util/getDifficultyLevelSettings'
 
 export default defineComponent({
   name: 'GameSetup',
@@ -54,6 +55,9 @@ export default defineComponent({
     supportCard() : Card {
       const cardDeck = this.state.setup.initialCardDeck ? CardDeck.fromPersistence(this.state.setup.initialCardDeck) : CardDeck.new()
       return cardDeck.supportCard
+    },
+    difficultyLevelSettings() : DifficultyLevelSettings {
+      return getDifficultyLevelSettings(this.state.setup.difficultyLevel)
     }
   }
 })
@@ -67,6 +71,7 @@ export default defineComponent({
   .icon {
     width: 40px;
     margin-right: 8px;
+    filter: drop-shadow(0.15rem 0.15rem 0.15rem #aaa);
   }
 }
 </style>
