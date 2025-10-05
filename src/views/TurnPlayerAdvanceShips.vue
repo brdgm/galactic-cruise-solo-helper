@@ -6,7 +6,7 @@
   </h1>
 
   <div class="mt-3">
-    <ActionBox :instructionTitle="t('rules.player.advanceShips.destination.title')">
+    <ActionBox :instructionTitle="t('rules.advanceShips.destination.title')">
       <template #action>
         <AppIcon type="turn" name="destination" extension="svg" class="icon"/>
       </template>
@@ -18,7 +18,7 @@
       </template>
     </ActionBox>
 
-    <ActionBox :instructionTitle="t('rules.player.advanceShips.dayInSpace.title')">
+    <ActionBox :instructionTitle="t('rules.advanceShips.dayInSpace.title')">
       <template #action>
         <AppIcon type="turn" name="day-in-space" extension="svg" class="icon"/>
       </template>
@@ -29,14 +29,14 @@
       </template>
     </ActionBox>
 
-    <ActionBox :instructionTitle="t('rules.player.advanceShips.returningToEarth.title')">
+    <ActionBox :instructionTitle="t('rules.advanceShips.returningToEarth.title')">
       <template #action>
         <AppIcon type="turn" name="returning-to-earth" extension="svg" class="icon"/>
       </template>
       <template #instruction>
         <ul>
-          <li v-html="t('rules.player.advanceShips.returningToEarth.returnWorker')"></li>
-          <li v-html="t('rules.player.advanceShips.returningToEarth.discardCruiseAndGuests')"></li>
+          <li v-html="t('rules.advanceShips.returningToEarth.returnWorker')"></li>
+          <li v-html="t('rules.advanceShips.returningToEarth.discardCruiseAndGuests')"></li>
         </ul>
       </template>
     </ActionBox>

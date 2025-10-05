@@ -57,21 +57,39 @@
     "turn": "Zug {turn}"
   },
   "rules": {
+    "advanceShips": {
+      "destination": {
+        "title": "Raumschiffe bewegen: Reiseziel"
+      },
+      "dayInSpace": {
+        "title": "Raumschiffe bewegen: Tag im Weltall"
+      },
+      "returningToEarth": {
+        "title": "Raumschiffe bewegen: Rückkehr zur Erde",
+        "returnWorker": "Stelle den Angestellten zurück in den Pausenraum.",
+        "discardCruiseAndGuests": "Wirf das Reiseplättchen ab und lege die Gäste in den Vorrat zurück."
+      }
+    },
     "player": {
       "advanceShips": {
         "destination": {
-          "title": "Raumschiffe bewegen: Reiseziel",
           "placeUpgradeToken": "Du kannst den Aufwertungsmarker auf dem Reiseziel ablegen.",
           "payAdsForGuests": "Wähle, ob du Werbung für jeden Gast bezahlst, um Siegpunkte zu erhalten."
         },
         "dayInSpace": {
-          "title": "Raumschiffe bewegen: Tag im Weltall",
           "gainGuestBonuses": "Für jeden Gast erhältst du den Bonus für jedes passende Symbol in deinem Raumschiff."
+        }
+      }
+    },
+    "bot": {
+      "advanceShips": {
+        "destination": {
+          "placeUpgradeToken": "Ist dies das erste Reiseziel der Reise, lädt sie ihren Aufwertungsmarker auf dem Feld am weitesten links des entsprechenden Reiseziels ab.",
+          "payAdsForGuests": "Dann wertet sie alle ihre Gäste, egal ob dies das erste Reiseziel ist oder nicht. Rachel muss keine Werbung bezahlen, um dies zu tun.",
+          "fourthToken": "Im seltenen Fall, dass Rachel 4 Mal im Spiel das gleiche erste Reiseziel besuchen würde, lädt sie den Marker erst beim zweiten Reiseziel ab. Gibt es auf der aktuellen Reise kein zweites, dann wirft sie es ab."
         },
-        "returningToEarth": {
-          "title": "Raumschiffe bewegen: Rückkehr zur Erde",
-          "returnWorker": "Stelle den Angestellten zurück in den Pausenraum.",
-          "discardCruiseAndGuests": "Wirf das Reiseplättchen ab und lege die Gäste in den Vorrat zurück."
+        "dayInSpace": {
+          "gainGuestBonuses": "Rachel erhält 1 Reputation pro Gast unabhängig von der Farbe."
         }
       }
     }
