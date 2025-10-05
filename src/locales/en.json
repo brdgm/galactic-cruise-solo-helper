@@ -61,6 +61,20 @@
   "sideBar": {
     "turn": "Turn {turn}"
   },
+  "endOfRound": {
+    "title": {
+      "1": "AGM A: Progress Scoring",
+      "2": "AGM B: Progress Scoring"
+    },
+    "endRound": {
+      "title": "Progress Track {round} completed",
+      "endRoundConfirm": {
+        "1": "If the last cube was placed on progress track 1, Annual General Meeting (AGM) A occurs.",
+        "2": "If the last cube was placed on progress track 2, Annual General Meeting (AGM) B occurs.",
+        "3": "If the last cube was placed on progress track 3, the end of the game is triggered."
+      }
+    }
+  },
   "rules": {
     "advanceShips": {
       "destination": {
