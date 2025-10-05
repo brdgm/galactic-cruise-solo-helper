@@ -23,51 +23,51 @@ const state = mockState({turns:[
 
 describe('services/RouteCalculator', () => {
   it('turn1', () => {
-    const routeCalculator = new RouteCalculator(1, mockRouteLocation({name:'JeanTurnPlayer'}), state)
+    const routeCalculator = new RouteCalculator(1, mockRouteLocation({name:'TurnPlayer'}), state)
 
     expect(routeCalculator.turn).to.eq(1)
     expect(routeCalculator.round).to.eq(1)
     expect(routeCalculator.getBackRouteTo()).to.eq('')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/jean/turn/2/bot')
-    expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/jean/turn/2/player/endOfRound')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/2/bot')
+    expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/turn/2/player/endOfRound')
   })
 
   it('turn2', () => {
-    const routeCalculator = new RouteCalculator(2, mockRouteLocation({name:'JeanTurnBot'}), state)
+    const routeCalculator = new RouteCalculator(2, mockRouteLocation({name:'TurnBot'}), state)
 
     expect(routeCalculator.turn).to.eq(2)
     expect(routeCalculator.round).to.eq(1)
-    expect(routeCalculator.getBackRouteTo()).to.eq('/jean/turn/1/player')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/jean/turn/3/player')
-    expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/jean/turn/3/bot/endOfRound')
+    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/1/player')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/3/player')
+    expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/turn/3/bot/endOfRound')
   })
 
   it('turn4', () => {
-    const routeCalculator = new RouteCalculator(4, mockRouteLocation({name:'JeanTurnBot'}), state)
+    const routeCalculator = new RouteCalculator(4, mockRouteLocation({name:'TurnBot'}), state)
 
     expect(routeCalculator.turn).to.eq(4)
     expect(routeCalculator.round).to.eq(1)
-    expect(routeCalculator.getBackRouteTo()).to.eq('/jean/turn/3/player')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/jean/turn/5/player')
-    expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/jean/turn/5/bot/endOfRound')
+    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/3/player')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/5/player')
+    expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/turn/5/bot/endOfRound')
   })
 
   it('turn5-endOfRound', () => {
-    const routeCalculator = new RouteCalculator(5, mockRouteLocation({name:'JeanTurnBotEndOfRound'}), state)
+    const routeCalculator = new RouteCalculator(5, mockRouteLocation({name:'TurnBotEndOfRound'}), state)
 
     expect(routeCalculator.turn).to.eq(5)
     expect(routeCalculator.round).to.eq(1)
-    expect(routeCalculator.getBackRouteTo()).to.eq('/jean/turn/4/bot')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/jean/turn/6/player')
+    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/4/bot')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/6/player')
   })
 
   it('turn6', () => {
-    const routeCalculator = new RouteCalculator(6, mockRouteLocation({name:'JeanTurnPlayer'}), state)
+    const routeCalculator = new RouteCalculator(6, mockRouteLocation({name:'TurnPlayer'}), state)
 
     expect(routeCalculator.turn).to.eq(6)
     expect(routeCalculator.round).to.eq(2)
-    expect(routeCalculator.getBackRouteTo()).to.eq('/jean/turn/5/bot/endOfRound')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/jean/turn/7/bot')
-    expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/jean/turn/7/player/endOfRound')
+    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/5/bot/endOfRound')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/7/bot')
+    expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/turn/7/player/endOfRound')
   })
 })

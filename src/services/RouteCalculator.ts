@@ -36,7 +36,7 @@ export default class RouteCalculator {
    * Get route to next step in round.
    */
   public getNextRouteTo() : string {
-    return `turn/${this.turn + 1}/${this.nextPlayer}`
+    return `/turn/${this.turn + 1}/${this.nextPlayer}`
   }
 
   /**
@@ -44,10 +44,10 @@ export default class RouteCalculator {
    */
   public getNextRouteToEndOfRound() : string {
     if (this.round == 4) {
-      return `turn/${this.turn + 1}/endOfGame`
+      return `/turn/${this.turn + 1}/endOfGame`
     }
     else {
-      return `turn/${this.turn + 1}/${this.currentPlayer}/endOfRound`
+      return `/turn/${this.turn + 1}/${this.currentPlayer}/endOfRound`
     }
   }
 
@@ -59,14 +59,14 @@ export default class RouteCalculator {
       return ''
     }
     else if (this.previousTurn?.endOfRound) {
-      return `turn/${this.turn - 1}/${this.previousTurn.player}/endOfRound`
+      return `/turn/${this.turn - 1}/${this.previousTurn.player}/endOfRound`
     }
     else {
-      return `turn/${this.turn - 1}/${this.previousTurn?.player ?? Player.PLAYER}`
+      return `/turn/${this.turn - 1}/${this.previousTurn?.player ?? Player.PLAYER}`
     }
   }
 
 }
 
-const TURN_REGEX = /^.+TurnPlayer(.+)?$/
-const ENDOFROUND_REGEX = /^.+EndOfRound$/
+const TURN_REGEX = /^TurnPlayer(.+)?$/
+const ENDOFROUND_REGEX = /^EndOfRound$/
