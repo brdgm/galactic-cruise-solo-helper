@@ -46,6 +46,16 @@
       "discardBlueprint": "She then discards this <b>Blueprint</b>:"
     }
   },
+  "turnPlayer": {
+    "title": "Player",
+    "takeTurn": "Take your turn."
+  },
+  "turnBot": {
+    "title": "Rachel"
+  },
+  "sideBar": {
+    "turn": "Turn {turn}"
+  },
   "difficultyLevel": {
     "1": "Easy",
     "2": "Medium",

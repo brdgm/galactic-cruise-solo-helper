@@ -46,6 +46,16 @@
       "discardBlueprint": "Anschließend wirft sie diese <b>Blaupause</b> ab:"
     }
   },
+  "turnPlayer": {
+    "title": "Spieler",
+    "takeTurn": "Führe deinen Zug aus."
+  },
+  "turnBot": {
+    "title": "Rachel"
+  },
+  "sideBar": {
+    "turn": "Zug {turn}"
+  },
   "difficultyLevel": {
     "1": "Einfach",
     "2": "Mittel",

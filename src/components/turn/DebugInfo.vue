@@ -5,6 +5,7 @@
       <b>cardDeck</b>: {{navigationState.cardDeck.toPersistence()}}<br/>
       <b>currentCard</b>: {{navigationState.cardDeck.currentCard}}<br/>
       <b>supportCard</b>: {{navigationState.cardDeck.supportCard}}<br/>
+      <b>round</b>: {{navigationState.round}}<br/>
     </p>
   </div>
 </template>

@@ -1,6 +1,5 @@
 <template>
   <div class="sidebar">
-    {{t('sideBar.round', {round})}}<br/>
     {{t('sideBar.turn', {turn})}}
   </div>
 </template>
@@ -25,9 +24,6 @@ export default defineComponent({
     }
   },
   computed: {
-    round() : number {
-      return this.navigationState.round
-    },
     turn() : number {
       return this.navigationState.turn
     }

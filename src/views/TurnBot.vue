@@ -1,6 +1,6 @@
 <template>
   <SideBar :navigationState="navigationState"/>
-  <h1>Bot Turn</h1>
+  <h1>{{t('turnBot.title')}}</h1>
 
   <p>...</p>
 

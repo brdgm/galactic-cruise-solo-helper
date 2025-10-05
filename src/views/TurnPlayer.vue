@@ -8,6 +8,8 @@
     {{t('action.next')}}
   </button>
 
+  <DebugInfo :navigationState="navigationState"/>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="abortGame"/>
 </template>
 
@@ -20,12 +22,14 @@ import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/turn/SideBar.vue'
 import Player from '@/services/enum/Player'
+import DebugInfo from '@/components/turn/DebugInfo.vue'
 
 export default defineComponent({
   name: 'TurnPlayer',
   components: {
     FooterButtons,
-    SideBar
+    SideBar,
+    DebugInfo
   },
   setup() {
     const { t } = useI18n()

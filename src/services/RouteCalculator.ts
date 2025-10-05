@@ -21,7 +21,7 @@ export default class RouteCalculator {
     this.state = state
     this.currentPlayer = route.name?.toString().match(TURN_REGEX) ? Player.PLAYER : Player.BOT
     this.nextPlayer = this.currentPlayer == Player.BOT ? Player.PLAYER : Player.BOT
-    this.endOfRound = route.name?.toString().match(ENDOFROUND_REGEX) ? true : false
+    this.endOfRound = route.name?.toString().match(ENDOFROUND_REGEX) != null
     this.previousTurn = this.state.turns.find(item => item.turn == this.turn - 1)
 
     if (this.previousTurn?.endOfRound) {
