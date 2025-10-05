@@ -35,7 +35,7 @@ export default defineComponent({
   },
   methods: {
     startGame() : void {
-      this.router.push('/turn/1/player')
+      this.router.push('/turn/1/player/advanceShips')
     }
   }
 })
