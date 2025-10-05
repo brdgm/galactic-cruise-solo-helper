@@ -192,7 +192,30 @@
           "refresh": "Rachel gibt 1 Reputation aus, wirft alle Blaupausen aus der offenen Auslage ab und füllt diese mit 5 neuen Blaupausen auf."
         },
         "launch-ship": {
-          "title": "Raumschiff starten"
+          "title": "Raumschiff starten",
+          "shipSelection": "Rachel führt diese Aktion aus, wenn sie ein Raumschiff mit <b>{shipSize}+ Segmenten</b> verfügbar hat. Wenn Rachel mehrere passende Raumschiffe hat, priorisiert sie wie folgt:",
+          "shipSelectionPriority1": "Ein Schiff, das im Spielverlauf noch nicht gestartet wurde.",
+          "shipSelectionPriority2": "Ein Schiff, das die meisten SP bringt.",
+          "shipSelectionPriority3": "Das Schiff, das am weitesten rechts liegt.",
+          "step5Title": "5. Boarding der Gäste",
+          "step5Cruise": "Rachel wählt das markierte Reiseplättchen und legt es oben an das gewählte Schiff an. Sie kann keine Reise nehmen, die du reserviert hast.",
+          "step5Guests": "Dann nimmt sie Gäste, die ggfs. bereits ein Ticket für die Reise haben (neben dem Reiseplättchen stehen) und fügt sie ihrem Schiff hinzu. Wurden keinen Gästen im Vorfeld Tickets für diese Reise verkauft, nimmt Rachel diese in einem Last Minute Sale und füllt damit ihre Kabinen. Dabei folgt sie denselben Regeln wie bei ihrer Aktion “Reise bewerben”, erhält jedoch keine Reputation.",
+          "step5Overflow": "Hat sie nur eine Kabine, aber 2 Tickets wurden an Gäste im Vorfeld verkauft, legt Rachel einen zufälligen Gast zurück ans Ende der Warteschlange (Abschnitt 3 Werbung) und verliert 2 Reputation.",
+          "step4Title": "4. Würfel platzieren",
+          "step4Cube": "Sie fügt einen Fortschrittswürfel aus ihrem Vorrat dem aktuellen Fortschrittsplättchen hinzu.",
+          "step3Title": "3. Ressourcen bezahlen",
+          "step3Compare": "Vergleiche die auf dem Reiseplättchen abgedruckten Treibstoffkosten mit der Treibstoff-Reihe von Rachels Tableau. Der höchste sichtbare Wert ist ihre Treibstoffkapazität.",
+          "step3Reputation": "Sind die Kosten der Reise höher als ihre Kapazität, wird Rachel den fehlenden Treibstoff besorgen, indem sie auf der Reputationsleiste so weit zurückgeht, bis sie die erforderliche Menge an Ressourcen erreicht hat.",
+          "step3ZeroReputation": "Befindet sich ihr Marker auf 0, startet sie dennoch und verliert pro noch nicht vorhandenem Treibstoff 1 SP.",
+          "step2Title": "2. Cockpit werten",
+          "step2Score": "Rachel wertet das Cockpit, indem sie nur den abgebildeten SP-Wert des Cockpits nimmt und dazu alle Punkte von Segmenten addiert.",
+          "step2FirstTime": "Ist dies das erste Mal, dass sie dieses Schiff startet, dreht sie das Cockpit auf die andere Seite um (und entfernt so das -5 SP).",
+          "step1Title": "1. Einladen",
+          "step1Upgrade": "Rachel dreht einen Aufwertungsmarker um, ohne den Bonus zu erhalten und lädt diesen direkt in ihren Antrieb ein.",
+          "step1Order": "Dabei priorisiert sie Marker wie folgt: Zunächst die unteren 4 Marker (in beliebiger Reihenfolge), bis sie den linken Experten angeheuert hat, danach den SP-Marker und als letzte die übrigen Marker (müssen nicht 3 sein, wenn sie irgendwann den linken angeheuert hat).",
+          "step0Title": "0. Abflug!",
+          "step0Action": "Stelle einen ihrer Angestellten ins Cockpit und fülle anschließend die offene Auslage mit einem neuen Reiseplättchen auf.",
+          "step0SecondAction": "Startet sie als zweite Aktion ein Schiff, nimmt Rachel den Angestellten, mit dem sie die erste Aktion durchgeführt hat und dieser fungiert als Pilot."
         }
       }
     }

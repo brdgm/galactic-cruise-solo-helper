@@ -192,7 +192,30 @@
           "refresh": "Rachel spends 1 Reputation, discards all Blueprints from the display on the Main Board, and adds 5 new Blueprints from the Blueprint tray."
         },
         "launch-ship": {
-          "title": "Launch Ship"
+          "title": "Launch Ship",
+          "shipSelection": "Rachel executes this action if she has a ship with <b>{shipSize}+ Segments</b> available. If Rachel has multiple Ships that fits the criteria, she will choose a Ship to launch prioritizing the following:",
+          "shipSelectionPriority1": "A Ship that hasn't been launched.",
+          "shipSelectionPriority2": "A Ship that will score the most VP.",
+          "shipSelectionPriority3": "The rightmost Ship.",
+          "step5Title": "5. Assign and Board",
+          "step5Cruise": "Rachel chooses the marked Cruise and places it above that Ship. She may not take a Cruise that you have scheduled.",
+          "step5Guests": "She then takes any Guests next to the Cruise and adds them to her Ship; if no Guests were pre-sold tickets, she will sell Last-Minute tickets to matching Guests from the Queue to fill up her Cabins (following the rules from the Advertise Cruise action).",
+          "step5Overflow": "If she only has one Cabin but takes 2 Guests because they were presold tickets, she returns one randomly to the back of the Queue (3 Ad cost) and loses 2 Reputation (like a human player would).",
+          "step4Title": "4. Place Progress Cube",
+          "step4Cube": "She adds a Progress Cube from her supply to the Progress Track.",
+          "step3Title": "3. Pay Resources",
+          "step3Compare": "Compare the printed Fuel cost of the Cruise to Rachel's Fuel row on her Player Board. The largest visible number in her Fuel row is her Fuel capacity.",
+          "step3Reputation": "If the Cruise's Fuel cost is higher than Rachel's Fuel capacity, she will spend Reputation to supplement the Fuel cost, reducing her Reputation tracker past the required number of Resource icons.",
+          "step3ZeroReputation": "If her Reputation tracker is at \"0,\" she will still launch, but she loses 1 VP per extra Fuel needed.",
+          "step2Title": "2. Score Cockpit",
+          "step2Score": "Rachel scores Cockpits by adding the VP listed on the Cockpit to all the VP on Segments in that Ship.",
+          "step2FirstTime": "If this is the first time that Ship is launched, the Cockpit is flipped over, removing the -5 VP at the top.",
+          "step1Title": "1. Load Up",
+          "step1Upgrade": "Rachel flips (without gaining its bonus) and moves one Upgrade Token from her Launch Tower to her Engine.",
+          "step1Order": "She removes them in this order: the lower 4 tokens (in any order) until the leftmost Expert is hired, then the 1 VP Funding Bonus token. After this, she takes any Upgrade Token in any order.",
+          "step0Title": "0. Liftoff!",
+          "step0Action": "Place Rachel's Worker into the Cockpit of the Ship, and then add a new Cruise to the Marketing Board as usual.",
+          "step0SecondAction": "If resolving this as her second action of the turn, she instead moves the Worker from her first action to the Launch Elevator."
         }
       }
     }
