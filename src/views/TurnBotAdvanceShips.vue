@@ -1,13 +1,13 @@
 <template>
   <SideBar :navigationState="navigationState"/>
-  <h1>{{t('turnBot.title')}}</h1>
-
-  <h3>
+  <h1>
+    {{t('turnBot.title')}}
     <AppIcon type="turn" name="advance-ships" extension="svg" class="icon"/>
-    <span>Advance Ships</span>
-  </h3>
+  </h1>
 
-  <p>...</p>
+  <div class="mt-3">
+    <p>...</p>
+  </div>
 
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next(false)">
     {{t('action.next')}}
@@ -28,13 +28,15 @@ import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/turn/SideBar.vue'
 import Player from '@/services/enum/Player'
 import DebugInfo from '@/components/turn/DebugInfo.vue'
+import AppIcon from '@/components/structure/AppIcon.vue'
 
 export default defineComponent({
   name: 'TurnBot',
   components: {
     FooterButtons,
     SideBar,
-    DebugInfo
+    DebugInfo,
+    AppIcon
   },
   setup() {
     const { t } = useI18n()
@@ -74,13 +76,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-h3 {
-  display: flex;
-  align-items: center;
-  gap: 0.25em;
-  .icon {
-    height: 1.5em;
-  }
+h1 .icon {
+  height: 1.5em;
 }
 .icon {
   height: 2.5em;

@@ -56,6 +56,26 @@
   "sideBar": {
     "turn": "Turn {turn}"
   },
+  "rules": {
+    "player": {
+      "advanceShips": {
+        "destination": {
+          "title": "Advance Ships: Destination",
+          "placeUpgradeToken": "You may place the Upgrade Token on the Destination.",
+          "payAdsForGuests": "Choose to pay Ads for each guest to score VP."
+        },
+        "dayInSpace": {
+          "title": "Advance Ships: Day in Space",
+          "gainGuestBonuses": "For each Guest, gain their bonus for each matching icon in the Ship."
+        },
+        "returningToEarth": {
+          "title": "Advance Ships: Returning to Earth",
+          "returnWorker": "Return the Worker into your Break Room.",
+          "discardCruiseAndGuests": "Discard the Cruise and return all Guests to the supply."
+        }
+      }
+    }
+  },
   "difficultyLevel": {
     "1": "Easy",
     "2": "Medium",

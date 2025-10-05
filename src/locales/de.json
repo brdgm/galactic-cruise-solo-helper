@@ -56,6 +56,26 @@
   "sideBar": {
     "turn": "Zug {turn}"
   },
+  "rules": {
+    "player": {
+      "advanceShips": {
+        "destination": {
+          "title": "Raumschiffe bewegen: Reiseziel",
+          "placeUpgradeToken": "Du kannst den Aufwertungsmarker auf dem Reiseziel ablegen.",
+          "payAdsForGuests": "Wähle, ob du Werbung für jeden Gast bezahlst, um Siegpunkte zu erhalten."
+        },
+        "dayInSpace": {
+          "title": "Raumschiffe bewegen: Tag im Weltall",
+          "gainGuestBonuses": "Für jeden Gast erhältst du den Bonus für jedes passende Symbol in deinem Raumschiff."
+        },
+        "returningToEarth": {
+          "title": "Raumschiffe bewegen: Rückkehr zur Erde",
+          "returnWorker": "Stelle den Angestellten zurück in den Pausenraum.",
+          "discardCruiseAndGuests": "Wirf das Reiseplättchen ab und lege die Gäste in den Vorrat zurück."
+        }
+      }
+    }
+  },
   "difficultyLevel": {
     "1": "Einfach",
     "2": "Mittel",

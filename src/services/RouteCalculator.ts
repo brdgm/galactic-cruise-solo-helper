@@ -13,15 +13,17 @@ export default class RouteCalculator {
 
   public readonly currentPlayer : Player
   readonly nextPlayer : Player
+  readonly advanceShips : boolean
   readonly endOfRound : boolean
   readonly previousTurn? : Turn
 
   constructor(turn: number, route: RouteLocation, state: State) {
     this.turn = turn
     this.state = state
-    this.currentPlayer = route.name?.toString().match(TURN_REGEX) ? Player.PLAYER : Player.BOT
+    this.currentPlayer = route.name?.toString().match(TURN_PLAYER_REGEX) ? Player.PLAYER : Player.BOT
     this.nextPlayer = this.currentPlayer == Player.BOT ? Player.PLAYER : Player.BOT
-    this.endOfRound = route.name?.toString().match(ENDOFROUND_REGEX) != null
+    this.advanceShips = route.name?.toString().match(ADVANCE_SHIPS_REGEX) != null
+    this.endOfRound = route.name?.toString().match(END_OF_ROUND_REGEX) != null
     this.previousTurn = this.state.turns.find(item => item.turn == this.turn - 1)
 
     if (this.previousTurn?.endOfRound) {
@@ -36,14 +38,19 @@ export default class RouteCalculator {
    * Get route to next step in round.
    */
   public getNextRouteTo() : string {
-    return `/turn/${this.turn + 1}/${this.nextPlayer}`
+    if (this.advanceShips) {
+      return `/turn/${this.turn}/${this.currentPlayer}`
+    }
+    else {
+      return `/turn/${this.turn + 1}/${this.nextPlayer}/advanceShips`
+    }
   }
 
   /**
    * Get route to next step in round (end of round).
    */
   public getNextRouteToEndOfRound() : string {
-    if (this.round == 4) {
+    if (this.round == 3) {
       return `/turn/${this.turn + 1}/endOfGame`
     }
     else {
@@ -55,18 +62,27 @@ export default class RouteCalculator {
    * Get route to previous step in round.
    */
   public getBackRouteTo() : string {
-    if (this.turn == 1) {
-      return ''
-    }
-    else if (this.previousTurn?.endOfRound) {
+    if (this.previousTurn?.endOfRound) {
       return `/turn/${this.turn - 1}/${this.previousTurn.player}/endOfRound`
     }
+    if (this.endOfRound) {
+      return `/turn/${this.turn - 1}/${this.previousTurn?.player}`
+    }
+    else if (this.advanceShips) {
+      if (this.turn == 1) {
+        return ''
+      }
+      else {
+        return `/turn/${this.turn - 1}/${this.previousTurn?.player ?? Player.PLAYER}`
+      }
+    }
     else {
-      return `/turn/${this.turn - 1}/${this.previousTurn?.player ?? Player.PLAYER}`
+      return `/turn/${this.turn}/${this.currentPlayer}/advanceShips`
     }
   }
 
 }
 
-const TURN_REGEX = /^TurnPlayer(.+)?$/
-const ENDOFROUND_REGEX = /^EndOfRound$/
+const TURN_PLAYER_REGEX = /^TurnPlayer(.+)?$/
+const ADVANCE_SHIPS_REGEX = /^Turn(.+)AdvanceShips$/
+const END_OF_ROUND_REGEX = /^Turn(.+)EndOfRound$/

@@ -22,14 +22,32 @@ const state = mockState({turns:[
 ]})
 
 describe('services/RouteCalculator', () => {
+  it('turn1-advance-ships', () => {
+    const routeCalculator = new RouteCalculator(1, mockRouteLocation({name:'TurnPlayerAdvanceShips'}), state)
+
+    expect(routeCalculator.turn).to.eq(1)
+    expect(routeCalculator.round).to.eq(1)
+    expect(routeCalculator.getBackRouteTo()).to.eq('')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/1/player')
+  })
+
   it('turn1', () => {
     const routeCalculator = new RouteCalculator(1, mockRouteLocation({name:'TurnPlayer'}), state)
 
     expect(routeCalculator.turn).to.eq(1)
     expect(routeCalculator.round).to.eq(1)
-    expect(routeCalculator.getBackRouteTo()).to.eq('')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/2/bot')
+    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/1/player/advanceShips')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/2/bot/advanceShips')
     expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/turn/2/player/endOfRound')
+  })
+
+  it('turn2-advance-ships', () => {
+    const routeCalculator = new RouteCalculator(2, mockRouteLocation({name:'TurnBotAdvanceShips'}), state)
+
+    expect(routeCalculator.turn).to.eq(2)
+    expect(routeCalculator.round).to.eq(1)
+    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/1/player')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/2/bot')
   })
 
   it('turn2', () => {
@@ -37,9 +55,18 @@ describe('services/RouteCalculator', () => {
 
     expect(routeCalculator.turn).to.eq(2)
     expect(routeCalculator.round).to.eq(1)
-    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/1/player')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/3/player')
+    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/2/bot/advanceShips')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/3/player/advanceShips')
     expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/turn/3/bot/endOfRound')
+  })
+
+  it('turn4-advance-ships', () => {
+    const routeCalculator = new RouteCalculator(4, mockRouteLocation({name:'TurnBotAdvanceShips'}), state)
+
+    expect(routeCalculator.turn).to.eq(4)
+    expect(routeCalculator.round).to.eq(1)
+    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/3/player')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/4/bot')
   })
 
   it('turn4', () => {
@@ -47,8 +74,8 @@ describe('services/RouteCalculator', () => {
 
     expect(routeCalculator.turn).to.eq(4)
     expect(routeCalculator.round).to.eq(1)
-    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/3/player')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/5/player')
+    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/4/bot/advanceShips')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/5/player/advanceShips')
     expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/turn/5/bot/endOfRound')
   })
 
@@ -58,16 +85,16 @@ describe('services/RouteCalculator', () => {
     expect(routeCalculator.turn).to.eq(5)
     expect(routeCalculator.round).to.eq(1)
     expect(routeCalculator.getBackRouteTo()).to.eq('/turn/4/bot')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/6/player')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/6/player/advanceShips')
   })
 
-  it('turn6', () => {
-    const routeCalculator = new RouteCalculator(6, mockRouteLocation({name:'TurnPlayer'}), state)
+  it('turn6-advance-ships', () => {
+    const routeCalculator = new RouteCalculator(6, mockRouteLocation({name:'TurnPlayerAdvanceShips'}), state)
 
     expect(routeCalculator.turn).to.eq(6)
     expect(routeCalculator.round).to.eq(2)
     expect(routeCalculator.getBackRouteTo()).to.eq('/turn/5/bot/endOfRound')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/7/bot')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/6/player')
     expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/turn/7/player/endOfRound')
   })
 })

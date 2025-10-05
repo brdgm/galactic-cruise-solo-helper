@@ -1,38 +1,46 @@
 <template>
   <SideBar :navigationState="navigationState"/>
-  <h1>{{t('turnPlayer.title')}}</h1>
-
-  <h3>
+  <h1>
+    {{t('turnPlayer.title')}}
     <AppIcon type="turn" name="advance-ships" extension="svg" class="icon"/>
-    <span>Advance Ships</span>
-  </h3>
+  </h1>
 
-  <ActionBox :instructionTitle="t('instructions.advanceShips.title')">
-    <template #action>
-      <AppIcon type="turn" name="destination" extension="svg" class="icon"/>
-    </template>
-    <template #instruction>
-      <p>...</p>
-    </template>
-  </ActionBox>
+  <div class="mt-3">
+    <ActionBox :instructionTitle="t('rules.player.advanceShips.destination.title')">
+      <template #action>
+        <AppIcon type="turn" name="destination" extension="svg" class="icon"/>
+      </template>
+      <template #instruction>
+        <ul>
+          <li v-html="t('rules.player.advanceShips.destination.placeUpgradeToken')"></li>
+          <li v-html="t('rules.player.advanceShips.destination.payAdsForGuests')"></li>
+        </ul>
+      </template>
+    </ActionBox>
 
-  <ActionBox :instructionTitle="t('instructions.advanceShips.title')">
-    <template #action>
-      <AppIcon type="turn" name="day-in-space" extension="svg" class="icon"/>
-    </template>
-    <template #instruction>
-      <p>...</p>
-    </template>
-  </ActionBox>
+    <ActionBox :instructionTitle="t('rules.player.advanceShips.dayInSpace.title')">
+      <template #action>
+        <AppIcon type="turn" name="day-in-space" extension="svg" class="icon"/>
+      </template>
+      <template #instruction>
+        <ul>
+          <li v-html="t('rules.player.advanceShips.dayInSpace.gainGuestBonuses')"></li>
+        </ul>
+      </template>
+    </ActionBox>
 
-  <ActionBox :instructionTitle="t('instructions.advanceShips.title')">
-    <template #action>
-      <AppIcon type="turn" name="returning-to-earth" extension="svg" class="icon"/>
-    </template>
-    <template #instruction>
-      <p>...</p>
-    </template>
-  </ActionBox>
+    <ActionBox :instructionTitle="t('rules.player.advanceShips.returningToEarth.title')">
+      <template #action>
+        <AppIcon type="turn" name="returning-to-earth" extension="svg" class="icon"/>
+      </template>
+      <template #instruction>
+        <ul>
+          <li v-html="t('rules.player.advanceShips.returningToEarth.returnWorker')"></li>
+          <li v-html="t('rules.player.advanceShips.returningToEarth.discardCruiseAndGuests')"></li>
+        </ul>
+      </template>
+    </ActionBox>
+  </div>
 
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next">
     {{t('action.next')}}
@@ -89,13 +97,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-h3 {
-  display: flex;
-  align-items: center;
-  gap: 0.25em;
-  .icon {
-    height: 1.5em;
-  }
+h1 .icon {
+  height: 1.5em;
 }
 .icon {
   height: 2.5em;
