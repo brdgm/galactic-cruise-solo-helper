@@ -142,7 +142,11 @@
       },
       "action": {
         "build-ship-segments": {
-          "title": "Segmente einbauen"
+          "title": "Segmente einbauen",
+          "takeBlueprints": "Rachel nimmt die 2 markierten Blaupausen aus der Auslage des Spielplans und legt sie direkt in ihre Schiffe.",
+          "freeBlueprints": "Beide Blaupausen sind für Rachel kostenlos. Sie baut sie direkt in ihre Schiffe ein, ohne Reputation zu verlieren.",
+          "maxSegments": "Wenn sie dabei das 3-Segmente-Limit eines Schiffs erreicht, nimmt sie sofort das markierte Paar aus Cockpit und Antrieb vom Spielplan und fährt mit dem Einbauen fort (Anmerkung: Wenn der Antrieb Reputation oder SP gewährt, nimmt Rachel diese; wenn sie eine Agendakarte nehmen müsste, wird die in der Cockpit-Auswahl markierte Karte abgeworfen).",
+          "shipLimit": "Rachel kann nur 3 Schiffe mit je 3 Segmenten besitzen. Sobald sie 8 Segmente eingebaut hat, wird sie bei ihrer letzten Aktion “Segmente einbauen” nur ein Segment einbauen."
         },
         "draw-agenda-cards": {
           "title": "Agendakarten ziehen",
@@ -184,7 +188,8 @@
           "title": "Experten anheuern"
         },
         "refresh-blueprints": {
-          "title": "Blaupausen auffüllen"
+          "title": "Blaupausen auffüllen",
+          "refresh": "Rachel gibt 1 Reputation aus, wirft alle Blaupausen aus der offenen Auslage ab und füllt diese mit 5 neuen Blaupausen auf."
         },
         "launch-ship": {
           "title": "Raumschiff starten"

@@ -1,10 +1,28 @@
 <template>
   <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)" :modalSizeLg="true">
     <template #action>
-      <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
+      <div class="iconContainer">
+        <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
+        <div class="cardSelection">
+          <BlueprintSelection :positions="blueprintPositions"/>
+        </div>
+      </div>
     </template>
     <template #instruction>
-      <p v-html="t(`rules.bot.action.${action.action}.instructions`)"></p>
+      <div class="float-end ms-3">
+        <BlueprintSelection :positions="blueprintPositions"/>
+      </div>
+      <ul>
+        <li v-html="t(`rules.bot.action.${action.action}.takeBlueprints`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.freeBlueprints`)"></li>
+      </ul>
+      <div class="float-end ms-3">
+        <AgendaCardSelection :position="cockpitPosition"/>
+      </div>
+      <ul>
+        <li v-html="t(`rules.bot.action.${action.action}.maxSegments`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.shipLimit`)"></li>
+      </ul>
     </template>
   </ActionBox>
 </template>
@@ -16,6 +34,9 @@ import NavigationState from '@/util/NavigationState'
 import { CardAction } from '@/services/Card'
 import ActionBox from '@/components/structure/ActionBox.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
+import BlueprintSelection from '@/components/structure/BlueprintSelection.vue'
+import getCardNumber from '@/util/getCardNumber'
+import AgendaCardSelection from '@/components/structure/AgendaCardSelection.vue'
 
 export default defineComponent({
   name: 'ActionBuildShipSegments',
@@ -24,7 +45,9 @@ export default defineComponent({
   },
   components: {
     ActionBox,
-    AppIcon
+    AppIcon,
+    BlueprintSelection,
+    AgendaCardSelection
   },
   props: {
     navigationState: {
@@ -39,12 +62,33 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     return { t }
+  },
+  computed: {
+    blueprintPositions() : number[] {
+      const firstPos = getCardNumber(this.navigationState.cardDeck.supportCard, 5)
+      let secondPos = firstPos + 1
+      if (secondPos > 5) {
+        secondPos = 1
+      }
+      return [firstPos, secondPos]
+    },
+    cockpitPosition() : number {
+      return getCardNumber(this.navigationState.cardDeck.supportCard, 4)
+    }
   }
 })
 </script>
 
 <style lang="scss" scoped>
 .icon {
-  height: 2.5em;
+  height: 3em;
+}
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.cardSelection {
+  zoom: 0.6;
 }
 </style>

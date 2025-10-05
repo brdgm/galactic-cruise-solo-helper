@@ -142,7 +142,11 @@
       },
       "action": {
         "build-ship-segments": {
-          "title": "Build Ship Segments"
+          "title": "Build Ship Segments",
+          "takeBlueprints": "Rachel takes the 2 marked Blueprints from the Main Board display and places them into her Ship(s).",
+          "freeBlueprints": "These 2 Blueprints are free for her, and she does not lose Reputation. They are immediately built into her Ship(s).",
+          "maxSegments": "If she reaches the 3-Segment maximum in a Ship, she immediately takes the marked Cockpit and Engine from the Main Board display and continues building into it (note: if the Engine grants Reputation or VP, she gains it; if it grants an Agenda Card, she discards one from the display as marked for the Cockpit selection).",
+          "shipLimit": "Rachel may only have 3 Ships with 3 Segments each. Once she has 8 Segments built, her final build action will result in only one Segment being built."
         },
         "draw-agenda-cards": {
           "title": "Draw Agenda Cards",
@@ -184,7 +188,8 @@
           "title": "Hire Expert Worker"
         },
         "refresh-blueprints": {
-          "title": "Refresh Blueprints"
+          "title": "Refresh Blueprints",
+          "refresh": "Rachel spends 1 Reputation, discards all Blueprints from the display on the Main Board, and adds 5 new Blueprints from the Blueprint tray."
         },
         "launch-ship": {
           "title": "Launch Ship"

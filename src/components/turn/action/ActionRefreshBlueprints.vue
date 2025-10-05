@@ -1,10 +1,10 @@
 <template>
-  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)" :modalSizeLg="true">
+  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)">
     <template #action>
       <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
     </template>
     <template #instruction>
-      <p v-html="t(`rules.bot.action.${action.action}.instructions`)"></p>
+      <p v-html="t(`rules.bot.action.${action.action}.refresh`)"></p>
     </template>
   </ActionBox>
 </template>
