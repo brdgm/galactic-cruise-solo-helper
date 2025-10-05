@@ -92,7 +92,17 @@
     }
   },
   "endOfGame": {
-    "title": "End of Game"
+    "title": "End of Game",
+    "condition": "Condition",
+    "scoreTrack": "Score Track",
+    "cockpit": "Cockpit",
+    "developments": "Developments",
+    "reputation": "Reputation",
+    "shipSegments": "Ship Segments",
+    "progressSection3": "Progress Section 3",
+    "supplies": "Supplies",
+    "total": "Total",
+    "botCockpitScoring": "Rachel scores the VP printed on each Cockpit, plus the VP on each Segment. (-5 VP for any unlaunched Ships.)"
   },
   "rules": {
     "advanceShips": {

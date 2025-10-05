@@ -92,7 +92,17 @@
     }
   },
   "endOfGame": {
-    "title": "Spielende"
+    "title": "Spielende",
+    "condition": "Bedingung",
+    "scoreTrack": "Siegpunktleiste",
+    "cockpit": "Cockpit",
+    "developments": "Entwicklungen",
+    "reputation": "Reputation",
+    "shipSegments": "Segment",
+    "progressSection3": "Fortschritt Abschnitt 3",
+    "supplies": "Vorräte",
+    "total": "Gesamt",
+    "botCockpitScoring": "Rachel wertet nur die aufgedruckte SP-Anzahl, plus die Punkte für jedes Segment (außerdem - 5SP wenn das Schiff nicht gestartet wurde)."
   },
   "rules": {
     "advanceShips": {
