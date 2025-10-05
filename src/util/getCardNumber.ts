@@ -7,10 +7,10 @@ import Card from '@/services/Card'
  * @returns Number
  */
 export default function getCardNumber(card: Card, max: number) : number {
-  if (card.number6 <= max) {
-    return card.number6
+  for (const n of card.numbers) {
+    if (n <= max) {
+      return n
+    }
   }
-  else {
-    return card.number4
-  }
+  return 1
 }

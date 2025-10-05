@@ -13,8 +13,7 @@ const cards : Card[] = [
       { action: BotAction.LAUNCH_SHIP, shipSize: 2 },
       { action: BotAction.BUILD_SHIP_SEGMENTS }
     ],
-    number6: 1,
-    number4: 4,
+    numbers: [1, 4],
     workerLocation: WorkerLocation.TOP_LEFT
   },
   {
@@ -23,8 +22,7 @@ const cards : Card[] = [
       { action: BotAction.LAUNCH_SHIP, shipSize: 3 },
       { action: BotAction.BUILD_SHIP_SEGMENTS }
     ],
-    number6: 2,
-    number4: 3,
+    numbers: [2, 3],
     workerLocation: WorkerLocation.TOP_CENTER
   },
   {
@@ -33,8 +31,7 @@ const cards : Card[] = [
       { action: BotAction.BUILD_SHIP_SEGMENTS },
       { action: BotAction.REFRESH_BLUEPRINTS }
     ],
-    number6: 3,
-    number4: 2,
+    numbers: [3, 2],
     workerLocation: WorkerLocation.TOP_RIGHT
   },
   {
@@ -43,8 +40,7 @@ const cards : Card[] = [
       { action: BotAction.HIRE_EXPERT_WORKER_BOT },
       { action: BotAction.BUILD_DEVELOPMENT_NETWORK }
     ],
-    number6: 4,
-    number4: 1,
+    numbers: [4, 1],
     workerLocation: WorkerLocation.BOTTOM_RIGHT
   },
   {
@@ -53,8 +49,7 @@ const cards : Card[] = [
       { action: BotAction.HIRE_EXPERT_WORKER_BOT },
       { action: BotAction.BUILD_DEVELOPMENT_NETWORK }
     ],
-    number6: 5,
-    number4: 4,
+    numbers: [5, 4],
     workerLocation: WorkerLocation.BOTTOM_CENTER
   },
   {
@@ -63,8 +58,7 @@ const cards : Card[] = [
       { action: BotAction.HIRE_EXPERT_WORKER_BOT },
       { action: BotAction.BUILD_DEVELOPMENT_TECHNOLOGY }
     ],
-    number6: 6,
-    number4: 3,
+    numbers: [6, 3],
     workerLocation: WorkerLocation.BOTTOM_LEFT
   },
   {
@@ -73,8 +67,7 @@ const cards : Card[] = [
       { action: BotAction.DRAW_AGENDA_CARDS },
       { action: BotAction.BUILD_SHIP_SEGMENTS }
     ],
-    number6: 1,
-    number4: 2,
+    numbers: [1, 2],
     workerLocation: WorkerLocation.TOP_LEFT
   },
   {
@@ -83,8 +76,7 @@ const cards : Card[] = [
       { action: BotAction.DRAW_AGENDA_CARDS },
       { action: BotAction.REFILL_AGENDA_CARDS }
     ],
-    number6: 2,
-    number4: 1,
+    numbers: [2, 1],
     workerLocation: WorkerLocation.TOP_CENTER
   },
   {
@@ -93,8 +85,7 @@ const cards : Card[] = [
       { action: BotAction.DRAW_AGENDA_CARDS },
       { action: BotAction.REFILL_AGENDA_CARDS }
     ],
-    number6: 3,
-    number4: 4,
+    numbers: [3, 4],
     workerLocation: WorkerLocation.TOP_RIGHT
   },
   {
@@ -103,8 +94,7 @@ const cards : Card[] = [
       { action: BotAction.GAIN_RESOURCES },
       { action: BotAction.REFILL_STORAGE_SILO }
     ],
-    number6: 4,
-    number4: 3,
+    numbers: [4, 3],
     workerLocation: WorkerLocation.BOTTOM_RIGHT
   },
   {
@@ -113,8 +103,7 @@ const cards : Card[] = [
       { action: BotAction.GAIN_RESOURCES },
       { action: BotAction.REFILL_STORAGE_SILO }
     ],
-    number6: 5,
-    number4: 2,
+    numbers: [5, 2],
     workerLocation: WorkerLocation.BOTTOM_CENTER
   },
   {
@@ -123,8 +112,7 @@ const cards : Card[] = [
       { action: BotAction.ADVERTISE_CRUISE },
       { action: BotAction.BUILD_SHIP_SEGMENTS }
     ],
-    number6: 6,
-    number4: 1,
+    numbers: [6, 1],
     workerLocation: WorkerLocation.BOTTOM_LEFT
   },
 ]

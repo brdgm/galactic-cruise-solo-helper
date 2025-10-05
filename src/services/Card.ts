@@ -4,8 +4,7 @@ import WorkerLocation from './enum/WorkerLocation'
 export default interface Card {
   id: number
   actions: CardAction[]
-  number6: number
-  number4: number
+  numbers: number[]
   workerLocation: WorkerLocation
 }
 
