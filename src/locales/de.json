@@ -145,10 +145,14 @@
           "title": "Segmente einbauen"
         },
         "draw-agenda-cards": {
-          "title": "Agendakarten ziehen"
+          "title": "Agendakarten ziehen",
+          "selection": "Rachel wirft die markierten Agendakarten (oder die nächst verfügbaren) ab.",
+          "minCards": "Befinden sich 0 oder 1 Agendakarte in der offenen Auslage, führt sie die Aktion nicht aus."
         },
         "refill-agenda-cards": {
-          "title": "Agendakarten auffüllen"
+          "title": "Agendakarten auffüllen",
+          "reputation": "Wenn Reputation ein sichtbarer Bonus ist, nimmt Rachel diesen.",
+          "refill": "Anschließend wirft sie alle Agendakarten von oben nach unten ab und füllt von unten nach oben die Auslage mit neuen Agendakarten wieder auf."
         },
         "gain-resources": {
           "title": "Ressourcen erhalten"

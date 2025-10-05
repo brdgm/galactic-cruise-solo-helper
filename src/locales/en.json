@@ -145,10 +145,14 @@
           "title": "Build Ship Segments"
         },
         "draw-agenda-cards": {
-          "title": "Draw Agenda Cards"
+          "title": "Draw Agenda Cards",
+          "selection": "Rachel will discard the marked agenda cards (or the next ones available).",
+          "minCards": "If there are 0 or 1 Agenda Cards in the column, Rachel will not take this action."
         },
         "refill-agenda-cards": {
-          "title": "Refill Agenda Cards"
+          "title": "Refill Agenda Cards",
+          "reputation": "If Reputation is visible in the Agenda Card display, Rachel gains 1 Reputation.",
+          "refill": "She then discards all the Agenda Cards in the column top to bottom and refills the spaces from bottom to top with 4 new cards from the top of the Agenda Card deck."
         },
         "gain-resources": {
           "title": "Gain Resources"

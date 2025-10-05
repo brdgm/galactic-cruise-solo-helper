@@ -51,10 +51,10 @@ export default defineComponent({
   .position {
     position: absolute;
     width: 25px;
-    &.pos1 { transform: translate(16px, 18px) rotate(90deg); }
-    &.pos2 { transform: translate(16px, 50px) rotate(90deg); }
-    &.pos3 { transform: translate(16px, 82px) rotate(90deg); }
-    &.pos4 { transform: translate(16px, 113px) rotate(90deg); }
+    &.pos1 { transform: translate(17px, 18px) rotate(90deg); }
+    &.pos2 { transform: translate(17px, 50px) rotate(90deg); }
+    &.pos3 { transform: translate(17px, 82px) rotate(90deg); }
+    &.pos4 { transform: translate(17px, 113px) rotate(90deg); }
   }
 }
 </style>

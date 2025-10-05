@@ -4,7 +4,10 @@
       <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
     </template>
     <template #instruction>
-      <p v-html="t(`rules.bot.action.${action.action}.instructions`)"></p>
+      <ul>
+        <li v-html="t(`rules.bot.action.${action.action}.reputation`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.refill`)"></li>
+      </ul>
     </template>
   </ActionBox>
 </template>
