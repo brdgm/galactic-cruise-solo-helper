@@ -46,10 +46,10 @@ export default defineComponent({
 <style lang="scss" scoped>
 .actionBox {
   display: flex;
-  background-color: #dbcba1;
-  border: 2px solid #8a7d72;
+  background-color: #f6efe0;
+  border: 2px solid #d8c6ac;
   border-radius: 0.5rem;
-  filter: drop-shadow(0.1rem 0.1rem 0.2rem #888);
+  filter: drop-shadow(0.1rem 0.1rem 0.2rem #aaa);
   padding: 1rem;
   cursor: pointer;
   max-width: 300px;

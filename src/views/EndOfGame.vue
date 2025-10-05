@@ -124,7 +124,4 @@ export default defineComponent({
 .number {
   width: 5rem;
 }
-.finalScore {
-  font-size: 1.25rem;
-}
 </style>

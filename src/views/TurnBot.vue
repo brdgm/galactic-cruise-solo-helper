@@ -2,12 +2,7 @@
   <SideBar :navigationState="navigationState"/>
   <h1>{{t('turnBot.title')}}</h1>
 
-  <p>...</p>
-
-  <button class="btn btn-primary btn-lg mt-4 me-2" @click="next(false)">
-    {{t('action.next')}}
-  </button>
-  <EndRoundButton :round="navigationState.round" @endRound="next(true)"/>
+  <BotActions :navigationState="navigationState" @next="next"/>
 
   <DebugInfo :navigationState="navigationState"/>
 
@@ -24,7 +19,7 @@ import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/turn/SideBar.vue'
 import Player from '@/services/enum/Player'
 import DebugInfo from '@/components/turn/DebugInfo.vue'
-import EndRoundButton from '@/components/turn/EndRoundButton.vue'
+import BotActions from '@/components/turn/BotActions.vue'
 
 export default defineComponent({
   name: 'TurnBot',
@@ -32,7 +27,7 @@ export default defineComponent({
     FooterButtons,
     SideBar,
     DebugInfo,
-    EndRoundButton
+    BotActions
   },
   setup() {
     const { t } = useI18n()

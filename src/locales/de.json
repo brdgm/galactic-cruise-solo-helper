@@ -139,6 +139,41 @@
         "dayInSpace": {
           "gainGuestBonuses": "Rachel erhält 1 Reputation pro Gast unabhängig von der Farbe."
         }
+      },
+      "action": {
+        "build-ship-segments": {
+          "title": "Segmente einbauen"
+        },
+        "draw-agenda-cards": {
+          "title": "Agendakarten ziehen"
+        },
+        "refill-agenda-cards": {
+          "title": "Agendakarten auffüllen"
+        },
+        "gain-resources": {
+          "title": "Ressourcen erhalten"
+        },
+        "refill-storage-silo": {
+          "title": "Depot auffüllen"
+        },
+        "advertise-cruise": {
+          "title": "Reise bewerben"
+        },
+        "build-development-network": {
+          "title": "Entwicklung bauen (im Hauptquartier)"
+        },
+        "build-development-technology": {
+          "title": "Entwicklung bauen (als Technologie)"
+        },
+        "hire-expert-worker-bot": {
+          "title": "Experten anheuern"
+        },
+        "refresh-blueprints": {
+          "title": "Blaupausen auffüllen"
+        },
+        "launch-ship": {
+          "title": "Raumschiff starten"
+        }
       }
     }
   },

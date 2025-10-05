@@ -139,6 +139,41 @@
         "dayInSpace": {
           "gainGuestBonuses": "Rachel gains 1 Reputation for each Guest on the Cruise, regardless of the Guest types."
         }
+      },
+      "action": {
+        "build-ship-segments": {
+          "title": "Build Ship Segments"
+        },
+        "draw-agenda-cards": {
+          "title": "Draw Agenda Cards"
+        },
+        "refill-agenda-cards": {
+          "title": "Refill Agenda Cards"
+        },
+        "gain-resources": {
+          "title": "Gain Resources"
+        },
+        "refill-storage-silo": {
+          "title": "Refill Storage Silo"
+        },
+        "advertise-cruise": {
+          "title": "Advertise Cruise"
+        },
+        "build-development-network": {
+          "title": "Build Development (Network)"
+        },
+        "build-development-technology": {
+          "title": "Build Development (Technology)"
+        },
+        "hire-expert-worker-bot": {
+          "title": "Hire Expert Worker"
+        },
+        "refresh-blueprints": {
+          "title": "Refresh Blueprints"
+        },
+        "launch-ship": {
+          "title": "Launch Ship"
+        }
       }
     }
   },
