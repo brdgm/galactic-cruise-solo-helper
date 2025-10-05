@@ -53,7 +53,8 @@
     "assignWorker": "Angestellten einsetzen",
     "launchShip": "Raumschiff starten",
     "callMeeting": "Meeting einberufen",
-    "companyGoals": "Überprüfe deine Unternehmensziele."
+    "companyGoals": "Überprüfe deine Unternehmensziele.",
+    "lastRoundInfo": "<b>Letzte Runde:</b> Rachel und du holen alle Angestellten vom Hauptquartier zurück in den Pausenraum und erhalten wie üblich Pausenboni."
   },
   "turnBot": {
     "title": "Rachel"
@@ -64,7 +65,8 @@
   "endOfRound": {
     "title": {
       "1": "JHV A: Fortschrittswertung",
-      "2": "JHV B: Fortschrittswertung"
+      "2": "JHV B: Fortschrittswertung",
+      "3": "Spielende ausgelöst"
     },
     "instructions": {
       "progressScoring": "Führe die Fortschrittswertung für Abschnitt {round} für Rachel und dich selbst durch.",
@@ -75,6 +77,11 @@
       "chooseClosestWorker": "Wähle den Angestellten, der sich im Uhrzeigersinn am nächsten zum Areal oben in der Mitte befindet.",
       "replaceSecondWorker": "Ersetze den anderen NPC-Angestellten durch den zweiten NPC-Experten."
     },
+    "endGameTriggered": {
+      "title": "Das Spielende ist ausgelöst.",
+      "finishCurrentRound": "Die aktuelle Runde wird noch zuende gespielt, und dann folgt eine letzte Runde.",
+      "nextRoundFinalRound": "Die nächste Runde ist die letzte Runde."
+    },
     "endRound": {
       "title": "Spielfortschritt {round} abgeschlossen",
       "endRoundConfirm": {
@@ -83,6 +90,9 @@
         "3": "Wenn der letzte Würfel auf Fortschrittsplättchen 3 platziert wurde, wird das Spielende ausgelöst."
       }
     }
+  },
+  "endOfGame": {
+    "title": "Spielende"
   },
   "rules": {
     "advanceShips": {

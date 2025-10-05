@@ -3,25 +3,33 @@
   <h1>{{t(`endOfRound.title.${round}`)}}</h1>
 
   <div class="instructions mt-4">
-    <ol class="mt-3">
-      <li v-html="t('endOfRound.instructions.progressScoring', { round })"></li>
-      <li>
-        <span v-html="t('endOfRound.instructions.buildNpcDevelopments')"></span><br/>
-        <div>
-          <TechnologySelection :position="npcDevelopment.developmentPos" />
-          <NetworkLocationDisplay :networkLocations="npcDevelopment.networkLocations"/>
-        </div>
-        <span v-html="t('endOfRound.instructions.skipIfColorExists')"></span>
-      </li>
-      <li v-html="t('endOfRound.instructions.hireNpcExpert')"></li>
-      <ul v-if="round == 1">
-        <li v-html="t('endOfRound.instructions.replaceFirstWorker')"></li>
-        <li v-html="t('endOfRound.instructions.chooseClosestWorker')"></li>
-      </ul>
-      <ul v-if="round == 2">
-        <li v-html="t('endOfRound.instructions.replaceSecondWorker')"></li>
-      </ul>
-    </ol>
+    <template v-if="round < 3">
+      <ol class="mt-3">
+        <li v-html="t('endOfRound.instructions.progressScoring', { round })"></li>
+        <li>
+          <span v-html="t('endOfRound.instructions.buildNpcDevelopments')"></span><br/>
+          <div>
+            <TechnologySelection :position="npcDevelopment.developmentPos" />
+            <NetworkLocationDisplay :networkLocations="npcDevelopment.networkLocations"/>
+          </div>
+          <span v-html="t('endOfRound.instructions.skipIfColorExists')"></span>
+        </li>
+        <li v-html="t('endOfRound.instructions.hireNpcExpert')"></li>
+        <ul v-if="round == 1">
+          <li v-html="t('endOfRound.instructions.replaceFirstWorker')"></li>
+          <li v-html="t('endOfRound.instructions.chooseClosestWorker')"></li>
+        </ul>
+        <ul v-if="round == 2">
+          <li v-html="t('endOfRound.instructions.replaceSecondWorker')"></li>
+        </ul>
+      </ol>
+    </template>
+
+    <template v-else>
+      <p v-html="t('endOfRound.endGameTriggered.title')"></p>
+      <p v-if="endOfGameFinishCurrentRound" v-html="t('endOfRound.endGameTriggered.finishCurrentRound')"></p>
+      <p v-else v-html="t('endOfRound.endGameTriggered.nextRoundFinalRound')"></p>
+    </template>
   </div>
 
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next">
@@ -43,6 +51,7 @@ import DevelopmentTile from '@/services/DevelopmentTile'
 import getDevelopmentSetup from '@/util/getDevelopmentSetup'
 import TechnologySelection from '@/components/structure/TechnologySelection.vue'
 import NetworkLocationDisplay from '@/components/structure/NetworkLocationDisplay.vue'
+import Player from '@/services/enum/Player'
 
 export default defineComponent({
   name: 'EndOfRound',
@@ -72,6 +81,9 @@ export default defineComponent({
     },
     npcDevelopment() : DevelopmentTile {
       return this.developmentSetup.npc[this.round]
+    },
+    endOfGameFinishCurrentRound() : boolean {
+      return this.round == 3 && this.navigationState.currentPlayer == Player.PLAYER
     }
   },
   methods: {

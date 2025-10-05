@@ -5,6 +5,12 @@
     <AppIcon type="turn" name="advance-ships" extension="svg" class="icon"/>
   </h1>
 
+  <div class="row" v-if="navigationState.lastRound">
+    <div class="col">
+      <p class="alert alert-info" v-html="t('turnPlayer.lastRoundInfo')"></p>
+    </div>
+  </div>
+
   <div class="mt-3">
     <ActionBox :instructionTitle="t('rules.advanceShips.destination.title')">
       <template #action>

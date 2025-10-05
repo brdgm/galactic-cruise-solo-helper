@@ -9,6 +9,8 @@ export default class NavigationState {
 
   readonly turn : number
   readonly round : number
+  readonly currentPlayer : Player
+  readonly lastRound : boolean
   readonly cardDeck : CardDeck
   readonly routeCalculator : RouteCalculator
 
@@ -16,7 +18,9 @@ export default class NavigationState {
     this.turn = getIntRouteParam(route, 'turn')
     this.routeCalculator = new RouteCalculator(this.turn, route, state)
     this.round = this.routeCalculator.round
-    
+    this.currentPlayer = this.routeCalculator.currentPlayer
+    this.lastRound = this.routeCalculator.lastRound
+
     const botPersistence = getLastBotPersistence(state, this.turn)
     this.cardDeck = CardDeck.fromPersistence(botPersistence.cardDeck)
     if (this.routeCalculator.currentPlayer == Player.BOT && !this.routeCalculator.endOfRound) {

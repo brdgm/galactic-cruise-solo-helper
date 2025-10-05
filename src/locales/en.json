@@ -53,7 +53,8 @@
     "assignWorker": "Assign a Worker",
     "launchShip": "Launch a Ship",
     "callMeeting": "Call a Meeting",
-    "companyGoals": "Check your company goals."
+    "companyGoals": "Check your company goals.",
+    "lastRoundInfo": "<b>Last Round:</b> Rachel and you return all Workers from the Network to the Break Room, gaining a Funding Bonus as usual."
   },
   "turnBot": {
     "title": "Rachel"
@@ -64,7 +65,8 @@
   "endOfRound": {
     "title": {
       "1": "AGM A: Progress Scoring",
-      "2": "AGM B: Progress Scoring"
+      "2": "AGM B: Progress Scoring",
+      "3": "End of game triggered"
     },
     "instructions": {
       "progressScoring": "Execute the progress scoring for Section {round} for Rachel and yourself.",
@@ -75,6 +77,11 @@
       "chooseClosestWorker": "Choose the NPC Worker closest to the top middle location going clockwise.",
       "replaceSecondWorker": "Replace the other NPC Worker with an NPC Expert Worker."
     },
+    "endGameTriggered": {
+      "title": "The end of the game is triggered.",
+      "finishCurrentRound": "The current round is finished, and then a final round is played.",
+      "nextRoundFinalRound": "The next round is the final round."
+    },
     "endRound": {
       "title": "Progress Track {round} completed",
       "endRoundConfirm": {
@@ -83,6 +90,9 @@
         "3": "If the last cube was placed on progress track 3, the end of the game is triggered."
       }
     }
+  },
+  "endOfGame": {
+    "title": "End of Game"
   },
   "rules": {
     "advanceShips": {

@@ -12,10 +12,13 @@ export default class RouteCalculator {
   readonly state : State
 
   public readonly currentPlayer : Player
+  public readonly lastRound : boolean
+
   readonly nextPlayer : Player
   readonly advanceShips : boolean
   readonly endOfRound : boolean
   readonly previousTurn? : Turn
+  readonly lastTurnInGame? : number
 
   constructor(turn: number, route: RouteLocation, state: State) {
     this.turn = turn
@@ -32,6 +35,24 @@ export default class RouteCalculator {
     else {
       this.round = this.previousTurn?.round ?? 1
     }
+
+    this.lastTurnInGame = this.getLastTurnInGame()
+    this.lastRound = this.lastTurnInGame != undefined && this.turn >= this.lastTurnInGame - 1
+  }
+
+  private getLastTurnInGame() : number|undefined {
+    if (this.round == 4) {
+      const round3EndTurn = this.state.turns.find(item => item.round == 3 && item.endOfRound)
+      if (round3EndTurn) {
+        if (round3EndTurn.player == Player.BOT) {
+          return round3EndTurn.turn + 2
+        }
+        else {
+          return round3EndTurn.turn + 3
+        }
+      }
+    }
+    return undefined
   }
 
   /**
@@ -40,6 +61,9 @@ export default class RouteCalculator {
   public getNextRouteTo() : string {
     if (this.advanceShips) {
       return `/turn/${this.turn}/${this.currentPlayer}`
+    }
+    else if (this.turn == this.lastTurnInGame) {
+      return `/turn/${this.turn + 1}/endOfGame`
     }
     else {
       return `/turn/${this.turn + 1}/${this.nextPlayer}/advanceShips`
@@ -50,12 +74,7 @@ export default class RouteCalculator {
    * Get route to next step in round (end of round).
    */
   public getNextRouteToEndOfRound() : string {
-    if (this.round == 3) {
-      return `/turn/${this.turn + 1}/endOfGame`
-    }
-    else {
-      return `/turn/${this.turn + 1}/${this.currentPlayer}/endOfRound`
-    }
+    return `/turn/${this.turn + 1}/${this.currentPlayer}/endOfRound`
   }
 
   /**
