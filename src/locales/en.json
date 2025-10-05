@@ -66,6 +66,15 @@
       "1": "AGM A: Progress Scoring",
       "2": "AGM B: Progress Scoring"
     },
+    "instructions": {
+      "progressScoring": "Execute the progress scoring for Section {round} for Rachel and yourself.",
+      "buildNpcDevelopments": "Build NPC developments:",
+      "skipIfColorExists": "If there is already a Development of that color in the depicted area, skip that placement.",
+      "hireNpcExpert": "Hire NPC Expert",
+      "replaceFirstWorker": "Replace one NPC Worker with one NPC Expert Worker.",
+      "chooseClosestWorker": "Choose the NPC Worker closest to the top middle location going clockwise.",
+      "replaceSecondWorker": "Replace the other NPC Worker with an NPC Expert Worker."
+    },
     "endRound": {
       "title": "Progress Track {round} completed",
       "endRoundConfirm": {

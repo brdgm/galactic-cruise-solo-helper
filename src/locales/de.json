@@ -61,6 +61,29 @@
   "sideBar": {
     "turn": "Zug {turn}"
   },
+  "endOfRound": {
+    "title": {
+      "1": "JHV A: Fortschrittswertung",
+      "2": "JHV B: Fortschrittswertung"
+    },
+    "instructions": {
+      "progressScoring": "Führe die Fortschrittswertung für Abschnitt {round} für Rachel und dich selbst durch.",
+      "buildNpcDevelopments": "NPC-Entwicklungen bauen:",
+      "skipIfColorExists": "Befindet sich schon eine NPC-Entwicklung auf diesem Areal, dann wirf die Entwicklung ungenutzt ab.",
+      "hireNpcExpert": "NPC-Experten anheuern",
+      "replaceFirstWorker": "Ersetze einen der NPC-Angestellten durch einen NPC-Experten.",
+      "chooseClosestWorker": "Wähle den Angestellten, der sich im Uhrzeigersinn am nächsten zum Areal oben in der Mitte befindet.",
+      "replaceSecondWorker": "Ersetze den anderen NPC-Angestellten durch den zweiten NPC-Experten."
+    },
+    "endRound": {
+      "title": "Spielfortschritt {round} abgeschlossen",
+      "endRoundConfirm": {
+        "1": "Wenn der letzte Würfel auf Fortschrittsplättchen 1 platziert wurde, wird die Jahreshauptversammlung (JHV) A abgehalten.",
+        "2": "Wenn der letzte Würfel auf Fortschrittsplättchen 1 platziert wurde, wird die Jahreshauptversammlung (JHV) B abgehalten.",
+        "3": "Wenn der letzte Würfel auf Fortschrittsplättchen 3 platziert wurde, wird das Spielende ausgelöst."
+      }
+    }
+  },
   "rules": {
     "advanceShips": {
       "destination": {

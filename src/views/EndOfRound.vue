@@ -4,22 +4,22 @@
 
   <div class="instructions mt-4">
     <ol class="mt-3">
-      <li>Execute the progress scoring for Section {{round}} for Rachel and yourself.</li>
+      <li v-html="t('endOfRound.instructions.progressScoring', { round })"></li>
       <li>
-        <span>Build NPC developments:</span><br/>
+        <span v-html="t('endOfRound.instructions.buildNpcDevelopments')"></span><br/>
         <div>
           <TechnologySelection :position="npcDevelopment.developmentPos" />
           <NetworkLocationDisplay :networkLocations="npcDevelopment.networkLocations"/>
         </div>
-        <span>If there is already a Development of that color in the depicted area, skip that placement.</span>
+        <span v-html="t('endOfRound.instructions.skipIfColorExists')"></span>
       </li>
-      <li>Hire NPC Expert</li>
+      <li v-html="t('endOfRound.instructions.hireNpcExpert')"></li>
       <ul v-if="round == 1">
-        <li>Replace one NPC Worker with one NPC Expert Worker.</li>
-        <li>Choose the NPC Worker closest to the top middle location going clockwise.</li>
+        <li v-html="t('endOfRound.instructions.replaceFirstWorker')"></li>
+        <li v-html="t('endOfRound.instructions.chooseClosestWorker')"></li>
       </ul>
       <ul v-if="round == 2">
-        <li>Replace the other NPC Worker with an NPC Expert Worker.</li>
+        <li v-html="t('endOfRound.instructions.replaceSecondWorker')"></li>
       </ul>
     </ol>
   </div>
