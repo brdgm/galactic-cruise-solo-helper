@@ -132,7 +132,7 @@
     "bot": {
       "advanceShips": {
         "destination": {
-          "placeUpgradeToken": "If it’s the first Destination of the Cruise, she drops off her Upgrade Token on the leftmost empty space on the Destination, increasing scoring here by 1 VP. Rachel does not unlock or trigger any bonuses from Upgrades.",
+          "placeUpgradeToken": "If it’s the first Destination of the Cruise, Rachel drops off her Upgrade Token on the leftmost empty space on the Destination, increasing scoring here by 1 VP. Rachel does not unlock or trigger any bonuses from Upgrades.",
           "payAdsForGuests": "Then, regardless if it is the first Destination or not, she scores all of her Guests at the Destination. Rachel does not gain/spend Ads to do this.",
           "fourthToken": "In the rare case that Rachel would visit the same first Destination four times, she will place the Upgrade Token on the next Destination on that same Cruise. If there are no other Destinations on that Cruise, the token is simply discarded."
         },
