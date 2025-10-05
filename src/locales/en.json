@@ -161,7 +161,18 @@
           "title": "Refill Storage Silo"
         },
         "advertise-cruise": {
-          "title": "Advertise Cruise"
+          "title": "Advertise Cruise",
+          "select": "Rachel selects the marked Cruise and adds 2 Guests to that Cruise.",
+          "nextCruise": "If that Cruise already has one or more Guests on it, she will select the next available Cruise instead.",
+          "addGuestsFromBottom": "Rachel adds Guests to the selected Cruise from the bottom (1 Ad) section of the Queue in this order:",
+          "firstDestination": "A Guest matching the first Destination on the Cruise (if able).",
+          "secondDestination": "A Guest matching the second Destination on the Cruise (if able).",
+          "thirdDestination": "A Guest matching the third Destination on the Cruise (if able).",
+          "repeatSteps": "Repeat the above steps if 2 Guests have not been added.",
+          "addFromMiddle": "If Rachel is not able to add 2 Guests to the selected Cruise from the bottom section, she will add Guests from the middle (2 Ads) section using the same order as above until a total of 2 Guests have been added.",
+          "addFromTop": "If Rachel is not able to add 2 Guests to the selected Cruise from the bottom and middle sections, she will add Guests from the top (3 Ads) section using the same order as above until a total of 2 Guests have been added.",
+          "addFromSupply": "If Rachel is not able to add 2 Guests to the selected Cruise from the Queue, she will add Guests from the supply using the same order as above until a total of 2 Guests have been added.",
+          "gainReputation": "Once both Guests are added to the selected Cruise, Rachel gains <b>2 Reputation</b>."
         },
         "build-development-network": {
           "title": "Build Development (Network)"

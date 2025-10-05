@@ -1,5 +1,5 @@
 <template>
-  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)" :modalSizeLg="true">
+  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)">
     <template #action>
       <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
     </template>

@@ -1,9 +1,9 @@
 <template>
-  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)" :modalSizeLg="true">
+  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)">
     <template #action>
-      <div class="drawAgendaCardsContainer">
+      <div class="iconContainer">
         <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
-        <div class="agendaCards">
+        <div class="cardSelection">
           <AgendaCardSelection :positions="cardPositions"/>
         </div>
       </div>
@@ -71,12 +71,12 @@ export default defineComponent({
 .icon {
   height: 3em;
 }
-.drawAgendaCardsContainer {
+.iconContainer {
   display: flex;
   align-items: center;
   gap: 1em;
 }
-.agendaCards {
+.cardSelection {
   zoom: 0.5;
 }
 </style>

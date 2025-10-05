@@ -1,10 +1,32 @@
 <template>
   <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)" :modalSizeLg="true">
     <template #action>
-      <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
+      <div class="iconContainer">
+        <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
+        <div class="cardSelection">
+          <AgendaCardSelection :position="cruisePos"/>
+        </div>
+      </div>
     </template>
     <template #instruction>
-      <p v-html="t(`rules.bot.action.${action.action}.instructions`)"></p>
+      <div class="float-end ms-3">
+        <AgendaCardSelection :position="cruisePos"/>
+      </div>
+      <ul>
+        <li v-html="t(`rules.bot.action.${action.action}.select`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.nextCruise`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.addGuestsFromBottom`)"></li>
+        <ol>
+          <li v-html="t(`rules.bot.action.${action.action}.firstDestination`)"></li>
+          <li v-html="t(`rules.bot.action.${action.action}.secondDestination`)"></li>
+          <li v-html="t(`rules.bot.action.${action.action}.thirdDestination`)"></li>
+          <li v-html="t(`rules.bot.action.${action.action}.repeatSteps`)"></li>
+        </ol>
+        <li v-html="t(`rules.bot.action.${action.action}.addFromMiddle`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.addFromTop`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.addFromSupply`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.gainReputation`)"></li>
+      </ul>
     </template>
   </ActionBox>
 </template>
@@ -16,6 +38,8 @@ import NavigationState from '@/util/NavigationState'
 import { CardAction } from '@/services/Card'
 import ActionBox from '@/components/structure/ActionBox.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
+import getCardNumber from '@/util/getCardNumber'
+import AgendaCardSelection from '@/components/structure/AgendaCardSelection.vue'
 
 export default defineComponent({
   name: 'ActionAdvertiseCruise',
@@ -24,7 +48,8 @@ export default defineComponent({
   },
   components: {
     ActionBox,
-    AppIcon
+    AppIcon,
+    AgendaCardSelection
   },
   props: {
     navigationState: {
@@ -39,12 +64,25 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     return { t }
+  },
+  computed: {
+    cruisePos() : number {
+      return getCardNumber(this.navigationState.cardDeck.supportCard, 4)
+    }
   }
 })
 </script>
 
 <style lang="scss" scoped>
 .icon {
-  height: 2.5em;
+  height: 3em;
+}
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.cardSelection {
+  zoom: 0.5;
 }
 </style>

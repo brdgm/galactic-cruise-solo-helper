@@ -161,7 +161,18 @@
           "title": "Depot auffüllen"
         },
         "advertise-cruise": {
-          "title": "Reise bewerben"
+          "title": "Reise bewerben",
+          "select": "Rachel wählt das markierte Reiseplättchen und stellt 2 Gäste zu dieser Reise.",
+          "nextCruise": "Hat diese Reise bereits einen oder mehrere Gäste, wählt sie stattdessen die nächste.",
+          "addGuestsFromBottom": "Rachel platziert Gäste beginnend mit Gästen aus dem 1. Abschnitt (1 Werbung) in folgender Reihenfolge:",
+          "firstDestination": "Einen Gast, der zum ersten Reiseziel der Reise passt (falls verfügbar).",
+          "secondDestination": "Einen Gast, der zum zweiten Reiseziel der Reise passt (falls verfügbar).",
+          "thirdDestination": "Einen Gast, der zum dritten Reiseziel der Reise passt (falls verfügbar)",
+          "repeatSteps": "Wiederhole die obigen Schritte, falls nötig, bis 2 Gäste platziert wurden.",
+          "addFromMiddle": "Sollte Rachel auf diese Weise keine 2 Gäste hinzufügen können, wiederholt sie obigen Ablauf und benutzt dazu den zweiten Abschnitt (2 Werbung), bis insgesamt 2 Gäste hinzugefügt wurden.",
+          "addFromTop": "Sollte Rachel auch so noch keine 2 Gäste hinzufügen können, wiederholt sie obigen Ablauf und benutzt dazu den dritten Abschnitt (3 Werbung), bis insgesamt 2 Gäste hinzugefügt wurden.",
+          "addFromSupply": "Sollte auch das nicht möglich sein, wiederholt Rachel den obigen Ablauf und nimmt dazu Gäste aus dem Vorrat, bis insgesamt 2 Gäste hinzugefügt wurden.",
+          "gainReputation": "Sobald 2 Gäste hinzugefügt wurden, erhält Rachel <b>2 Reputation</b>."
         },
         "build-development-network": {
           "title": "Entwicklung bauen (im Hauptquartier)"
