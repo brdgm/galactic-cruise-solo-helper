@@ -2,12 +2,13 @@
   <SideBar :navigationState="navigationState"/>
   <h1>{{t('turnPlayer.title')}}</h1>
 
-  <p class="mt-3">Either:</p>
+  <p class="mt-3" v-html="t('turnPlayer.choose')"></p>
   <ul>
-    <li>Assign a Worker</li>
-    <li>Launch a Ship</li>
-    <li>Call a Meeting</li>
+    <li>{{t('turnPlayer.assignWorker')}}</li>
+    <li>{{t('turnPlayer.launchShip')}}</li>
+    <li>{{t('turnPlayer.callMeeting')}}</li>
   </ul>
+  <p v-html="t('turnPlayer.companyGoals')"></p>
 
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next(false)">
     {{t('action.next')}}

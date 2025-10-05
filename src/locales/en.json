@@ -48,7 +48,12 @@
   },
   "turnPlayer": {
     "title": "Player",
-    "takeTurn": "Take your turn."
+    "takeTurn": "Take your turn.",
+    "choose": "Choose:",
+    "assignWorker": "Assign a Worker",
+    "launchShip": "Launch a Ship",
+    "callMeeting": "Call a Meeting",
+    "companyGoals": "Check your company goals."
   },
   "turnBot": {
     "title": "Rachel"

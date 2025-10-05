@@ -48,7 +48,12 @@
   },
   "turnPlayer": {
     "title": "Spieler",
-    "takeTurn": "Führe deinen Zug aus."
+    "takeTurn": "Führe deinen Zug aus.",
+    "choose": "Wähle:",
+    "assignWorker": "Angestellten einsetzen",
+    "launchShip": "Raumschiff starten",
+    "callMeeting": "Meeting einberufen",
+    "companyGoals": "Überprüfe deine Unternehmensziele."
   },
   "turnBot": {
     "title": "Rachel"
