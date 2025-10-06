@@ -22,9 +22,6 @@ import AppIcon from '@/components/structure/AppIcon.vue'
 
 export default defineComponent({
   name: 'ActionRefillStorageSilo',
-  emits: {
-    extraVP: (_extraVP: number) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
-  },
   components: {
     ActionBox,
     AppIcon

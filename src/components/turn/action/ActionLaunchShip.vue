@@ -80,9 +80,6 @@ import AgendaCardSelection from '@/components/structure/AgendaCardSelection.vue'
 
 export default defineComponent({
   name: 'ActionLaunchShip',
-  emits: {
-    extraVP: (_extraVP: number) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
-  },
   components: {
     ActionBox,
     AppIcon,
@@ -112,6 +109,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .icon {
-  height: 3em;
+  height: 4em;
 }
 </style>

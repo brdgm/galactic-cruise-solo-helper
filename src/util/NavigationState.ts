@@ -4,6 +4,7 @@ import { BotPersistence, State } from '@/store/state'
 import Player from '@/services/enum/Player'
 import CardDeck from '@/services/CardDeck'
 import RouteCalculator from '@/services/RouteCalculator'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
 export default class NavigationState {
 
@@ -25,7 +26,9 @@ export default class NavigationState {
 
     const botPersistence = getLastBotPersistence(state, this.turn)
     this.cardDeck = CardDeck.fromPersistence(botPersistence.cardDeck)
-    if (this.routeCalculator.currentPlayer == Player.BOT && !this.routeCalculator.endOfRound) {
+    if (this.routeCalculator.currentPlayer == Player.BOT
+        && !this.routeCalculator.endOfRound
+        && (!this.noWorkers || state.setup.difficultyLevel == DifficultyLevel.HARD)) {
       this.cardDeck.draw()
     }
   }

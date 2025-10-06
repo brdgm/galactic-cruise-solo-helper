@@ -43,9 +43,6 @@ import AgendaCardSelection from '@/components/structure/AgendaCardSelection.vue'
 
 export default defineComponent({
   name: 'ActionAdvertiseCruise',
-  emits: {
-    extraVP: (_extraVP: number) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
-  },
   components: {
     ActionBox,
     AppIcon,

@@ -1,50 +1,44 @@
 <template>
-  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)">
+  <ActionBox :instructionTitle="t(`rules.bot.action.place-worker.title`)">
     <template #action>
       <div class="iconContainer">
-        <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
+        <AppIcon name="place-worker" extension="svg" class="icon"/>
         <div class="selectionIcon">
-          <TechnologySelection :position="technologyPosition"/>
+          <WorkerLocationDisplay :workerLocation="workerLocation"/>
         </div>
       </div>
     </template>
     <template #instruction>
       <div class="float-end ms-3">
-        <TechnologySelection :position="technologyPosition"/>
+        <WorkerLocationDisplay :workerLocation="workerLocation"/>
       </div>
       <ul>
-        <li v-html="t(`rules.bot.action.${action.action}.startingPosition`)"></li>
-        <li v-html="t(`rules.bot.action.${action.action}.allAreasFilled`)"></li>
-        <li v-html="t(`rules.bot.action.${action.action}.buildingOrder`)"></li>
+        <li v-html="t(`rules.bot.action.place-worker.placeWorker`)"></li> 
+        <li v-html="t(`rules.bot.action.place-worker.nextLocation`)"></li>
       </ul>
     </template>
   </ActionBox>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
+import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
-import { CardAction } from '@/services/Card'
 import ActionBox from '@/components/structure/ActionBox.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
+import WorkerLocationDisplay from '@/components/structure/WorkerLocationDisplay.vue'
 import getCardNumber from '@/util/getCardNumber'
-import TechnologySelection from '@/components/structure/TechnologySelection.vue'
 
 export default defineComponent({
-  name: 'ActionBuildDevelopmentTechnology',
+  name: 'ActionPlaceWorker',
   components: {
     ActionBox,
     AppIcon,
-    TechnologySelection
+    WorkerLocationDisplay
   },
   props: {
     navigationState: {
       type: NavigationState,
-      required: true
-    },
-    action: {
-      type: Object as PropType<CardAction>,
       required: true
     }
   },
@@ -53,8 +47,8 @@ export default defineComponent({
     return { t }
   },
   computed: {
-    technologyPosition() : number {
-      return getCardNumber(this.navigationState.cardDeck.supportCard, 4)
+    workerLocation() : number {
+      return getCardNumber(this.navigationState.cardDeck.supportCard, 6)
     }
   }
 })
@@ -62,7 +56,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .icon {
-  height: 5em;
+  height: 3em;
 }
 .iconContainer {
   display: flex;

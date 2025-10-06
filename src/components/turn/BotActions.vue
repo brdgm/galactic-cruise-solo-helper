@@ -2,6 +2,9 @@
   <template v-if="isNoWorkers">
     <ActionCallMeeting :navigationState="navigationState"/>
   </template>
+  <template v-else>
+    <ActionPlaceWorker :navigationState="navigationState"/>
+  </template>
 
   <template v-if="!isNoWorkers || isHardDifficultyMode">
     <div v-for="(action,index) in currentCard?.actions" :key="index">
@@ -36,6 +39,7 @@ import EndRoundButton from './EndRoundButton.vue'
 import ActionCallMeeting from './action/ActionCallMeeting.vue'
 import { useStateStore } from '@/store/state'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import ActionPlaceWorker from './action/ActionPlaceWorker.vue'
 
 export default defineComponent({
   name: 'BotActions',
@@ -56,7 +60,8 @@ export default defineComponent({
     ActionRefillAgendaCards,
     ActionRefillStorageSilo,
     ActionRefreshBlueprints,
-    ActionCallMeeting
+    ActionCallMeeting,
+    ActionPlaceWorker
   },
   props: {
     navigationState: {

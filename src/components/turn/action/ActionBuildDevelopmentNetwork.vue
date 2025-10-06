@@ -3,7 +3,7 @@
     <template #action>
       <div class="iconContainer">
         <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
-        <div class="cardSelection">
+        <div class="selectionIcon">
           <NetworkLocationDisplay :networkLocation="networkLocation"/>
         </div>
       </div>
@@ -33,9 +33,6 @@ import getCardNumber from '@/util/getCardNumber'
 
 export default defineComponent({
   name: 'ActionBuildDevelopmentNetwork',
-  emits: {
-    extraVP: (_extraVP: number) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
-  },
   components: {
     ActionBox,
     AppIcon,
@@ -72,7 +69,7 @@ export default defineComponent({
   align-items: center;
   gap: 1em;
 }
-.cardSelection {
+.selectionIcon {
   zoom: 0.6;
 }
 </style>

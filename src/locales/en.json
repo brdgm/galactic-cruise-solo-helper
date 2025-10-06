@@ -238,6 +238,11 @@
         "call-meeting": {
           "title": "Call a Meeting",
           "returnWorkers": "Rachel returns all Workers and gains VP for each Worker recalled based on her VP Funding Bonus."
+        },
+        "place-worker": {
+          "title": "Place a Worker",
+          "placeWorker": "Place one of Rachel’s Workers (an Expert if available) into the Network at the marked location.",
+          "nextLocation": "If she already occupies that space, she will go to the first available space clockwise not containing one of her Workers."
         }
       }
     }

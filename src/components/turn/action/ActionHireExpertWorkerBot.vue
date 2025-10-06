@@ -27,9 +27,6 @@ import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
 export default defineComponent({
   name: 'ActionHireExpertWorkerBot',
-  emits: {
-    extraVP: (_extraVP: number) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
-  },
   components: {
     ActionBox,
     AppIcon

@@ -32,9 +32,6 @@ import getCardNumber from '@/util/getCardNumber'
 
 export default defineComponent({
   name: 'ActionDrawAgendaCards',
-  emits: {
-    extraVP: (_extraVP: number) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
-  },
   components: {
     ActionBox,
     AppIcon,

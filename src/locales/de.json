@@ -238,6 +238,11 @@
         "call-meeting": {
           "title": "Ein Meeting einberufen",
           "returnWorkers": "Rachel ruft alle Arbeiter zurück und erhält SP pro Angestelltem als Pausenbonus für das Zurücknehmen."
+        },
+        "place-worker": {
+          "title": "Angestellten platzieren",
+          "placeWorker": "Platziere einen von Rachels Angestellten (wenn möglich immer zuerst einen Experten) im Hauptquartier an der markierten Stelle.",
+          "nextLocation": "Wenn dieser Ort bereits von ihr besetzt ist, wählt sie den nächsten Ort im Uhrzeigersinn, an dem sich kein eigener Angestellter befindet."
         }
       }
     }
