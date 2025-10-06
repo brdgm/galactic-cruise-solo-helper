@@ -159,10 +159,15 @@
           "refill": "She then discards all the Agenda Cards in the column top to bottom and refills the spaces from bottom to top with 4 new cards from the top of the Agenda Card deck."
         },
         "gain-resources": {
-          "title": "Gain Resources"
+          "title": "Gain Resources",
+          "targetCards": "Rachel targets the marked Agenda Card from the display and reduces the Resource listed on it in the Storage Silo by one. She then moves to the next card (top to bottom, wrapping around if necessary) and does the same thing, and then does so with a third card. If needed, she can target the same card over and over.",
+          "noCardsInDisplay": "If there are no cards in the display, she will attempt to take 3 of whichever Resource is listed on the top card of the Agenda Card discard. If there are no cards in the display and none in the discard pile she will not take this action.",
+          "cannotReduceAll": "If she cannot reduce all 3 indicated Resources, she will not take this action at all."
         },
         "refill-storage-silo": {
-          "title": "Refill Storage Silo"
+          "title": "Refill Storage Silo",
+          "selection": "Rachel refills the first Resource that she was unable to take during the Gain Resources action that she just tried to perform.",
+          "refill": "She will refill this Resource to its maximum and gain 1 Reputation."
         },
         "advertise-cruise": {
           "title": "Advertise Cruise",

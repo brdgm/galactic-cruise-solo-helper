@@ -159,10 +159,15 @@
           "refill": "Anschließend wirft sie alle Agendakarten von oben nach unten ab und füllt von unten nach oben die Auslage mit neuen Agendakarten wieder auf."
         },
         "gain-resources": {
-          "title": "Ressourcen erhalten"
+          "title": "Ressourcen erhalten",
+          "targetCards": "Beginne mit der markierten Agendakarte. Rachel reduziert die unten links abgebildete Ressource im Depot um 1 und geht von oben nach unten weiter zur nächsten Agendakarte, bis das Depot insgesamt um drei Ressourcen reduziert wurde. Ist sie bei der 4. Agendakarte angekommen und es wurden noch nicht 3 Ressourcen genommen, fängt sie wieder bei der obersten Karte der offenen Auslage an.",
+          "noCardsInDisplay": "Falls keine Agendakarte in der offenen Auslage liegt, versucht Rachel, 3x die Ressource der obersten offenen Karte des Ablagestapels zu nehmen.",
+          "cannotReduceAll": "Kann sie auf diese Weise nicht 3 Ressourcen nehmen, führt sie die Aktion nicht aus."
         },
         "refill-storage-silo": {
-          "title": "Depot auffüllen"
+          "title": "Depot auffüllen",
+          "selection": "Rachel füllt die erste Ressource, die sie während der (nicht durchgeführten) Aktion \"Ressourcen erhalten\" nicht nehmen konnte, auf ihr Maximum auf.",
+          "refill": "Sie erhält dafür 1 Reputation."
         },
         "advertise-cruise": {
           "title": "Reise bewerben",

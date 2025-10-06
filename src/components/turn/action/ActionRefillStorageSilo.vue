@@ -1,10 +1,13 @@
 <template>
-  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)" :modalSizeLg="true">
+  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)">
     <template #action>
       <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
     </template>
     <template #instruction>
-      <p v-html="t(`rules.bot.action.${action.action}.instructions`)"></p>
+      <ul>
+        <li v-html="t(`rules.bot.action.${action.action}.selection`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.refill`)"></li>
+      </ul>
     </template>
   </ActionBox>
 </template>
@@ -45,6 +48,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .icon {
-  height: 2.5em;
+  height: 4.5em;
 }
 </style>
