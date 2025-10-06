@@ -59,7 +59,9 @@
   "turnBot": {
     "title": "Rachel",
     "placeWorker": "Place a Worker",
-    "noWorkers": "No Workers available"
+    "noWorkers": "No Workers available",
+    "actionExecuted": "Action executed",
+    "notPossible": "Not possible"
   },
   "sideBar": {
     "turn": "Turn {turn}"

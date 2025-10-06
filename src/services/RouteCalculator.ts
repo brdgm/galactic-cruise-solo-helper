@@ -9,6 +9,7 @@ export default class RouteCalculator {
 
   readonly round : number
   readonly turn : number
+  readonly action : number
   readonly state : State
 
   public readonly currentPlayer : Player
@@ -21,8 +22,9 @@ export default class RouteCalculator {
   readonly previousTurn? : Turn
   readonly lastTurnInGame? : number
 
-  constructor(turn: number, route: RouteLocation, state: State) {
+  constructor(turn: number, action: number, route: RouteLocation, state: State) {
     this.turn = turn
+    this.action = action
     this.state = state
     this.currentPlayer = route.name?.toString().match(TURN_PLAYER_REGEX) ? Player.PLAYER : Player.BOT
     this.nextPlayer = this.currentPlayer == Player.BOT ? Player.PLAYER : Player.BOT
@@ -87,13 +89,26 @@ export default class RouteCalculator {
   }
 
   /**
+   * Get route to next step in round for bot's next action.
+   */
+  public getNextRouteNextAction() : string {
+    return `/turn/${this.turn}/${this.currentPlayer}/action/${this.action + 1}`
+  }
+
+  /**
    * Get route to previous step in round.
    */
   public getBackRouteTo() : string {
-    if (this.previousTurn?.endOfRound) {
+    if (this.action > 1) {
+      return `/turn/${this.turn}/${this.currentPlayer}/action/${this.action - 1}`
+    }
+    else if (this.action > 0) {
+      return `/turn/${this.turn}/${this.currentPlayer}`
+    }
+    else if (this.previousTurn?.endOfRound) {
       return `/turn/${this.turn - 1}/${this.previousTurn.player}/endOfRound`
     }
-    if (this.endOfRound) {
+    else if (this.endOfRound) {
       return `/turn/${this.turn - 1}/${this.previousTurn?.player}`
     }
     else if (this.advanceShips) {

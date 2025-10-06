@@ -59,7 +59,9 @@
   "turnBot": {
     "title": "Rachel",
     "placeWorker": "Platziere Angestellten",
-    "noWorkers": "Keine Angestellten verfügbar"
+    "noWorkers": "Keine Angestellten verfügbar",
+    "actionExecuted": "Aktion ausgeführt",
+    "notPossible": "Nicht möglich"
   },
   "sideBar": {
     "turn": "Zug {turn}"

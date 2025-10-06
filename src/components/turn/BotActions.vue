@@ -6,16 +6,24 @@
     <ActionPlaceWorker :navigationState="navigationState"/>
   </template>
 
-  <template v-if="!isNoWorkers || isHardDifficultyMode">
-    <div v-for="(action,index) in currentCard?.actions" :key="index">
-      <component :is="`action-${action.action}`" :navigationState="navigationState" :action="action"/>
-    </div>
+  <template v-if="cardAction">
+    <component :is="`action-${cardAction.action}`" :navigationState="navigationState" :action="cardAction"/>
   </template>
 
-  <button class="btn btn-primary btn-lg mt-4 me-2" @click="next(false)">
-    {{t('action.next')}}
-  </button>
-  <EndRoundButton :round="navigationState.round" @endRound="next(true)"/>
+  <template v-if="cardActionExecuted">
+    <button class="btn btn-primary btn-lg mt-4 me-2" @click="next(false)">
+      {{t('action.next')}}
+    </button>
+    <EndRoundButton :round="navigationState.round" @endRound="next(true)"/>
+  </template>
+  <template v-else>
+    <button class="btn btn-success btn-lg mt-4 me-2" @click="actionExecuted">
+      {{t('turnBot.actionExecuted')}}
+    </button>
+    <button class="btn btn-danger btn-lg mt-4 me-2" @click="actionNotPossible">
+      {{t('turnBot.notPossible')}}
+    </button>
+  </template>
 
 </template>
 
@@ -40,11 +48,13 @@ import ActionCallMeeting from './action/ActionCallMeeting.vue'
 import { useStateStore } from '@/store/state'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import ActionPlaceWorker from './action/ActionPlaceWorker.vue'
+import { CardAction } from '@/services/Card'
 
 export default defineComponent({
   name: 'BotActions',
   emits: {
-    next: (_endRound: boolean) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
+    next: (_endRound: boolean) => true,  // eslint-disable-line @typescript-eslint/no-unused-vars
+    actionNotPossible: () => true
   },
   components: {
     AppIcon,
@@ -79,6 +89,7 @@ export default defineComponent({
   },
   data() {
     return {
+      cardActionExecuted: false
     }
   },
   computed: {
@@ -87,11 +98,23 @@ export default defineComponent({
     },
     isHardDifficultyMode() : boolean {
       return this.state.setup.difficultyLevel == DifficultyLevel.HARD
+    },
+    cardAction() : CardAction|undefined {
+      if (this.isNoWorkers && !this.isHardDifficultyMode) {
+        return undefined
+      }
+      return this.currentCard?.actions[this.navigationState.action % 2]
     }
   },
   methods: {
     next(endRound: boolean) : void {
       this.$emit('next', endRound)
+    },
+    actionExecuted() : void {
+      this.cardActionExecuted = true
+    },
+    actionNotPossible() : void {
+      this.$emit('actionNotPossible')
     }
   }
 })
