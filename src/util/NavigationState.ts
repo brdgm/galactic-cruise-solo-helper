@@ -32,6 +32,9 @@ export default class NavigationState {
         && !this.routeCalculator.endOfRound
         && (!this.noWorkers || state.setup.difficultyLevel == DifficultyLevel.HARD)) {
       this.cardDeck.draw()
+      if (this.action > 1) {
+        this.cardDeck.draw()
+      }
     }
   }
 

@@ -1,5 +1,5 @@
 /**
- * BotAction
+ * Bot Action
  */
 enum BotAction {
   BUILD_SHIP_SEGMENTS = 'build-ship-segments',

@@ -2,7 +2,7 @@
   <SideBar :navigationState="navigationState"/>
   <h1>{{t('turnBot.title')}}</h1>
 
-  <BotActions :navigationState="navigationState" @next="next" @actionNotPossible="actionNotPossible"/>
+  <BotActions :navigationState="navigationState" @next="next" @actionNotPossible="actionNotPossible" @anotherAction="anotherAction"/>
 
   <DebugInfo :navigationState="navigationState"/>
 
@@ -48,6 +48,9 @@ export default defineComponent({
   methods: {
     actionNotPossible() : void {
       this.router.push(this.routeCalculator.getNextRouteNextAction())
+    },
+    anotherAction() : void {
+      this.router.push(this.routeCalculator.getNextRouteNextAction(2))
     },
     next(endOfRound: boolean) : void {
       const turn : Turn = {

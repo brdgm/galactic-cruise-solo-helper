@@ -28,7 +28,7 @@ const state = mockState({turns:[
 
 describe('services/RouteCalculator', () => {
   it('turn1-advance-ships', () => {
-    const routeCalculator = new RouteCalculator(1, mockRouteLocation({name:'TurnPlayerAdvanceShips'}), state)
+    const routeCalculator = new RouteCalculator(1, 0, mockRouteLocation({name:'TurnPlayerAdvanceShips'}), state)
 
     expect(routeCalculator.turn).to.eq(1)
     expect(routeCalculator.round).to.eq(1)
@@ -37,7 +37,7 @@ describe('services/RouteCalculator', () => {
   })
 
   it('turn1', () => {
-    const routeCalculator = new RouteCalculator(1, mockRouteLocation({name:'TurnPlayer'}), state)
+    const routeCalculator = new RouteCalculator(1, 0, mockRouteLocation({name:'TurnPlayer'}), state)
 
     expect(routeCalculator.turn).to.eq(1)
     expect(routeCalculator.round).to.eq(1)
@@ -47,7 +47,7 @@ describe('services/RouteCalculator', () => {
   })
 
   it('turn2-advance-ships', () => {
-    const routeCalculator = new RouteCalculator(2, mockRouteLocation({name:'TurnBotAdvanceShips'}), state)
+    const routeCalculator = new RouteCalculator(2, 0, mockRouteLocation({name:'TurnBotAdvanceShips'}), state)
 
     expect(routeCalculator.turn).to.eq(2)
     expect(routeCalculator.round).to.eq(1)
@@ -57,7 +57,7 @@ describe('services/RouteCalculator', () => {
   })
 
   it('turn2', () => {
-    const routeCalculator = new RouteCalculator(2, mockRouteLocation({name:'TurnBotNoWorkers'}), state)
+    const routeCalculator = new RouteCalculator(2, 0, mockRouteLocation({name:'TurnBotNoWorkers'}), state)
 
     expect(routeCalculator.turn).to.eq(2)
     expect(routeCalculator.round).to.eq(1)
@@ -68,7 +68,7 @@ describe('services/RouteCalculator', () => {
   })
 
   it('turn3-advance-ships', () => {
-    const routeCalculator = new RouteCalculator(3, mockRouteLocation({name:'TurnPlayerAdvanceShips'}), state)
+    const routeCalculator = new RouteCalculator(3, 0, mockRouteLocation({name:'TurnPlayerAdvanceShips'}), state)
 
     expect(routeCalculator.turn).to.eq(3)
     expect(routeCalculator.round).to.eq(1)
@@ -77,7 +77,7 @@ describe('services/RouteCalculator', () => {
   })
 
   it('turn4-advance-ships', () => {
-    const routeCalculator = new RouteCalculator(4, mockRouteLocation({name:'TurnBotAdvanceShips'}), state)
+    const routeCalculator = new RouteCalculator(4, 0, mockRouteLocation({name:'TurnBotAdvanceShips'}), state)
 
     expect(routeCalculator.turn).to.eq(4)
     expect(routeCalculator.round).to.eq(1)
@@ -86,7 +86,7 @@ describe('services/RouteCalculator', () => {
   })
 
   it('turn4', () => {
-    const routeCalculator = new RouteCalculator(4, mockRouteLocation({name:'TurnBot'}), state)
+    const routeCalculator = new RouteCalculator(4, 0, mockRouteLocation({name:'TurnBot'}), state)
 
     expect(routeCalculator.turn).to.eq(4)
     expect(routeCalculator.round).to.eq(1)
@@ -96,7 +96,7 @@ describe('services/RouteCalculator', () => {
   })
 
   it('turn5-endOfRound', () => {
-    const routeCalculator = new RouteCalculator(5, mockRouteLocation({name:'TurnBotEndOfRound'}), state)
+    const routeCalculator = new RouteCalculator(5, 0, mockRouteLocation({name:'TurnBotEndOfRound'}), state)
 
     expect(routeCalculator.turn).to.eq(5)
     expect(routeCalculator.round).to.eq(1)
@@ -105,7 +105,7 @@ describe('services/RouteCalculator', () => {
   })
 
   it('turn6-advance-ships', () => {
-    const routeCalculator = new RouteCalculator(6, mockRouteLocation({name:'TurnPlayerAdvanceShips'}), state)
+    const routeCalculator = new RouteCalculator(6, 0, mockRouteLocation({name:'TurnPlayerAdvanceShips'}), state)
 
     expect(routeCalculator.turn).to.eq(6)
     expect(routeCalculator.round).to.eq(2)
@@ -115,7 +115,7 @@ describe('services/RouteCalculator', () => {
   })
 
   it('turn10', () => {
-    const routeCalculator = new RouteCalculator(10, mockRouteLocation({name:'TurnPlayer'}), state)
+    const routeCalculator = new RouteCalculator(10, 0, mockRouteLocation({name:'TurnPlayer'}), state)
 
     expect(routeCalculator.turn).to.eq(10)
     expect(routeCalculator.round).to.eq(4)
@@ -124,7 +124,7 @@ describe('services/RouteCalculator', () => {
   })
 
   it('turn11', () => {
-    const routeCalculator = new RouteCalculator(11, mockRouteLocation({name:'TurnBot'}), state)
+    const routeCalculator = new RouteCalculator(11, 0, mockRouteLocation({name:'TurnBot'}), state)
 
     expect(routeCalculator.turn).to.eq(11)
     expect(routeCalculator.round).to.eq(4)

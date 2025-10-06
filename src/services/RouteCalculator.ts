@@ -90,16 +90,20 @@ export default class RouteCalculator {
 
   /**
    * Get route to next step in round for bot's next action.
+   * @param action Optional action number (default: current action + 1)
    */
-  public getNextRouteNextAction() : string {
-    return `/turn/${this.turn}/${this.currentPlayer}/action/${this.action + 1}`
+  public getNextRouteNextAction(action?: number) : string {
+    return `/turn/${this.turn}/${this.currentPlayer}/action/${action ?? this.action + 1}`
   }
 
   /**
    * Get route to previous step in round.
    */
   public getBackRouteTo() : string {
-    if (this.action > 1) {
+    if (this.action == 2) {
+      return `/turn/${this.turn}/${this.currentPlayer}`
+    }
+    else if (this.action > 1) {
       return `/turn/${this.turn}/${this.currentPlayer}/action/${this.action - 1}`
     }
     else if (this.action > 0) {
