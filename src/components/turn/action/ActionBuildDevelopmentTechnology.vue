@@ -1,10 +1,22 @@
 <template>
-  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)" :modalSizeLg="true">
+  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)">
     <template #action>
-      <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
+      <div class="iconContainer">
+        <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
+        <div class="cardSelection">
+          <TechnologySelection :position="technologyPosition"/>
+        </div>
+      </div>
     </template>
     <template #instruction>
-      <p v-html="t(`rules.bot.action.${action.action}.instructions`)"></p>
+      <div class="float-end ms-3">
+        <TechnologySelection :position="technologyPosition"/>
+      </div>
+      <ul>
+        <li v-html="t(`rules.bot.action.${action.action}.startingPosition`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.allAreasFilled`)"></li>
+        <li v-html="t(`rules.bot.action.${action.action}.buildingOrder`)"></li>
+      </ul>
     </template>
   </ActionBox>
 </template>
@@ -16,6 +28,8 @@ import NavigationState from '@/util/NavigationState'
 import { CardAction } from '@/services/Card'
 import ActionBox from '@/components/structure/ActionBox.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
+import getCardNumber from '@/util/getCardNumber'
+import TechnologySelection from '@/components/structure/TechnologySelection.vue'
 
 export default defineComponent({
   name: 'ActionBuildDevelopmentTechnology',
@@ -24,7 +38,8 @@ export default defineComponent({
   },
   components: {
     ActionBox,
-    AppIcon
+    AppIcon,
+    TechnologySelection
   },
   props: {
     navigationState: {
@@ -39,12 +54,25 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     return { t }
+  },
+  computed: {
+    technologyPosition() : number {
+      return getCardNumber(this.navigationState.cardDeck.supportCard, 4)
+    }
   }
 })
 </script>
 
 <style lang="scss" scoped>
 .icon {
-  height: 2.5em;
+  height: 5em;
+}
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.cardSelection {
+  zoom: 0.6;
 }
 </style>

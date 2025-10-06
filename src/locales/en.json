@@ -179,10 +179,16 @@
           "gainReputation": "Once both Guests are added to the selected Cruise, Rachel gains <b>2 Reputation</b>."
         },
         "build-development-network": {
-          "title": "Build Development (Network)"
+          "title": "Build Development (Network)",
+          "startingPosition": "Rachel will build a Development in the Network, starting with the marked space and working clockwise, skipping over any area that does not grant Reputation.",
+          "allAreasFilled": "If all areas have one or more Developments, she will begin again with the area indicated by the Number System, working clockwise until she reaches an area where she has not yet built a Development.",
+          "buildingOrder": "Rachel builds her Developments from her Player Board top to bottom, left to right. In other words, she will build all of the Developments in the first column before moving on to the second."
         },
         "build-development-technology": {
-          "title": "Build Development (Technology)"
+          "title": "Build Development (Technology)",
+          "startingPosition": "Rachel will build a Development under a Technology, starting with the marked space and working left to right, skipping over any area that does not grant Reputation.",
+          "allAreasFilled": "If all areas have one or more Developments, she will begin again with the area indicated by the Number System, working left to right until she reaches an area where she has not yet built a Development.",
+          "buildingOrder": "Rachel builds her Developments from her Player Board top to bottom, left to right. In other words, she will build all of the Developments in the first column before moving on to the second."
         },
         "hire-expert-worker-bot": {
           "title": "Hire Expert Worker",

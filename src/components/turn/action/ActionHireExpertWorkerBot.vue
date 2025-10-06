@@ -59,6 +59,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .icon {
-  height: 2.5em;
+  height: 3em;
 }
 </style>

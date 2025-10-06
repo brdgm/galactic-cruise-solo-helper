@@ -179,10 +179,16 @@
           "gainReputation": "Sobald 2 Gäste hinzugefügt wurden, erhält Rachel <b>2 Reputation</b>."
         },
         "build-development-network": {
-          "title": "Entwicklung bauen (im Hauptquartier)"
+          "title": "Entwicklung bauen (im Hauptquartier)",
+          "startingPosition": "Rachel baut eine Entwicklung im Hauptquartier an der markierten Stelle und geht dabei solange im Uhrzeigersinn von Areal zu Areal, bis eines erreicht ist, an dem sie noch Reputation durch die Platzierung erhält.",
+          "allAreasFilled": "Rachel baut eine Entwicklung im Hauptquartier gemäß des Zahlen-Systems und geht dabei solange im Uhrzeigersinn von Areal zu Areal, bis eines erreicht ist, an dem sie noch Reputation durch die Platzierung erhält.",
+          "buildingOrder": "Rachel nimmt die Entwicklungen von ihrem Tableau von oben nach unten und von links nach rechts. Sie baut also zuerst alle Entwicklungen der ersten Spalte, bevor sie mit der nächsten fortfährt."
         },
         "build-development-technology": {
-          "title": "Entwicklung bauen (als Technologie)"
+          "title": "Entwicklung bauen (als Technologie)",
+          "startingPosition": "Rachel baut eine Entwicklung auf einer Technologie an der markierten Stelle und geht dabei von links nach rechts von Areal zu Areal, bis ein Areal erreicht ist, an dem sie noch Reputation durch die Platzierung erhält.",
+          "allAreasFilled": "Rachel baut eine Entwicklung auf einer Technologie gemäß des Zahlen-Systems und geht dabei von links nach rechts von Areal zu Areal, bis ein Areal erreicht ist, an dem sie noch Reputation durch die Platzierung erhält.",
+          "buildingOrder": "Rachel nimmt die Entwicklungen von ihrem Tableau von oben nach unten und von links nach rechts. Sie baut also zuerst alle Entwicklungen der ersten Spalte, bevor sie mit der nächsten fortfährt."
         },
         "hire-expert-worker-bot": {
           "title": "Experten anheuern",
