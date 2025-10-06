@@ -185,7 +185,12 @@
           "title": "Entwicklung bauen (als Technologie)"
         },
         "hire-expert-worker-bot": {
-          "title": "Experten anheuern"
+          "title": "Experten anheuern",
+          "firstExpert": "Rachel heuert ihren ersten Experten nur an, wenn einer der beiden 6 Geld oder weniger kostet. Falls beide Experten 6 Geld oder weniger kosten, wählt sie zuerst den linken Experten (neben dem Startturm).",
+          "addToBreakRoom": "Sie stellt den Experten in ihren Pausenraum und nimmt sich den Pausenbonus.",
+          "secondExpert": "Rachel heuert ihren zweiten Experten nur an, wenn dieser 3 Geld oder weniger kostet.",
+          "easyDifficulty": "Rachels Experten haben keine besondere Fähigkeit und funktionieren wie normale Angestellte.",
+          "normalDifficulty": "Rachels Experten erhalten einen zusätzlichen Pausenbonus, wenn sie in ihren Pausenraum zurückkehren."
         },
         "refresh-blueprints": {
           "title": "Blaupausen auffüllen",

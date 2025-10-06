@@ -185,7 +185,12 @@
           "title": "Build Development (Technology)"
         },
         "hire-expert-worker-bot": {
-          "title": "Hire Expert Worker"
+          "title": "Hire Expert Worker",
+          "firstExpert": "When Rachel is hiring her first Expert, she will only hire an Expert that costs less than 7 Money. If both Experts cost less than 7, she hires the leftmost Expert first (the one associated with the Launch Tower).",
+          "addToBreakRoom": "She adds that Expert to her Break Room, and gains a Funding Bonus as usual.",
+          "secondExpert": "When Rachel is hiring her second Expert, she will only hire an Expert that costs less than 4 Money.",
+          "easyDifficulty": "Rachel's Experts have no special ability and function exactly like a normal Worker.",
+          "normalDifficulty": "Rachel's Experts gain an additional Funding Bonus when returned to her Break Room."
         },
         "refresh-blueprints": {
           "title": "Refresh Blueprints",
