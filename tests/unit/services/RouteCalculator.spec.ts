@@ -9,7 +9,7 @@ import mockRouteLocation from '../helper/mockRouteLocation'
 
 const state = mockState({turns:[
   mockTurn({turn:1, round:1, player:Player.PLAYER}),
-  mockTurn({turn:2, round:1, player:Player.BOT, botPersistence:mockBotPersistence(
+  mockTurn({turn:2, round:1, player:Player.BOT, noWorkers:true, botPersistence:mockBotPersistence(
     {cardDeck:mockCardDeck({pile:[2,3,4,5], discard:[1]})}
   )}),
   mockTurn({turn:3, round:1, player:Player.PLAYER}),
@@ -53,16 +53,27 @@ describe('services/RouteCalculator', () => {
     expect(routeCalculator.round).to.eq(1)
     expect(routeCalculator.getBackRouteTo()).to.eq('/turn/1/player')
     expect(routeCalculator.getNextRouteTo()).to.eq('/turn/2/bot')
+    expect(routeCalculator.getNextRouteNoWorkers()).to.eq('/turn/2/bot/noWorkers')
   })
 
   it('turn2', () => {
-    const routeCalculator = new RouteCalculator(2, mockRouteLocation({name:'TurnBot'}), state)
+    const routeCalculator = new RouteCalculator(2, mockRouteLocation({name:'TurnBotNoWorkers'}), state)
 
     expect(routeCalculator.turn).to.eq(2)
     expect(routeCalculator.round).to.eq(1)
     expect(routeCalculator.getBackRouteTo()).to.eq('/turn/2/bot/advanceShips')
     expect(routeCalculator.getNextRouteTo()).to.eq('/turn/3/player/advanceShips')
     expect(routeCalculator.getNextRouteToEndOfRound()).to.eq('/turn/3/bot/endOfRound')
+    expect(routeCalculator.noWorkers).to.true
+  })
+
+  it('turn3-advance-ships', () => {
+    const routeCalculator = new RouteCalculator(3, mockRouteLocation({name:'TurnPlayerAdvanceShips'}), state)
+
+    expect(routeCalculator.turn).to.eq(3)
+    expect(routeCalculator.round).to.eq(1)
+    expect(routeCalculator.getBackRouteTo()).to.eq('/turn/2/bot/noWorkers')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/3/player')
   })
 
   it('turn4-advance-ships', () => {

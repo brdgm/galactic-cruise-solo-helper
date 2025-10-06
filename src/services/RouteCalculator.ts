@@ -13,6 +13,7 @@ export default class RouteCalculator {
 
   public readonly currentPlayer : Player
   public readonly lastRound : boolean
+  public readonly noWorkers : boolean
 
   readonly nextPlayer : Player
   readonly advanceShips : boolean
@@ -26,6 +27,7 @@ export default class RouteCalculator {
     this.currentPlayer = route.name?.toString().match(TURN_PLAYER_REGEX) ? Player.PLAYER : Player.BOT
     this.nextPlayer = this.currentPlayer == Player.BOT ? Player.PLAYER : Player.BOT
     this.advanceShips = route.name?.toString().match(ADVANCE_SHIPS_REGEX) != null
+    this.noWorkers = route.name?.toString().match(TURN_BOT_NO_WORKERS_REGEX) != null
     this.endOfRound = route.name?.toString().match(END_OF_ROUND_REGEX) != null
     this.previousTurn = this.state.turns.find(item => item.turn == this.turn - 1)
 
@@ -78,6 +80,13 @@ export default class RouteCalculator {
   }
 
   /**
+   * Get route to next step in round for bot with no workers.
+   */
+  public getNextRouteNoWorkers() : string {
+    return `/turn/${this.turn}/${this.currentPlayer}/noWorkers`
+  }
+
+  /**
    * Get route to previous step in round.
    */
   public getBackRouteTo() : string {
@@ -92,7 +101,7 @@ export default class RouteCalculator {
         return ''
       }
       else {
-        return `/turn/${this.turn - 1}/${this.previousTurn?.player ?? Player.PLAYER}`
+        return `/turn/${this.turn - 1}/${this.previousTurn?.player ?? Player.PLAYER}${this.previousTurn?.noWorkers ? '/noWorkers' : ''}`
       }
     }
     else {
@@ -105,3 +114,4 @@ export default class RouteCalculator {
 const TURN_PLAYER_REGEX = /^TurnPlayer(.+)?$/
 const ADVANCE_SHIPS_REGEX = /^Turn(.+)AdvanceShips$/
 const END_OF_ROUND_REGEX = /^Turn(.+)EndOfRound$/
+const TURN_BOT_NO_WORKERS_REGEX = /^TurnBotNoWorkers$/

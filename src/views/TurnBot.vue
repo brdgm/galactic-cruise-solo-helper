@@ -13,7 +13,7 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
-import { useStateStore } from '@/store/state'
+import { Turn, useStateStore } from '@/store/state'
 import { useRoute, useRouter } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/turn/SideBar.vue'
@@ -47,14 +47,18 @@ export default defineComponent({
   },
   methods: {
     next(endOfRound: boolean) : void {
-      this.state.storeTurn({
+      const turn : Turn = {
         turn: this.turn,
         round: this.navigationState.round,
         player: Player.BOT,
         botPersistence: {
           cardDeck: this.navigationState.cardDeck.toPersistence()
         }
-      })
+      }
+      if (this.navigationState.noWorkers) {
+        turn.noWorkers = true
+      }
+      this.state.storeTurn(turn)
       if (endOfRound) {
         this.router.push(this.routeCalculator.getNextRouteToEndOfRound())
       }

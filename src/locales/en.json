@@ -57,7 +57,9 @@
     "lastRoundInfo": "<b>Last Round:</b> Rachel and you return all Workers from the Network to the Break Room, gaining a Funding Bonus as usual."
   },
   "turnBot": {
-    "title": "Rachel"
+    "title": "Rachel",
+    "placeWorker": "Place a Worker",
+    "noWorkers": "No Workers available"
   },
   "sideBar": {
     "turn": "Turn {turn}"

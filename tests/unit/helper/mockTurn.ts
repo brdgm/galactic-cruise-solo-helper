@@ -8,7 +8,8 @@ export default function mockTurn(params?: MockTurnParams) : Turn {
     round: params?.round ?? 1,
     player: params?.player ?? Player.PLAYER,
     botPersistence: params?.botPersistence ?? mockBotPersistence(),
-    endOfRound: params?.endOfRound ?? undefined
+    endOfRound: params?.endOfRound ?? undefined,
+    noWorkers: params?.noWorkers ?? undefined
   }
 }
 
@@ -18,4 +19,5 @@ export interface MockTurnParams {
   player? : Player
   botPersistence?: BotPersistence
   endOfRound?: boolean
+  noWorkers?: boolean
 }

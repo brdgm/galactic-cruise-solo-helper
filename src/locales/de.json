@@ -57,7 +57,9 @@
     "lastRoundInfo": "<b>Letzte Runde:</b> Rachel und du holen alle Angestellten vom Hauptquartier zurück in den Pausenraum und erhalten wie üblich Pausenboni."
   },
   "turnBot": {
-    "title": "Rachel"
+    "title": "Rachel",
+    "placeWorker": "Platziere Angestellten",
+    "noWorkers": "Keine Angestellten verfügbar"
   },
   "sideBar": {
     "turn": "Zug {turn}"

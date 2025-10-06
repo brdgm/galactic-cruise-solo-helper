@@ -11,8 +11,11 @@
     <AdvanceShipsReturningToEarth/>
   </div>
 
-  <button class="btn btn-primary btn-lg mt-4 me-2" @click="next(false)">
-    {{t('action.next')}}
+  <button class="btn btn-success btn-lg mt-4 me-2" @click="next(false)">
+    {{t('turnBot.placeWorker')}}
+  </button>
+  <button class="btn btn-danger btn-lg mt-4 me-2" @click="next(true)">
+    {{t('turnBot.noWorkers')}}
   </button>
 
   <DebugInfo :navigationState="navigationState"/>
@@ -28,7 +31,6 @@ import { useStateStore } from '@/store/state'
 import { useRoute, useRouter } from 'vue-router'
 import NavigationState from '@/util/NavigationState'
 import SideBar from '@/components/turn/SideBar.vue'
-import Player from '@/services/enum/Player'
 import DebugInfo from '@/components/turn/DebugInfo.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import AdvanceShipsDestinationBot from '@/components/turn/advanceShips/AdvanceShipsDestinationBot.vue'
@@ -63,17 +65,9 @@ export default defineComponent({
     }
   },
   methods: {
-    next(endOfRound: boolean) : void {
-      this.state.storeTurn({
-        turn: this.turn,
-        round: this.navigationState.round,
-        player: Player.BOT,
-        botPersistence: {
-          cardDeck: this.navigationState.cardDeck.toPersistence()
-        }
-      })
-      if (endOfRound) {
-        this.router.push(this.routeCalculator.getNextRouteToEndOfRound())
+    next(noWorkers: boolean) : void {
+      if (noWorkers) {
+        this.router.push(this.routeCalculator.getNextRouteNoWorkers())
       }
       else {
         this.router.push(this.routeCalculator.getNextRouteTo())
