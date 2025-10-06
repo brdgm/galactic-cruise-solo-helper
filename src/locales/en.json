@@ -234,6 +234,10 @@
           "step0Title": "0. Liftoff!",
           "step0Action": "Place Rachel's Worker into the Cockpit of the Ship, and then add a new Cruise to the Marketing Board as usual.",
           "step0SecondAction": "If resolving this as her second action of the turn, she instead moves the Worker from her first action to the Launch Elevator."
+        },
+        "call-meeting": {
+          "title": "Call a Meeting",
+          "returnWorkers": "Rachel returns all Workers and gains VP for each Worker recalled based on her VP Funding Bonus."
         }
       }
     }

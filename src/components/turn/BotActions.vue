@@ -1,7 +1,13 @@
 <template>
-  <div v-for="(action,index) in currentCard?.actions" :key="index">
-    <component :is="`action-${action.action}`" :navigationState="navigationState" :action="action"/>
-  </div>
+  <template v-if="isNoWorkers">
+    <ActionCallMeeting :navigationState="navigationState"/>
+  </template>
+
+  <template v-if="!isNoWorkers || isHardDifficultyMode">
+    <div v-for="(action,index) in currentCard?.actions" :key="index">
+      <component :is="`action-${action.action}`" :navigationState="navigationState" :action="action"/>
+    </div>
+  </template>
 
   <button class="btn btn-primary btn-lg mt-4 me-2" @click="next(false)">
     {{t('action.next')}}
@@ -27,6 +33,9 @@ import ActionRefillAgendaCards from './action/ActionRefillAgendaCards.vue'
 import ActionRefillStorageSilo from './action/ActionRefillStorageSilo.vue'
 import ActionRefreshBlueprints from './action/ActionRefreshBlueprints.vue'
 import EndRoundButton from './EndRoundButton.vue'
+import ActionCallMeeting from './action/ActionCallMeeting.vue'
+import { useStateStore } from '@/store/state'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
 export default defineComponent({
   name: 'BotActions',
@@ -46,7 +55,8 @@ export default defineComponent({
     ActionLaunchShip,
     ActionRefillAgendaCards,
     ActionRefillStorageSilo,
-    ActionRefreshBlueprints
+    ActionRefreshBlueprints,
+    ActionCallMeeting
   },
   props: {
     navigationState: {
@@ -56,13 +66,22 @@ export default defineComponent({
   },
   setup(props) {
     const { t } = useI18n()
+    const state = useStateStore()
 
     const { currentCard, supportCard } = props.navigationState.cardDeck
 
-    return { t, currentCard, supportCard }
+    return { t, state, currentCard, supportCard }
   },
   data() {
     return {
+    }
+  },
+  computed: {
+    isNoWorkers() : boolean {
+      return this.navigationState.noWorkers
+    },
+    isHardDifficultyMode() : boolean {
+      return this.state.setup.difficultyLevel == DifficultyLevel.HARD
     }
   },
   methods: {

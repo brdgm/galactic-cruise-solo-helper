@@ -234,6 +234,10 @@
           "step0Title": "0. Abflug!",
           "step0Action": "Stelle einen ihrer Angestellten ins Cockpit und fülle anschließend die offene Auslage mit einem neuen Reiseplättchen auf.",
           "step0SecondAction": "Startet sie als zweite Aktion ein Schiff, nimmt Rachel den Angestellten, mit dem sie die erste Aktion durchgeführt hat und dieser fungiert als Pilot."
+        },
+        "call-meeting": {
+          "title": "Ein Meeting einberufen",
+          "returnWorkers": "Rachel ruft alle Arbeiter zurück und erhält SP pro Angestelltem als Pausenbonus für das Zurücknehmen."
         }
       }
     }
