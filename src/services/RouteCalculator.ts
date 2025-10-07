@@ -93,7 +93,7 @@ export default class RouteCalculator {
    * @param action Optional action number (default: current action + 1)
    */
   public getNextRouteNextAction(action?: number) : string {
-    return `/turn/${this.turn}/${this.currentPlayer}/action/${action ?? this.action + 1}`
+    return `/turn/${this.turn}/${this.currentPlayer}/action/${action ?? this.action + 1}${this.noWorkers ? '/noWorkers' : ''}`
   }
 
   /**
@@ -101,13 +101,13 @@ export default class RouteCalculator {
    */
   public getBackRouteTo() : string {
     if (this.action == 2) {
-      return `/turn/${this.turn}/${this.currentPlayer}`
+      return `/turn/${this.turn}/${this.currentPlayer}${this.noWorkers ? '/noWorkers' : ''}`
     }
     else if (this.action > 1) {
-      return `/turn/${this.turn}/${this.currentPlayer}/action/${this.action - 1}`
+      return `/turn/${this.turn}/${this.currentPlayer}/action/${this.action - 1}${this.noWorkers ? '/noWorkers' : ''}`
     }
     else if (this.action > 0) {
-      return `/turn/${this.turn}/${this.currentPlayer}`
+      return `/turn/${this.turn}/${this.currentPlayer}${this.noWorkers ? '/noWorkers' : ''}`
     }
     else if (this.previousTurn?.endOfRound) {
       return `/turn/${this.turn - 1}/${this.previousTurn.player}/endOfRound`
@@ -133,4 +133,4 @@ export default class RouteCalculator {
 const TURN_PLAYER_REGEX = /^TurnPlayer(.+)?$/
 const ADVANCE_SHIPS_REGEX = /^Turn(.+)AdvanceShips$/
 const END_OF_ROUND_REGEX = /^Turn(.+)EndOfRound$/
-const TURN_BOT_NO_WORKERS_REGEX = /^TurnBotNoWorkers$/
+const TURN_BOT_NO_WORKERS_REGEX = /^TurnBot(Action)?NoWorkers$/

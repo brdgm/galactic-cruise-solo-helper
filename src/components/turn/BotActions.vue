@@ -17,7 +17,7 @@
     <EndRoundButton :round="navigationState.round" @endRound="next(true)"/>
   </template>
   <template v-else>
-    <template v-if="navigationState.action > 1 || !matchingAction">
+    <template v-if="navigationState.action > 1 || !matchingAction || isNoWorkers">
       <button class="btn btn-success btn-lg mt-4 me-2" @click="actionExecuted(false)">
         {{t('turnBot.actionExecuted')}}<br/>
       </button>
