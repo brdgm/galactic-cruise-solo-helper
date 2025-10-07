@@ -1,13 +1,17 @@
 <template>
   <template v-if="isNoWorkers">
-    <ActionCallMeeting :navigationState="navigationState"/>
+    <ActionCallMeeting/>
   </template>
   <template v-else>
-    <ActionPlaceWorker :navigationState="navigationState"/>
+    <ActionPlaceWorker :supportCard="supportCard"/>
+  </template>
+
+  <template v-if="firstAction && firstActionSupportCard">
+    <BotAction :supportCard="firstActionSupportCard" :cardAction="firstAction"/>
   </template>
 
   <template v-if="cardAction && !noActionPossible">
-    <component :is="`action-${cardAction.action}`" :navigationState="navigationState" :action="cardAction"/>
+    <BotAction :supportCard="supportCard" :cardAction="cardAction"/>
   </template>
 
   <template v-if="cardActionExecuted || noActionPossible">
@@ -17,7 +21,7 @@
     <EndRoundButton :round="navigationState.round" @endRound="next(true)"/>
   </template>
   <template v-else>
-    <template v-if="navigationState.action > 1 || !matchingAction || isNoWorkers">
+    <template v-if="action > 1 || !matchingAction || isNoWorkers">
       <button class="btn btn-success btn-lg mt-4 me-2" @click="actionExecuted(false)">
         {{t('turnBot.actionExecuted')}}<br/>
       </button>
@@ -45,47 +49,25 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import NavigationState from '@/util/NavigationState'
 import AppIcon from '@/components/structure/AppIcon.vue'
-import ActionDrawAgendaCards from './action/ActionDrawAgendaCards.vue'
-import ActionAdvertiseCruise from './action/ActionAdvertiseCruise.vue'
-import ActionBuildDevelopmentNetwork from './action/ActionBuildDevelopmentNetwork.vue'
-import ActionBuildDevelopmentTechnology from './action/ActionBuildDevelopmentTechnology.vue'
-import ActionBuildShipSegments from './action/ActionBuildShipSegments.vue'
-import ActionGainResources from './action/ActionGainResources.vue'
-import ActionHireExpertWorkerBot from './action/ActionHireExpertWorkerBot.vue'
-import ActionLaunchShip from './action/ActionLaunchShip.vue'
-import ActionRefillAgendaCards from './action/ActionRefillAgendaCards.vue'
-import ActionRefillStorageSilo from './action/ActionRefillStorageSilo.vue'
-import ActionRefreshBlueprints from './action/ActionRefreshBlueprints.vue'
 import EndRoundButton from './EndRoundButton.vue'
 import ActionCallMeeting from './action/ActionCallMeeting.vue'
 import { useStateStore } from '@/store/state'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import ActionPlaceWorker from './action/ActionPlaceWorker.vue'
-import { CardAction } from '@/services/Card'
+import Card, { CardAction } from '@/services/Card'
 import Action from '@/services/enum/Action'
 import getMatchingAction from '@/util/getMatchingAction'
+import BotAction from './BotAction.vue'
 
 export default defineComponent({
   name: 'BotActions',
   emits: {
-    next: (_endRound: boolean) => true,  // eslint-disable-line @typescript-eslint/no-unused-vars
-    anotherAction: () => true,
-    actionNotPossible: () => true
+    next: (_endRound: boolean) => true  // eslint-disable-line @typescript-eslint/no-unused-vars
   },
   components: {
     AppIcon,
     EndRoundButton,
-    ActionAdvertiseCruise,
-    ActionBuildDevelopmentNetwork,
-    ActionBuildDevelopmentTechnology,
-    ActionBuildShipSegments,
-    ActionDrawAgendaCards,
-    ActionGainResources,
-    ActionHireExpertWorkerBot,
-    ActionLaunchShip,
-    ActionRefillAgendaCards,
-    ActionRefillStorageSilo,
-    ActionRefreshBlueprints,
+    BotAction,
     ActionCallMeeting,
     ActionPlaceWorker
   },
@@ -95,21 +77,27 @@ export default defineComponent({
       required: true
     }
   },
-  setup(props) {
+  setup() {
     const { t } = useI18n()
     const state = useStateStore()
-
-    const { currentCard, supportCard } = props.navigationState.cardDeck
-
-    return { t, state, currentCard, supportCard }
+    return { t, state }
   },
   data() {
     return {
+      action: 0,
       cardActionExecuted: false,
-      noActionPossible: false
+      noActionPossible: false,
+      firstActionSupportCard: undefined as Card|undefined,
+      firstAction: undefined as CardAction|undefined
     }
   },
   computed: {
+    currentCard() : Card|undefined {
+      return this.navigationState.cardDeck.currentCard
+    },
+    supportCard() : Card {
+      return this.navigationState.cardDeck.supportCard
+    },
     isNoWorkers() : boolean {
       return this.navigationState.noWorkers
     },
@@ -120,7 +108,7 @@ export default defineComponent({
       if (this.isNoWorkers && !this.isHardDifficultyMode) {
         return undefined
       }
-      return this.currentCard?.actions[this.navigationState.action % 2]
+      return this.currentCard?.actions[this.action % 2]
     },
     matchingAction() : Action|undefined {
       return this.cardAction ? getMatchingAction(this.cardAction.action) : undefined
@@ -140,18 +128,21 @@ export default defineComponent({
     },
     actionExecuted(anotherAction: boolean) : void {
       if (anotherAction) {
-        this.$emit('anotherAction')
+        this.firstActionSupportCard = this.supportCard
+        this.firstAction = this.cardAction
+        this.navigationState.cardDeck.draw()
+        this.action = 2
       }
       else {
         this.cardActionExecuted = true
       }
     },
     actionNotPossible() : void {
-      if (this.navigationState.action % 2 == 1) {
+      if (this.action % 2 == 1) {
         this.noActionPossible = true
       }
       else {
-        this.$emit('actionNotPossible')
+        this.action++
       }
     }
   }

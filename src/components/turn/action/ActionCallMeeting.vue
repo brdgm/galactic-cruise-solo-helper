@@ -12,7 +12,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import NavigationState from '@/util/NavigationState'
 import ActionBox from '@/components/structure/ActionBox.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
 
@@ -21,12 +20,6 @@ export default defineComponent({
   components: {
     ActionBox,
     AppIcon
-  },
-  props: {
-    navigationState: {
-      type: NavigationState,
-      required: true
-    }
   },
   setup() {
     const { t } = useI18n()

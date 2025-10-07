@@ -23,8 +23,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
-import NavigationState from '@/util/NavigationState'
-import { CardAction } from '@/services/Card'
+import Card, { CardAction } from '@/services/Card'
 import ActionBox from '@/components/structure/ActionBox.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import AgendaCardSelection from '@/components/structure/AgendaCardSelection.vue'
@@ -38,8 +37,8 @@ export default defineComponent({
     AgendaCardSelection
   },
   props: {
-    navigationState: {
-      type: NavigationState,
+    supportCard: {
+      type: Object as PropType<Card>,
       required: true
     },
     action: {
@@ -53,7 +52,7 @@ export default defineComponent({
   },
   computed: {
     cardPositions() : number[] {
-      const firstPos = getCardNumber(this.navigationState.cardDeck.supportCard, 4)
+      const firstPos = getCardNumber(this.supportCard, 4)
       let secondPos = firstPos + 1
       if (secondPos > 4) {
         secondPos = 1

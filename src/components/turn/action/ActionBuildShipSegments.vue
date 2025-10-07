@@ -30,8 +30,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
-import NavigationState from '@/util/NavigationState'
-import { CardAction } from '@/services/Card'
+import Card, { CardAction } from '@/services/Card'
 import ActionBox from '@/components/structure/ActionBox.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import BlueprintSelection from '@/components/structure/BlueprintSelection.vue'
@@ -47,8 +46,8 @@ export default defineComponent({
     AgendaCardSelection
   },
   props: {
-    navigationState: {
-      type: NavigationState,
+    supportCard: {
+      type: Object as PropType<Card>,
       required: true
     },
     action: {
@@ -62,7 +61,7 @@ export default defineComponent({
   },
   computed: {
     blueprintPositions() : number[] {
-      const firstPos = getCardNumber(this.navigationState.cardDeck.supportCard, 5)
+      const firstPos = getCardNumber(this.supportCard, 5)
       let secondPos = firstPos + 1
       if (secondPos > 5) {
         secondPos = 1
@@ -70,7 +69,7 @@ export default defineComponent({
       return [firstPos, secondPos]
     },
     cockpitPosition() : number {
-      return getCardNumber(this.navigationState.cardDeck.supportCard, 4)
+      return getCardNumber(this.supportCard, 4)
     }
   }
 })

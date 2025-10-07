@@ -24,8 +24,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
-import NavigationState from '@/util/NavigationState'
-import { CardAction } from '@/services/Card'
+import Card, { CardAction } from '@/services/Card'
 import ActionBox from '@/components/structure/ActionBox.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import NetworkLocationDisplay from '@/components/structure/NetworkLocationDisplay.vue'
@@ -39,8 +38,8 @@ export default defineComponent({
     NetworkLocationDisplay
   },
   props: {
-    navigationState: {
-      type: NavigationState,
+    supportCard: {
+      type: Object as PropType<Card>,
       required: true
     },
     action: {
@@ -54,7 +53,7 @@ export default defineComponent({
   },
   computed: {
     networkLocation() : number {
-      return getCardNumber(this.navigationState.cardDeck.supportCard, 6)
+      return getCardNumber(this.supportCard, 6)
     }
   }
 })

@@ -21,12 +21,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
-import NavigationState from '@/util/NavigationState'
 import ActionBox from '@/components/structure/ActionBox.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import WorkerLocationDisplay from '@/components/structure/WorkerLocationDisplay.vue'
+import Card from '@/services/Card'
 
 export default defineComponent({
   name: 'ActionPlaceWorker',
@@ -36,10 +36,10 @@ export default defineComponent({
     WorkerLocationDisplay
   },
   props: {
-    navigationState: {
-      type: NavigationState,
+    supportCard: {
+      type: Object as PropType<Card>,
       required: true
-    }
+    },
   },
   setup() {
     const { t } = useI18n()
@@ -47,7 +47,7 @@ export default defineComponent({
   },
   computed: {
     workerLocation() : number {
-      return this.navigationState.cardDeck.supportCard.workerLocation
+      return this.supportCard.workerLocation
     }
   }
 })

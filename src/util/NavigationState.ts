@@ -9,7 +9,6 @@ import DifficultyLevel from '@/services/enum/DifficultyLevel'
 export default class NavigationState {
 
   readonly turn : number
-  readonly action : number
   readonly round : number
   readonly currentPlayer : Player
   readonly noWorkers : boolean
@@ -19,8 +18,7 @@ export default class NavigationState {
 
   constructor(route: RouteLocation, state: State) {    
     this.turn = getIntRouteParam(route, 'turn')
-    this.action = getIntRouteParam(route, 'action')
-    this.routeCalculator = new RouteCalculator(this.turn, this.action, route, state)
+    this.routeCalculator = new RouteCalculator(this.turn, route, state)
     this.round = this.routeCalculator.round
     this.currentPlayer = this.routeCalculator.currentPlayer
     this.noWorkers = this.routeCalculator.noWorkers
@@ -32,9 +30,6 @@ export default class NavigationState {
         && !this.routeCalculator.endOfRound
         && (!this.noWorkers || state.setup.difficultyLevel == DifficultyLevel.HARD)) {
       this.cardDeck.draw()
-      if (this.action > 1) {
-        this.cardDeck.draw()
-      }
     }
   }
 
