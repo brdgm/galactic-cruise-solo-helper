@@ -65,7 +65,7 @@ export default class RouteCalculator {
       return `/turn/${this.turn}/${this.currentPlayer}`
     }
     else if (this.turn == this.lastTurnInGame) {
-      return `/turn/${this.turn + 1}/endOfGame`
+      return `/turn/${this.turn}/endOfGame/advanceShips`
     }
     else {
       return `/turn/${this.turn + 1}/${this.nextPlayer}/advanceShips`

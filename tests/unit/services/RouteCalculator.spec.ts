@@ -129,6 +129,6 @@ describe('services/RouteCalculator', () => {
     expect(routeCalculator.turn).to.eq(11)
     expect(routeCalculator.round).to.eq(4)
     expect(routeCalculator.getBackRouteTo()).to.eq('/turn/11/bot/advanceShips')
-    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/12/endOfGame')
+    expect(routeCalculator.getNextRouteTo()).to.eq('/turn/11/endOfGame/advanceShips')
   })
 })

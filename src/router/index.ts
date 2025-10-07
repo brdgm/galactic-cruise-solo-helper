@@ -11,6 +11,7 @@ import TurnBot from '@/views/TurnBot.vue'
 import EndOfGame from '@/views/EndOfGame.vue'
 import TurnPlayerAdvanceShips from '@/views/TurnPlayerAdvanceShips.vue'
 import TurnBotAdvanceShips from '@/views/TurnBotAdvanceShips.vue'
+import EndOfGameAdvanceShips from '@/views/EndOfGameAdvanceShips.vue'
 
 const LOCALSTORAGE_KEY = `${name}.route`
 
@@ -64,6 +65,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/turn/:turn/bot/endOfRound',
     name: 'TurnBotEndOfRound',
     component: EndOfRound
+  },
+  {
+    path: '/turn/:turn/endOfGame/advanceShips',
+    name: 'GameEndAdvanceShips',
+    component: EndOfGameAdvanceShips
   },
   {
     path: '/turn/:turn/endOfGame',

@@ -95,6 +95,11 @@
       }
     }
   },
+  "endOfGameAdvanceShips": {
+    "title": "Ship Advancement",
+    "lastMovement": "In turn order, advance all Ships you have on Cruises one final time, advancing to <b>any one</b> remaining Stop on the Cruise, and then complete the steps of that Stop as usual.",
+    "botDestination": "Rachel chooses the Stop that will score her the most VP."
+  },
   "endOfGame": {
     "title": "End of Game",
     "condition": "Condition",

@@ -95,6 +95,11 @@
       }
     }
   },
+  "endOfGameAdvanceShips": {
+    "title": "Raumschiff-Bewegung",
+    "lastMovement": "Alle dürfen (in Zugreihenfolge) ihre gestarteten Schiffe zu einem <b>beliebigen</b> Stopp der Reise bewegen und diesen wie gewöhnlich abhandeln.",
+    "botDestination": "Rachel wählt den letzten Stopp, der ihr die meisten SP bringt."
+  },
   "endOfGame": {
     "title": "Spielende",
     "condition": "Bedingung",

@@ -84,9 +84,8 @@ export default defineComponent({
     const state = useStateStore()
 
     const navigationState = new NavigationState(route, state)
-    const { routeCalculator } = navigationState
 
-    return { t, router, state, navigationState, routeCalculator }
+    return { t, router, state, navigationState }
   },
   data() {
     return {
@@ -101,7 +100,7 @@ export default defineComponent({
   },
   computed: {
     backButtonRouteTo() : string {
-      return this.routeCalculator.getBackRouteTo()
+      return `/turn/${this.navigationState.turn}/endOfGame/advanceShips`
     },
     totalVP() : number[] {
       const result = [] as number[]
