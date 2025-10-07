@@ -1,0 +1,287 @@
+{
+  "gameTitle": "Galactic Cruise",
+  "home": {
+    "title": "Galactic Cruise Solo Helper",
+    "play1": "Play a <a href='https://boardgamegeek.com/boardgame/391137/galactic-cruise' target='_blank' rel='noopener'><b>Galactic Cruise</b></a> solo game against Rachel, the solo opponent.",
+    "play2": "This application replaces the solo card deck and guides you through the game flow.",
+    "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Setup",
+    "difficultyLevel": {
+      "title": "Difficulty Level",
+      "easy": "Easy",
+      "hard": "Hard"
+    },
+    "expansions": {
+      "title": "Expansions",
+      "advancements": "Advancements",
+      "accommodations": "Accommodations"
+    }
+  },
+  "setupGame": {
+    "title": "Setup Game",
+    "gameBoard": {
+      "title": "Game Board",
+      "twoPlayerGame": "Set up the game for a <b>2-player game</b>.",
+      "neutralDevelopments": "Place the <b>neutral Developments</b> in these areas, covering the Reputation icon:",
+      "npcWorkers": "Place <b>2 NPC Workers</b> on this locations:"
+    },
+    "bot": {
+      "title": "Rachel",
+      "playerBoard": "Rachel receives a <b>Player Board</b> and sets up all the usual pieces that a player would use. She does NOT need Resource trackers and always uses the base game Upgrade Tokens.",
+      "reputation": "She will be the <b>2nd player</b>, so place her Reputation tracker on the “1” space of the Reputation Track.",
+      "soloTokens": {
+        "title": "Place the <b>Solo Tokens</b> (Rachel's Company Goal threshold reminders) on the appropriate spaces:",
+        "development": {
+          "7": "Place this onto her <b>rightmost</b> Fuel Development.",
+          "6": "Place this onto her <b>middle</b> Fuel Development.",
+          "5": "Place this onto her <b>leftmost</b> Fuel Development."
+        },
+        "segment": "Place this around the area where Rachel's <b>Segment #{segment}</b> will be built.",
+        "ship": "Place this above the area where Rachel's <b>Ship #{ship}</b> will be."
+      },
+      "soloWorkerCard": "Place the <b>Solo Worker Card</b> of your chosen difficulty next to the Action Cards (this will help you to remember to Call a Meeting if she has no Workers). This is her Break Room—place her Workers here instead of on her Player Board.",
+      "firstDevelopment": "Rachel places her <b>first Development</b> (from the Food row) in the Network. This placement must be in an area with no other Developments as usual.",
+      "discardBlueprint": "She then discards this <b>Blueprint</b>:"
+    }
+  },
+  "turnPlayer": {
+    "title": "Player",
+    "takeTurn": "Take your turn.",
+    "choose": "Choose:",
+    "assignWorker": "Assign a Worker",
+    "launchShip": "Launch a Ship",
+    "callMeeting": "Call a Meeting",
+    "companyGoals": "Check your company goals.",
+    "lastRoundInfo": "<b>Last Round:</b> Rachel and you return all Workers from the Network to the Break Room, gaining a Funding Bonus as usual."
+  },
+  "turnBot": {
+    "title": "Rachel",
+    "placeWorker": "Place a Worker",
+    "noWorkers": "No Workers available",
+    "actionExecuted": "Action executed",
+    "notPossible": "Not possible"
+  },
+  "sideBar": {
+    "turn": "Turn {turn}"
+  },
+  "endOfRound": {
+    "title": {
+      "1": "AGM A: Progress Scoring",
+      "2": "AGM B: Progress Scoring",
+      "3": "End of game triggered"
+    },
+    "instructions": {
+      "progressScoring": "Execute the progress scoring for Section {round} for Rachel and yourself.",
+      "buildNpcDevelopments": "Build NPC developments:",
+      "skipIfColorExists": "If there is already a Development of that color in the depicted area, skip that placement.",
+      "hireNpcExpert": "Hire NPC Expert",
+      "replaceFirstWorker": "Replace one NPC Worker with one NPC Expert Worker.",
+      "chooseClosestWorker": "Choose the NPC Worker closest to the top middle location going clockwise.",
+      "replaceSecondWorker": "Replace the other NPC Worker with an NPC Expert Worker."
+    },
+    "endGameTriggered": {
+      "title": "The end of the game is triggered.",
+      "finishCurrentRound": "The current round is finished, and then a final round is played.",
+      "nextRoundFinalRound": "The next round is the final round."
+    },
+    "endRound": {
+      "title": "Progress Track {round} completed",
+      "endRoundConfirm": {
+        "1": "If the last cube was placed on progress track 1, Annual General Meeting (AGM) A occurs.",
+        "2": "If the last cube was placed on progress track 2, Annual General Meeting (AGM) B occurs.",
+        "3": "If the last cube was placed on progress track 3, the end of the game is triggered."
+      }
+    }
+  },
+  "endOfGameAdvanceShips": {
+    "title": "Ship Advancement",
+    "lastMovement": "In turn order, advance all Ships you have on Cruises one final time, advancing to <b>any one</b> remaining Stop on the Cruise, and then complete the steps of that Stop as usual.",
+    "botDestination": "Rachel chooses the Stop that will score her the most VP."
+  },
+  "endOfGame": {
+    "title": "End of Game",
+    "condition": "Condition",
+    "scoreTrack": "Score Track",
+    "cockpit": "Cockpit",
+    "developments": "Developments",
+    "reputation": "Reputation",
+    "shipSegments": "Ship Segments",
+    "progressSection3": "Progress Section 3",
+    "supplies": "Supplies",
+    "total": "Total",
+    "botCockpitScoring": "Rachel scores the VP printed on each Cockpit, plus the VP on each Segment. (-5 VP for any unlaunched Ships.)"
+  },
+  "rules": {
+    "advanceShips": {
+      "destination": {
+        "title": "Advance Ships: Destination"
+      },
+      "dayInSpace": {
+        "title": "Advance Ships: Day in Space"
+      },
+      "returningToEarth": {
+        "title": "Advance Ships: Returning to Earth",
+        "returnWorker": "Return the Worker into your Break Room.",
+        "discardCruiseAndGuests": "Discard the Cruise and return all Guests to the supply."
+      }
+    },
+    "player": {
+      "advanceShips": {
+        "destination": {
+          "placeUpgradeToken": "You may place the Upgrade Token on the Destination.",
+          "payAdsForGuests": "Choose to pay Ads for each guest to score VP."
+        },
+        "dayInSpace": {
+          "gainGuestBonuses": "For each Guest, gain their bonus for each matching icon in the Ship."
+        }
+      }
+    },
+    "bot": {
+      "advanceShips": {
+        "destination": {
+          "placeUpgradeToken": "If it’s the first Destination of the Cruise, Rachel drops off her Upgrade Token on the leftmost empty space on the Destination, increasing scoring here by 1 VP. Rachel does not unlock or trigger any bonuses from Upgrades.",
+          "payAdsForGuests": "Then, regardless if it is the first Destination or not, she scores all of her Guests at the Destination. Rachel does not gain/spend Ads to do this.",
+          "fourthToken": "In the rare case that Rachel would visit the same first Destination four times, she will place the Upgrade Token on the next Destination on that same Cruise. If there are no other Destinations on that Cruise, the token is simply discarded."
+        },
+        "dayInSpace": {
+          "gainGuestBonuses": "Rachel gains 1 Reputation for each Guest on the Cruise, regardless of the Guest types."
+        }
+      },
+      "action": {
+        "build-ship-segments": {
+          "title": "Build Ship Segments",
+          "takeBlueprints": "Rachel takes the 2 marked Blueprints from the Main Board display and places them into her Ship(s).",
+          "freeBlueprints": "These 2 Blueprints are free for her, and she does not lose Reputation. They are immediately built into her Ship(s).",
+          "maxSegments": "If she reaches the 3-Segment maximum in a Ship, she immediately takes the marked Cockpit and Engine from the Main Board display and continues building into it (note: if the Engine grants Reputation or VP, she gains it; if it grants an Agenda Card, she discards one from the display as marked for the Cockpit selection).",
+          "shipLimit": "Rachel may only have 3 Ships with 3 Segments each. Once she has 8 Segments built, her final build action will result in only one Segment being built."
+        },
+        "draw-agenda-cards": {
+          "title": "Draw Agenda Cards",
+          "selection": "Rachel will discard the marked agenda cards (or the next ones available).",
+          "minCards": "If there are 0 or 1 Agenda Cards in the column, Rachel will not take this action."
+        },
+        "refill-agenda-cards": {
+          "title": "Refill Agenda Cards",
+          "reputation": "If Reputation is visible in the Agenda Card display, Rachel gains 1 Reputation.",
+          "refill": "She then discards all the Agenda Cards in the column top to bottom and refills the spaces from bottom to top with 4 new cards from the top of the Agenda Card deck."
+        },
+        "gain-resources": {
+          "title": "Gain Resources",
+          "targetCards": "Rachel targets the marked Agenda Card from the display and reduces the Resource listed on it in the Storage Silo by one. She then moves to the next card (top to bottom, wrapping around if necessary) and does the same thing, and then does so with a third card. If needed, she can target the same card over and over.",
+          "noCardsInDisplay": "If there are no cards in the display, she will attempt to take 3 of whichever Resource is listed on the top card of the Agenda Card discard. If there are no cards in the display and none in the discard pile she will not take this action.",
+          "cannotReduceAll": "If she cannot reduce all 3 indicated Resources, she will not take this action at all."
+        },
+        "refill-storage-silo": {
+          "title": "Refill Storage Silo",
+          "selection": "Rachel refills the first Resource that she was unable to take during the Gain Resources action that she just tried to perform.",
+          "refill": "She will refill this Resource to its maximum and gain 1 Reputation."
+        },
+        "advertise-cruise": {
+          "title": "Advertise Cruise",
+          "select": "Rachel selects the marked Cruise and adds 2 Guests to that Cruise.",
+          "nextCruise": "If that Cruise already has one or more Guests on it, she will select the next available Cruise instead.",
+          "addGuestsFromBottom": "Rachel adds Guests to the selected Cruise from the bottom (1 Ad) section of the Queue in this order:",
+          "firstDestination": "A Guest matching the first Destination on the Cruise (if able).",
+          "secondDestination": "A Guest matching the second Destination on the Cruise (if able).",
+          "thirdDestination": "A Guest matching the third Destination on the Cruise (if able).",
+          "repeatSteps": "Repeat the above steps if 2 Guests have not been added.",
+          "addFromMiddle": "If Rachel is not able to add 2 Guests to the selected Cruise from the bottom section, she will add Guests from the middle (2 Ads) section using the same order as above until a total of 2 Guests have been added.",
+          "addFromTop": "If Rachel is not able to add 2 Guests to the selected Cruise from the bottom and middle sections, she will add Guests from the top (3 Ads) section using the same order as above until a total of 2 Guests have been added.",
+          "addFromSupply": "If Rachel is not able to add 2 Guests to the selected Cruise from the Queue, she will add Guests from the supply using the same order as above until a total of 2 Guests have been added.",
+          "gainReputation": "Once both Guests are added to the selected Cruise, Rachel gains <b>2 Reputation</b>."
+        },
+        "build-development-network": {
+          "title": "Build Development (Network)",
+          "startingPosition": "Rachel will build a Development in the Network, starting with the marked space and working clockwise, skipping over any area that does not grant Reputation.",
+          "allAreasFilled": "If all areas have one or more Developments, she will begin again with the area indicated by the Number System, working clockwise until she reaches an area where she has not yet built a Development.",
+          "buildingOrder": "Rachel builds her Developments from her Player Board top to bottom, left to right. In other words, she will build all of the Developments in the first column before moving on to the second."
+        },
+        "build-development-technology": {
+          "title": "Build Development (Technology)",
+          "startingPosition": "Rachel will build a Development under a Technology, starting with the marked space and working left to right, skipping over any area that does not grant Reputation.",
+          "allAreasFilled": "If all areas have one or more Developments, she will begin again with the area indicated by the Number System, working left to right until she reaches an area where she has not yet built a Development.",
+          "buildingOrder": "Rachel builds her Developments from her Player Board top to bottom, left to right. In other words, she will build all of the Developments in the first column before moving on to the second."
+        },
+        "hire-expert-worker-bot": {
+          "title": "Hire Expert Worker",
+          "firstExpert": "When Rachel is hiring her first Expert, she will only hire an Expert that costs less than 7 Money. If both Experts cost less than 7, she hires the leftmost Expert first (the one associated with the Launch Tower).",
+          "addToBreakRoom": "She adds that Expert to her Break Room, and gains a Funding Bonus as usual.",
+          "secondExpert": "When Rachel is hiring her second Expert, she will only hire an Expert that costs less than 4 Money.",
+          "easyDifficulty": "Rachel's Experts have no special ability and function exactly like a normal Worker.",
+          "normalDifficulty": "Rachel's Experts gain an additional Funding Bonus when returned to her Break Room."
+        },
+        "refresh-blueprints": {
+          "title": "Refresh Blueprints",
+          "refresh": "Rachel spends 1 Reputation, discards all Blueprints from the display on the Main Board, and adds 5 new Blueprints from the Blueprint tray."
+        },
+        "launch-ship": {
+          "title": "Launch Ship",
+          "shipSelection": "Rachel executes this action if she has a ship with <b>{shipSize}+ Segments</b> available. If Rachel has multiple Ships that fits the criteria, she will choose a Ship to launch prioritizing the following:",
+          "shipSelectionPriority1": "A Ship that hasn't been launched.",
+          "shipSelectionPriority2": "A Ship that will score the most VP.",
+          "shipSelectionPriority3": "The rightmost Ship.",
+          "step5Title": "5. Assign and Board",
+          "step5Cruise": "Rachel chooses the marked Cruise and places it above that Ship. She may not take a Cruise that you have scheduled.",
+          "step5Guests": "She then takes any Guests next to the Cruise and adds them to her Ship; if no Guests were pre-sold tickets, she will sell Last-Minute tickets to matching Guests from the Queue to fill up her Cabins (following the rules from the Advertise Cruise action).",
+          "step5Overflow": "If she only has one Cabin but takes 2 Guests because they were presold tickets, she returns one randomly to the back of the Queue (3 Ad cost) and loses 2 Reputation (like a human player would).",
+          "step4Title": "4. Place Progress Cube",
+          "step4Cube": "She adds a Progress Cube from her supply to the Progress Track.",
+          "step3Title": "3. Pay Resources",
+          "step3Compare": "Compare the printed Fuel cost of the Cruise to Rachel's Fuel row on her Player Board. The largest visible number in her Fuel row is her Fuel capacity.",
+          "step3Reputation": "If the Cruise's Fuel cost is higher than Rachel's Fuel capacity, she will spend Reputation to supplement the Fuel cost, reducing her Reputation tracker past the required number of Resource icons.",
+          "step3ZeroReputation": "If her Reputation tracker is at \"0,\" she will still launch, but she loses 1 VP per extra Fuel needed.",
+          "step2Title": "2. Score Cockpit",
+          "step2Score": "Rachel scores Cockpits by adding the VP listed on the Cockpit to all the VP on Segments in that Ship.",
+          "step2FirstTime": "If this is the first time that Ship is launched, the Cockpit is flipped over, removing the -5 VP at the top.",
+          "step1Title": "1. Load Up",
+          "step1Upgrade": "Rachel flips (without gaining its bonus) and moves one Upgrade Token from her Launch Tower to her Engine.",
+          "step1Order": "She removes them in this order: the lower 4 tokens (in any order) until the leftmost Expert is hired, then the 1 VP Funding Bonus token. After this, she takes any Upgrade Token in any order.",
+          "step0Title": "0. Liftoff!",
+          "step0Action": "Place Rachel's Worker into the Cockpit of the Ship, and then add a new Cruise to the Marketing Board as usual.",
+          "step0SecondAction": "If resolving this as her second action of the turn, she instead moves the Worker from her first action to the Launch Elevator."
+        },
+        "call-meeting": {
+          "title": "Call a Meeting",
+          "returnWorkers": "Rachel returns all Workers and gains VP for each Worker recalled based on her VP Funding Bonus."
+        },
+        "place-worker": {
+          "title": "Place a Worker",
+          "placeWorker": "Place one of Rachel’s Workers (an Expert if available) into the Network at the marked location.",
+          "nextLocation": "If she already occupies that space, she will go to the first available space clockwise not containing one of her Workers."
+        }
+      }
+    }
+  },
+  "difficultyLevel": {
+    "1": "Easy",
+    "2": "Medium",
+    "3": "Hard"
+  },
+  "notfound": {
+    "title": "Not Found"
+  },
+  "action": {
+    "playGame": "Play Game",
+    "startGame": "Start Game",
+    "next": "Next",
+    "nextRound": "Next Round",
+    "abortGame": "Abort Game",
+    "abortGameConfirm": "Aborting the running game - are you sure?",
+    "endGame": "End Game",
+    "endGameConfirm": "End this game and return to home screen - are you sure?",
+    "cancel": "Cancel",
+    "backToHome": "Back to Home",
+    "back": "Back",
+    "close": "Close",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Refresh Application",
+    "notice": "The application was updated - do you want to refresh to use the latest version?"
+  }
+}
