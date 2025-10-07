@@ -161,7 +161,8 @@
           "fourthToken": "In the rare case that Rachel would visit the same first Destination four times, she will place the Upgrade Token on the next Destination on that same Cruise. If there are no other Destinations on that Cruise, the token is simply discarded."
         },
         "dayInSpace": {
-          "gainGuestBonuses": "Rachel gains 1 Reputation for each Guest on the Cruise, regardless of the Guest types."
+          "gainGuestBonuses": "Rachel gains 1 Reputation for each Guest on the Cruise, regardless of the Guest types.",
+          "accommodationsIgnoreSpecialBlueprints": "<b>Accommodations Expansion</b>: During a Day in Space, Rachel ignores the actions on the Specialized Blueprints and instead gains Reputation as usual."
         }
       },
       "action": {

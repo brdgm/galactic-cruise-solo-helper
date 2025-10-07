@@ -161,7 +161,8 @@
           "fourthToken": "Im seltenen Fall, dass Rachel 4 Mal im Spiel das gleiche erste Reiseziel besuchen würde, lädt sie den Marker erst beim zweiten Reiseziel ab. Gibt es auf der aktuellen Reise kein zweites, dann wirft sie es ab."
         },
         "dayInSpace": {
-          "gainGuestBonuses": "Rachel erhält 1 Reputation pro Gast unabhängig von der Farbe."
+          "gainGuestBonuses": "Rachel erhält 1 Reputation pro Gast unabhängig von der Farbe.",
+          "accommodationsIgnoreSpecialBlueprints": "<b>Unterkünfte-Erweiterung</b>: An einem Tag im Weltall ignoriert Rachel die Aktionen der spezialisierten Blaupausen und erhält wie üblich Reputation."
         }
       },
       "action": {
