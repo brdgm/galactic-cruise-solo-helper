@@ -23,6 +23,7 @@
         <li v-html="t(`rules.bot.action.${action.action}.maxSegments`)"></li>
         <li v-html="t(`rules.bot.action.${action.action}.shipLimit`)"></li>
       </ul>
+      <p class="fst-italic" v-if="hasAdvancementsAccommodationsExpansion" v-html="t(`rules.bot.action.${action.action}.noCabinMatch`)"></p>
     </template>
   </ActionBox>
 </template>
@@ -36,6 +37,8 @@ import AppIcon from '@/components/structure/AppIcon.vue'
 import BlueprintSelection from '@/components/structure/BlueprintSelection.vue'
 import getCardNumber from '@/util/getCardNumber'
 import AgendaCardSelection from '@/components/structure/AgendaCardSelection.vue'
+import { useStateStore } from '@/store/state'
+import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
   name: 'ActionBuildShipSegments',
@@ -61,7 +64,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   computed: {
     blueprintPositions() : number[] {
@@ -74,6 +78,10 @@ export default defineComponent({
     },
     cockpitPosition() : number {
       return getCardNumber(this.supportCard, 4)
+    },
+    hasAdvancementsAccommodationsExpansion() : boolean {
+      return this.state.setup.expansions.includes(Expansion.ADVANCEMENTS)
+          || this.state.setup.expansions.includes(Expansion.ACCOMMODATIONS)
     }
   }
 })
