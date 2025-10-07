@@ -27,7 +27,6 @@ import NavigationState from '@/util/NavigationState'
 import ActionBox from '@/components/structure/ActionBox.vue'
 import AppIcon from '@/components/structure/AppIcon.vue'
 import WorkerLocationDisplay from '@/components/structure/WorkerLocationDisplay.vue'
-import getCardNumber from '@/util/getCardNumber'
 
 export default defineComponent({
   name: 'ActionPlaceWorker',
@@ -48,7 +47,7 @@ export default defineComponent({
   },
   computed: {
     workerLocation() : number {
-      return getCardNumber(this.navigationState.cardDeck.supportCard, 6)
+      return this.navigationState.cardDeck.supportCard.workerLocation
     }
   }
 })
