@@ -43,7 +43,13 @@
       },
       "soloWorkerCard": "Place the <b>Solo Worker Card</b> of your chosen difficulty next to the Action Cards (this will help you to remember to Call a Meeting if she has no Workers). This is her Break Room—place her Workers here instead of on her Player Board.",
       "firstDevelopment": "Rachel places her <b>first Development</b> (from the Food row) in the Network. This placement must be in an area with no other Developments as usual.",
-      "discardBlueprint": "She then discards this <b>Blueprint</b>:"
+      "discardBlueprint": "She then discards this <b>Blueprint</b>:",
+      "actionExecutionSelection": {
+        "title": "Rachel \"Action Executed\" Selection",
+        "workerSameAction": "After successfully executing Rachel's action, use the button with this icon if Rachel’s Worker is at the location that displays the actual action she took. She will then execute another action.",
+        "workerSameActionConnected": "After successfully executing Rachel's action, use the button with this icon if Rachel’s Worker is at the location that displays the actual action she took, or is adjacent to that action and connected by one or more Developments. She will then execute another action.",
+        "otherLocation": "If Rachel's Worker is at a different location, use the button with this icon. She will <i>not</i> execute another action."
+      }
     }
   },
   "turnPlayer": {

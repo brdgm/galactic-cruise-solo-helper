@@ -149,7 +149,6 @@ export default defineComponent({
 })
 </script>
 
-
 <style lang="scss" scoped>
 .btn {
   .workerIcon {
