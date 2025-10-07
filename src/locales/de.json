@@ -49,6 +49,15 @@
         "workerSameAction": "Benutze die Schaltfläche mit diesem Symbol nach erfolgreichem Ausführen der Aktion, wenn sich Rachels Angestellter am selben Ort befindet, wie die soeben ausgeführte Aktion. Sie wird dann eine weitere Aktion ausführen.",
         "workerSameActionConnected": "Benutze die Schaltfläche mit diesem Symbol nach erfolgreichem Ausführen der Aktion, wenn sich Rachels Angestellter am selben Ort befindet, wie die soeben ausgeführte Aktion, oder wenn die ausgeführte Aktion an den Einsatzort angrenzt und über mindestens eine Entwicklung verbunden ist. Sie wird dann eine weitere Aktion ausführen.",
         "otherLocation": "Wenn sich Rachels Angestellter an einem anderen Ort befindet, benutze die Schaltfläche mit diesem Symbol. Sie wird <i>keine</i> weitere Aktion ausführen."
+      },
+      "advancementsExpansion": {
+        "title": "Errungenschaften-Erweiterung",
+        "locationBonus": "Wenn Rachel einen Angestellten an einen Ort mit aktivem Orts-Bonusmarker stellt, erhält sie Reputation, SP und Agendakarten (die abgeworfen werden) als Bonus. Statt Ressourcen, Werbung und Geld wird sie sich stattdessen jedoch jeweils 1 SP nehmen.",
+        "progressCube": "Immer wenn Rachel einem Fortschrittsplättchen (oder Überhangfeld) einen Würfel hinzufügt, schiebt sie den Anzeiger der Technologie, der auf dem niedrigsten Feld ist, um 1 Feld nach rechts. Gleichstände werden nach dem Zahlen-System aufgelöst."
+      },
+      "accommodationsExpansion": {
+        "title": "Unterkünfte-Erweiterung",
+        "startingUpgrades": "Wenn du mit den Start-Aufwertungskarten spielst und nachdem du dir deine Karte ausgesucht hast, gib die andere an Rachel weiter. Rachel aktiviert sie zu Beginn ihres ersten Zuges und legt sie – ohne einen Bonus zu erhalten – auf den entsprechenden Platz ihres Tableaus. Wird ein Aufwertungsmarker mit Pausenbonus genutzt, nimmt Rachel den SP-Marker, egal was auf der Karte abgebildet ist. Ist einer der unteren 4 Marker des Startturms abgebildet, nimmt sie einen beliebigen aus dem unteren Bereich."
       }
     }
   },
@@ -161,7 +170,8 @@
           "takeBlueprints": "Rachel nimmt die 2 markierten Blaupausen aus der Auslage des Spielplans und legt sie direkt in ihre Schiffe.",
           "freeBlueprints": "Beide Blaupausen sind für Rachel kostenlos. Sie baut sie direkt in ihre Schiffe ein, ohne Reputation zu verlieren.",
           "maxSegments": "Wenn sie dabei das 3-Segmente-Limit eines Schiffs erreicht, nimmt sie sofort das markierte Paar aus Cockpit und Antrieb vom Spielplan und fährt mit dem Einbauen fort (Anmerkung: Wenn der Antrieb Reputation oder SP gewährt, nimmt Rachel diese; wenn sie eine Agendakarte nehmen müsste, wird die in der Cockpit-Auswahl markierte Karte abgeworfen).",
-          "shipLimit": "Rachel kann nur 3 Schiffe mit je 3 Segmenten besitzen. Sobald sie 8 Segmente eingebaut hat, wird sie bei ihrer letzten Aktion “Segmente einbauen” nur ein Segment einbauen."
+          "shipLimit": "Rachel kann nur 3 Schiffe mit je 3 Segmenten besitzen. Sobald sie 8 Segmente eingebaut hat, wird sie bei ihrer letzten Aktion “Segmente einbauen” nur ein Segment einbauen.",
+          "noCabinMatch": "<b>Errungenschaften/Unterkünfte-Erweiterung</b>: Rachel muss keine passenden Kabinen bauen und baut ihre Segmente wie oben angeben ein."
         },
         "draw-agenda-cards": {
           "title": "Agendakarten ziehen",

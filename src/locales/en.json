@@ -49,6 +49,15 @@
         "workerSameAction": "After successfully executing Rachel's action, use the button with this icon if Rachel’s Worker is at the location that displays the actual action she took. She will then execute another action.",
         "workerSameActionConnected": "After successfully executing Rachel's action, use the button with this icon if Rachel’s Worker is at the location that displays the actual action she took, or is adjacent to that action and connected by one or more Developments. She will then execute another action.",
         "otherLocation": "If Rachel's Worker is at a different location, use the button with this icon. She will <i>not</i> execute another action."
+      },
+      "advancementsExpansion": {
+        "title": "Advancements Expansion",
+        "locationBonus": "If Rachel places a Worker at a location with an active Location Bonus token, she will gain the VP, Reputation, and Agenda Card bonuses just like a normal player. However, she will treat the Resource, Ad, and Money bonuses as a 1 VP bonus instead.",
+        "progressCube": "Whenever Rachel adds a Progress Cube to the Progress Track, she advances the least advanced invented Technology. Ties are broken by the Number System."
+      },
+      "accommodationsExpansion": {
+        "title": "Accommodations Expansion",
+        "startingUpgrades": "When playing with the Starting Upgrades, after you have chosen yours as usual, give Rachel the remaining Starting Upgrade Card. Rachel will activate it at the start of her first turn by placing the specified Upgrade Token (without gaining its bonus) on the indicated Upgrade. If the card specifies a Funding Bonus Upgrade Token, she removes the VP one (regardless of what it shows on the card). If the card specifies a gray token, she removes any gray token."
       }
     }
   },
@@ -161,7 +170,8 @@
           "takeBlueprints": "Rachel takes the 2 marked Blueprints from the Main Board display and places them into her Ship(s).",
           "freeBlueprints": "These 2 Blueprints are free for her, and she does not lose Reputation. They are immediately built into her Ship(s).",
           "maxSegments": "If she reaches the 3-Segment maximum in a Ship, she immediately takes the marked Cockpit and Engine from the Main Board display and continues building into it (note: if the Engine grants Reputation or VP, she gains it; if it grants an Agenda Card, she discards one from the display as marked for the Cockpit selection).",
-          "shipLimit": "Rachel may only have 3 Ships with 3 Segments each. Once she has 8 Segments built, her final build action will result in only one Segment being built."
+          "shipLimit": "Rachel may only have 3 Ships with 3 Segments each. Once she has 8 Segments built, her final build action will result in only one Segment being built.",
+          "noCabinMatch": "<b>Advancements/Accommodations Expansion</b>: Rachel does not need to Cabin-match and will still build Segments as instructed above."
         },
         "draw-agenda-cards": {
           "title": "Draw Agenda Cards",

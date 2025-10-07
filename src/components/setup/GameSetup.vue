@@ -66,6 +66,29 @@
     </div>
   </div>
 
+  <div class="row" v-if="hasAdvancementsExpansion">
+    <div class="col">
+      <div class="alert alert-info">
+        <h5>{{t('setupGame.bot.advancementsExpansion.title')}}</h5>
+        <ul>
+          <li v-html="t('setupGame.bot.advancementsExpansion.locationBonus')"></li>
+          <li v-html="t('setupGame.bot.advancementsExpansion.progressCube')"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" v-if="hasAccommodationsExpansion">
+    <div class="col">
+      <div class="alert alert-info">
+        <h5>{{t('setupGame.bot.accommodationsExpansion.title')}}</h5>
+        <ul>
+          <li v-html="t('setupGame.bot.accommodationsExpansion.startingUpgrades')"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
 </template>
 
 <script lang="ts">
@@ -85,6 +108,7 @@ import WorkerLocationDisplay from '../structure/WorkerLocationDisplay.vue'
 import BlueprintSelection from '../structure/BlueprintSelection.vue'
 import getCardNumber from '@/util/getCardNumber'
 import DifficultyLevel from './DifficultyLevel.vue'
+import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
   name: 'GameSetup',
@@ -134,6 +158,12 @@ export default defineComponent({
     },
     isEasyDifficultyLevel() : boolean {
       return (this.state.setup.difficultyLevel == DifficultyLevel.EASY)
+    },
+    hasAdvancementsExpansion() : boolean {
+      return this.state.setup.expansions.includes(Expansion.ADVANCEMENTS)
+    },
+    hasAccommodationsExpansion() : boolean {
+      return this.state.setup.expansions.includes(Expansion.ACCOMMODATIONS)
     }
   }
 })
