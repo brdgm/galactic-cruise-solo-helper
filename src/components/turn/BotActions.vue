@@ -7,11 +7,11 @@
   </template>
 
   <template v-if="firstAction && firstActionSupportCard">
-    <BotAction :supportCard="firstActionSupportCard" :cardAction="firstAction"/>
+    <BotAction :supportCard="firstActionSupportCard" :cardAction="firstAction" :checked="true"/>
   </template>
 
   <template v-if="cardAction && !noActionPossible">
-    <BotAction :supportCard="supportCard" :cardAction="cardAction"/>
+    <BotAction :supportCard="supportCard" :cardAction="cardAction" :checked="cardActionExecuted"/>
   </template>
 
   <template v-if="cardActionExecuted || noActionPossible">

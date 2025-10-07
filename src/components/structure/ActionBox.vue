@@ -1,5 +1,6 @@
 <template>
   <div class="actionBox col" @click="showInstructions">
+    <div class="checkmark" v-if="checked">✓</div>
     <slot name="action"></slot>
   </div>
 
@@ -30,6 +31,10 @@ export default defineComponent({
       type: String,
       required: true
     },
+    checked: {
+      type: Boolean,
+      required: false
+    },
     modalSizeLg: {
       type: Boolean,
       required: false
@@ -45,6 +50,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .actionBox {
+  position: relative;
   display: flex;
   background-color: #f6efe0;
   border: 2px solid #d8c6ac;
@@ -59,5 +65,13 @@ export default defineComponent({
   background-size: 1.25rem;
   justify-content: center;
   margin-bottom: 0.75rem;
+  .checkmark {
+    position: absolute;
+    right: -1rem;
+    bottom: -0.5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    color: green;
+  }
 }
 </style>

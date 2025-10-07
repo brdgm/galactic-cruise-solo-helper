@@ -1,5 +1,5 @@
 <template>
-  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)" :modalSizeLg="true">
+  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)" :checked="checked" :modalSizeLg="true">
     <template #action>
       <AppIcon type="action" :name="`${action.action}-${action.shipSize}`" extension="svg" class="icon"/>
     </template>
@@ -92,6 +92,10 @@ export default defineComponent({
     action: {
       type: Object as PropType<CardAction>,
       required: true
+    },
+    checked: {
+      type: Boolean,
+      required: false
     }
   },
   setup() {

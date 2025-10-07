@@ -1,5 +1,5 @@
 <template>
-  <component :is="`action-${cardAction.action}`" :supportCard="supportCard" :action="cardAction"/>
+  <component :is="`action-${cardAction.action}`" :supportCard="supportCard" :action="cardAction" :checked="checked"/>
 </template>
 
 <script lang="ts">
@@ -40,6 +40,10 @@ export default defineComponent({
     cardAction: {
       type: Object as PropType<CardAction>,
       required: true
+    },
+    checked: {
+      type: Boolean,
+      required: false
     }
   }
 })

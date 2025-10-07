@@ -1,5 +1,5 @@
 <template>
-  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)">
+  <ActionBox :instructionTitle="t(`rules.bot.action.${action.action}.title`)" :checked="checked">
     <template #action>
       <AppIcon type="action" :name="action.action" extension="svg" class="icon"/>
     </template>
@@ -30,6 +30,10 @@ export default defineComponent({
     action: {
       type: Object as PropType<CardAction>,
       required: true
+    },
+    checked: {
+      type: Boolean,
+      required: false
     }
   },
   setup() {
