@@ -14,7 +14,7 @@
     <BotAction :supportCard="supportCard" :cardAction="cardAction" :checked="cardActionExecuted"/>
   </template>
 
-  <template v-if="cardActionExecuted || noActionPossible">
+  <template v-if="cardActionExecuted || noActionPossible || !cardAction">
     <button class="btn btn-primary btn-lg mt-4 me-2" @click="next(false)">
       {{t('action.next')}}
     </button>
