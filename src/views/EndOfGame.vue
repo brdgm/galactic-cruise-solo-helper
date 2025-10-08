@@ -1,7 +1,7 @@
 <template>
   <h1>{{t('endOfGame.title')}}</h1>
 
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered table-striped mt-3">
     <thead>
       <tr class="table-secondary">
         <th>{{t('endOfGame.condition')}}</th>
@@ -45,8 +45,8 @@
       </tr>
       <tr>
         <td>{{t('endOfGame.supplies')}}</td>
+        <td><NumberInput v-model="suppliesVP[0]" class="number"/></td>
         <td></td>
-        <td><NumberInput v-model="suppliesVP[1]" class="number"/></td>
       </tr>
       <tr>
         <td class="fw-bold">{{t('endOfGame.total')}}</td>
