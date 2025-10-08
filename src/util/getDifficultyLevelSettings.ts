@@ -9,7 +9,7 @@ import SecondActionOption from '@/services/enum/SecondActionOption'
 export default function getDifficultyLevelSettings(difficultyLevel : DifficultyLevel) : DifficultyLevelSettings {
   switch (difficultyLevel) {
     case DifficultyLevel.EASY:
-      return { developmentsBuildGoal: 7, segmentsBuildGoal: 7, differentShipsLaunchedGoal: 3,
+      return { developmentsBuildGoal: 7, segmentsBuildGoal: 8, differentShipsLaunchedGoal: 3,
           secondAction: SecondActionOption.SAME_LOCATION, actionAfterMeeting: false, expertAdditionalFundingBonus: false }
     case DifficultyLevel.MEDIUM:
       return { developmentsBuildGoal: 6, segmentsBuildGoal: 6, differentShipsLaunchedGoal: 2,

@@ -41,20 +41,9 @@
         "segment": "Place this around the area where Rachel's <b>Segment #{segment}</b> will be built.",
         "ship": "Place this above the area where Rachel's <b>Ship #{ship}</b> will be."
       },
-      "soloWorkerCard": "Place the <b>Solo Worker Card</b> of your chosen difficulty next to the Action Cards (this will help you to remember to Call a Meeting if she has no Workers). This is her Break Room—place her Workers here instead of on her Player Board.",
-      "firstDevelopment": "Rachel places her <b>first Development</b> (from the Food row) in the Network. This placement must be in an area with no other Developments as usual.",
+      "firstDevelopment": "Rachel places her <b>first Development</b> (from the Food row) in the Network and gains Reputation as usual. This placement must be in an area with no other Developments as usual.",
       "discardBlueprint": "She then discards this <b>Blueprint</b>:",
-      "actionExecutionSelection": {
-        "title": "Rachel \"Action Executed\" Selection",
-        "workerSameAction": "After successfully executing Rachel's action, use the button with this icon if Rachel’s Worker is at the location that displays the actual action she took. She will then execute another action.",
-        "workerSameActionConnected": "After successfully executing Rachel's action, use the button with this icon if Rachel’s Worker is at the location that displays the actual action she took, or is adjacent to that action and connected by one or more Developments. She will then execute another action.",
-        "otherLocation": "If Rachel's Worker is at a different location, use the button with this icon. She will <i>not</i> execute another action."
-      },
-      "advancementsExpansion": {
-        "title": "Advancements Expansion",
-        "locationBonus": "If Rachel places a Worker at a location with an active Location Bonus token, she will gain the VP, Reputation, and Agenda Card bonuses just like a normal player. However, she will treat the Resource, Ad, and Money bonuses as a 1 VP bonus instead.",
-        "progressCube": "Whenever Rachel adds a Progress Cube to the Progress Track, she advances the least advanced invented Technology. Ties are broken by the Number System."
-      },
+      "discardAgendaCard": "Finally, she discards the top card of the <b>Agenda</b> deck into the faceup discard pile.",
       "accommodationsExpansion": {
         "title": "Accommodations Expansion",
         "startingUpgrades": "When playing with the Starting Upgrades, after you have chosen yours as usual, give Rachel the remaining Starting Upgrade Card. Rachel will activate it at the start of her first turn by placing the specified Upgrade Token (without gaining its bonus) on the indicated Upgrade. If the card specifies a Funding Bonus Upgrade Token, she removes the VP one (regardless of what it shows on the card). If the card specifies a gray token, she removes any gray token."
@@ -76,7 +65,8 @@
     "placeWorker": "Place a Worker",
     "noWorkers": "No Workers available",
     "actionExecuted": "Action executed",
-    "notPossible": "Not possible"
+    "notPossible": "Not possible",
+    "checkCompanyGoals": "Check Rachel's Company Goals"
   },
   "sideBar": {
     "turn": "Turn {turn}"
@@ -269,6 +259,50 @@
           "nextLocation": "If she already occupies that space, she will go to the first available space clockwise not containing one of her Workers."
         }
       }
+    },
+    "companyGoals": {
+      "title": "Company Goals",
+      "check": "If, at the end of Rachels turn, she has accomplished one of her Company Goals, she moves the corresponding cube to the Progress Track.",
+      "rachelGoals": "Rachel's Goals:",
+      "leftGoal": "Left Goal",
+      "middleGoal": "Middle Goal",
+      "rightGoal": "Right Goal",
+      "buildDevelopments": "Build <b>{count} Developments</b>",
+      "buildSegments": "Build <b>{count} Segments</b>",
+      "launchShips": "Launch <b>{count} Different Ships</b>",
+      "goalCompletion": "Whenever she completes a Company Goal, she removes her cube from above that corresponding goal and places it on the Progress Track, and the corresponding Company Goal tracker raises to the top level, if it isn't already there.",
+      "note": "Note: While her achievement of goals affect you, yours do not affect her. In other words, if you accomplish your leftmost Company Goal before she accomplishes her #1 goal, her required number of Developments built does not change."
+    },
+    "networkActions": {
+      "title": "Network & Actions",
+      "actionExecutionSelection": {
+        "title": "Rachel \"Action Executed\" Selection",
+        "workerSameAction": "After successfully executing Rachel's action, use the button with this icon if Rachel’s Worker is at the location that displays the actual action she took. She will then execute another action.",
+        "workerSameActionConnected": "After successfully executing Rachel's action, use the button with this icon if Rachel’s Worker is at the location that displays the actual action she took, or is adjacent to that action and connected by one or more Developments. She will then execute another action. She will pay you Money from the supply based on her Reputation level to use your Developments if she has none of her own. She can use neutral Developments as normal by \"paying the supply,\" but because she does not gain or spend Money, this transaction does not happen.",
+        "otherLocation": "If Rachel's Worker is at a different location, use the button with this icon. She will <i>not</i> execute another action."
+      },
+      "otherDevelopments": {
+        "title": "Other Players' Developments",
+        "useOtherDevelopments": "If you use a neutral, NPC or Rachel's development in the Network or below a Technology, you have to pay to the supply for <b>every</b> one of them in that area (depending on your position on the Reputation track)."
+      },
+      "npcWorkerBumping": {
+        "title": "NPC Worker Bumping",
+        "placingWorker": "When placing a Worker onto a location occupied by an NPC Worker, you bump that Worker to the next location clockwise:",
+        "locationEmpty": "<i>If that location is empty</i>: The NPC Worker will stay there until bumped again in the future.",
+        "locationOccupiedByOpponent": "<i>If that location is occupied by your opponent’s Worker</i>: The NPC Worker bumps the Worker occupying that location. This will cause your opponent’s Worker to get bumped back to their Break Room, the same as if your Worker had bumped them.",
+        "locationOccupiedByNPC": "<i>If that location is occupied by an NPC Worker</i>: The NPC Worker will skip this location and move clockwise to the next location.",
+        "locationOccupiedByYourself": "<i>If that location is occupied by one of your own Workers</i>: The NPC Worker will not bump your Worker, unless you have the ability to bump yourself. The NPC Worker will skip this location and move clockwise to the next location.",
+        "expertWorkers": "NPC Expert Workers function the same as NPC Workers except, when bumped, they skip over empty locations unless there is no other possible location."
+      },
+      "advancementsExpansion": {
+        "title": "Advancements Expansion",
+        "locationBonus": "If Rachel places a Worker at a location with an active Location Bonus token, she will gain the VP, Reputation, and Agenda Card bonuses just like a normal player. However, she will treat the Resource, Ad, and Money bonuses as a 1 VP bonus instead.",
+        "progressCube": "Whenever Rachel adds a Progress Cube to the Progress Track, she advances the least advanced invented Technology. Ties are broken by the Number System."
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "botRuleModifications": "Rachel Rules Modifications"
     }
   },
   "difficultyLevel": {
