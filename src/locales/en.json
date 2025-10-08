@@ -76,7 +76,8 @@
     "placeWorker": "Place a Worker",
     "noWorkers": "No Workers available",
     "actionExecuted": "Action executed",
-    "notPossible": "Not possible"
+    "notPossible": "Not possible",
+    "checkCompanyGoals": "Check Rachel's Company Goals"
   },
   "sideBar": {
     "turn": "Turn {turn}"
@@ -269,6 +270,19 @@
           "nextLocation": "If she already occupies that space, she will go to the first available space clockwise not containing one of her Workers."
         }
       }
+    },
+    "companyGoals": {
+      "title": "Company Goals",
+      "check": "If, at the end of Rachels turn, she has accomplished one of her Company Goals, she moves the corresponding cube to the Progress Track.",
+      "rachelGoals": "Rachel's Goals:",
+      "leftGoal": "Left Goal",
+      "middleGoal": "Middle Goal",
+      "rightGoal": "Right Goal",
+      "buildDevelopments": "Build <b>{count} Developments</b>",
+      "buildSegments": "Build <b>{count} Segments</b>",
+      "launchShips": "Launch <b>{count} Different Ships</b>",
+      "goalCompletion": "Whenever she completes a Company Goal, she removes her cube from above that corresponding goal and places it on the Progress Track, and the corresponding Company Goal tracker raises to the top level, if it isn't already there.",
+      "note": "Note: While her achievement of goals affect you, yours do not affect her. In other words, if you accomplish your leftmost Company Goal before she accomplishes her #1 goal, her required number of Developments built does not change."
     }
   },
   "difficultyLevel": {

@@ -15,6 +15,9 @@
   </template>
 
   <template v-if="cardActionExecuted || noActionPossible || !cardAction">
+    <div clasS="mt-3">
+      <button class="btn btn-outline-secondary" data-bs-toggle="modal" href="#companyGoalsModal">{{t('turnBot.checkCompanyGoals')}}</button>
+    </div>
     <button class="btn btn-primary btn-lg mt-4 me-2" @click="next(false)">
       {{t('action.next')}}
     </button>

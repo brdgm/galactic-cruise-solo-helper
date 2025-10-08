@@ -76,7 +76,8 @@
     "placeWorker": "Platziere Angestellten",
     "noWorkers": "Keine Angestellten verfügbar",
     "actionExecuted": "Aktion ausgeführt",
-    "notPossible": "Nicht möglich"
+    "notPossible": "Nicht möglich",
+    "checkCompanyGoals": "Prüfe Rachels Unternehmensziele"
   },
   "sideBar": {
     "turn": "Zug {turn}"
@@ -269,6 +270,19 @@
           "nextLocation": "Wenn dieser Ort bereits von ihr besetzt ist, wählt sie den nächsten Ort im Uhrzeigersinn, an dem sich kein eigener Angestellter befindet."
         }
       }
+    },
+    "companyGoals": {
+      "title": "Unternehmensziele",
+      "check": "Hat Rachel am Ende ihres Zuges eines ihrer Unternehmensziele erreicht, legt sie den entsprechenden Würfel auf das unterste Fortschrittsplättchen, das noch Platz für Würfel hat.",
+      "rachelGoals": "Rachels Ziele:",
+      "leftGoal": "Linkes Ziel",
+      "middleGoal": "Mittleres Ziel",
+      "rightGoal": "Rechtes Ziel",
+      "buildDevelopments": "Baue <b>{count} Entwicklungen</b>",
+      "buildSegments": "Baue <b>{count} Segmente</b>",
+      "launchShips": "Starte <b>{count} verschiedene Schiffe</b>",
+      "goalCompletion": "Immer wenn sie ein Ziel erfüllt, nimmt sie einen Würfel aus der Spalte über dem entsprechenden Ziel und legt ihn auf das aktuelle Fortschrittsplättchen und der Unternehmensziel-Anzeiger steigt auf den höchsten Wert, falls er sich dort nicht bereits befindet.",
+      "note": "Anmerkung: Während ihre Errungenschaften dich beeinflussen, gilt das nicht andersrum. In anderen Worten: Wenn du dein linkes Ziel vor Rachels #1-Ziel erreichst, wird das ihre Anforderungen an gebaute Entwicklungen nicht erhöhen."
     }
   },
   "difficultyLevel": {
