@@ -2,16 +2,16 @@
   <template v-if="isNoWorkers">
     <ActionCallMeeting/>
   </template>
-  <template v-else>
+  <template v-else-if="!isFirstActionLaunchShip">
     <ActionPlaceWorker :supportCard="supportCard"/>
   </template>
 
   <template v-if="firstAction && firstActionSupportCard">
-    <BotAction :supportCard="firstActionSupportCard" :cardAction="firstAction" :checked="true"/>
+    <BotActionBox :supportCard="firstActionSupportCard" :cardAction="firstAction" :checked="true"/>
   </template>
 
   <template v-if="cardAction && !noActionPossible">
-    <BotAction :supportCard="supportCard" :cardAction="cardAction" :checked="cardActionExecuted"/>
+    <BotActionBox :supportCard="supportCard" :cardAction="cardAction" :checked="cardActionExecuted"/>
   </template>
 
   <template v-if="cardActionExecuted || noActionPossible || !cardAction">
@@ -57,7 +57,8 @@ import ActionPlaceWorker from './action/ActionPlaceWorker.vue'
 import Card, { CardAction } from '@/services/Card'
 import Action from '@/services/enum/Action'
 import getMatchingAction from '@/util/getMatchingAction'
-import BotAction from './BotAction.vue'
+import BotActionBox from './BotActionBox.vue'
+import BotAction from '@/services/enum/BotAction'
 
 export default defineComponent({
   name: 'BotActions',
@@ -67,7 +68,7 @@ export default defineComponent({
   components: {
     AppIcon,
     EndRoundButton,
-    BotAction,
+    BotActionBox,
     ActionCallMeeting,
     ActionPlaceWorker
   },
@@ -109,6 +110,9 @@ export default defineComponent({
         return undefined
       }
       return this.currentCard?.actions[this.action % 2]
+    },
+    isFirstActionLaunchShip() : boolean {
+      return this.firstAction == undefined && this.cardAction?.action == BotAction.LAUNCH_SHIP
     },
     matchingAction() : Action|undefined {
       return this.cardAction ? getMatchingAction(this.cardAction.action) : undefined

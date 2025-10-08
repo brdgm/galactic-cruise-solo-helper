@@ -18,7 +18,7 @@ import ActionRefillStorageSilo from './action/ActionRefillStorageSilo.vue'
 import ActionRefreshBlueprints from './action/ActionRefreshBlueprints.vue'
 
 export default defineComponent({
-  name: 'BotAction',
+  name: 'BotActionBox',
   components: {
     ActionAdvertiseCruise,
     ActionBuildDevelopmentNetwork,
