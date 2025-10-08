@@ -10,13 +10,13 @@
 
   <p v-html="t('home.play1')"></p>
   <p v-html="t('home.play2')"></p>
-<!--
+
   <p class="text-muted fst-italic">
     {{t('home.feedback')}}
-    <a href="https://boardgamegeek.com/thread/3579650/XXX" target="_blank" rel="noopener">Board Game Geek Thread</a> |
+    <a href="https://boardgamegeek.com/thread/3589315/brdgmme-galactic-cruise-solo-helper-web-applicatio" target="_blank" rel="noopener">Board Game Geek Thread</a> |
     <a href="https://github.com/brdgm/galactic-cruise-solo-helper" target="_blank" rel="noopener">GitHub</a>
   </p>
--->
+
   <router-link to="/setup" class="btn btn-primary btn-lg mt-3">{{t('action.playGame')}}</router-link>
 
   <p class="disclaimer">
