@@ -4,11 +4,13 @@
     <ul class="rules">
       <li><a data-bs-toggle="modal" href="#networkActionsModal">{{t('rules.networkActions.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#companyGoalsModal">{{t('rules.companyGoals.title')}}</a></li>
+      <li><a data-bs-toggle="modal" href="#faqModal">{{t('rules.faq.title')}}</a></li>
     </ul>
   </div>
 
   <CompanyGoalsModal/>
   <NetworkActionsModal/>
+  <FAQModal/>
 </template>
 
 <script lang="ts">
@@ -18,12 +20,14 @@ import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import CompanyGoalsModal from '../rules/CompanyGoalsModal.vue'
 import NetworkActionsModal from '../rules/NetworkActionsModal.vue'
+import FAQModal from '../rules/FAQModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
   components: {
     CompanyGoalsModal,
-    NetworkActionsModal
+    NetworkActionsModal,
+    FAQModal
   },
   setup() {
     const { t } = useI18n()

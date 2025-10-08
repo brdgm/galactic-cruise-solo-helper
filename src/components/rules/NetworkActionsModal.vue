@@ -1,7 +1,6 @@
 <template>
   <ModalDialog id="networkActionsModal" :size-lg="true" :scrollable="true" :title="t('rules.networkActions.title')">
     <template #body>
-
       <div class="actionExecutedRules">
         <h5>{{t('rules.networkActions.actionExecutionSelection.title')}}</h5>
         <p v-if="isEasyDifficultyLevel">

@@ -299,6 +299,10 @@
         "locationBonus": "Wenn Rachel einen Angestellten an einen Ort mit aktivem Orts-Bonusmarker stellt, erhält sie Reputation, SP und Agendakarten (die abgeworfen werden) als Bonus. Statt Ressourcen, Werbung und Geld wird sie sich stattdessen jedoch jeweils 1 SP nehmen.",
         "progressCube": "Immer wenn Rachel einem Fortschrittsplättchen (oder Überhangfeld) einen Würfel hinzufügt, schiebt sie den Anzeiger der Technologie, der auf dem niedrigsten Feld ist, um 1 Feld nach rechts. Gleichstände werden nach dem Zahlen-System aufgelöst."
       }
+    },
+    "faq": {
+      "title": "FAQ",
+      "botRuleModifications": "Regeländerungen für Rachel"
     }
   },
   "difficultyLevel": {

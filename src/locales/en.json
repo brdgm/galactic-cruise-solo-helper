@@ -299,6 +299,10 @@
         "locationBonus": "If Rachel places a Worker at a location with an active Location Bonus token, she will gain the VP, Reputation, and Agenda Card bonuses just like a normal player. However, she will treat the Resource, Ad, and Money bonuses as a 1 VP bonus instead.",
         "progressCube": "Whenever Rachel adds a Progress Cube to the Progress Track, she advances the least advanced invented Technology. Ties are broken by the Number System."
       }
+    },
+    "faq": {
+      "title": "FAQ",
+      "botRuleModifications": "Rachel Rules Modifications"
     }
   },
   "difficultyLevel": {
