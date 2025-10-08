@@ -66,9 +66,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-ul > li {
-  margin-top: 0.5rem;
-}
 .goals {
   display: flex;
   gap: 0.5rem;

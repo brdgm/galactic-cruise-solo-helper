@@ -41,7 +41,7 @@
         "segment": "Lege dieses Plättchen in der Nähe des Bereichs, in dem Rachels <b>Segment #{segment}</b> gebaut wird",
         "ship": "Lege dieses Plättchen in die Nähe des Platzes, wo Rachels <b>Schiff #{ship}</b> gebaut wird."
       },
-      "firstDevelopment": "Rachel platziert ihre <b>erste Entwicklung</b> (aus der Nahrungs-Reihe) im Hauptquartier. Die Entwicklung muss in ein leeres Areal gebaut werden.",
+      "firstDevelopment": "Rachel platziert ihre <b>erste Entwicklung</b> (aus der Nahrungs-Reihe) im Hauptquartier und erhält wie üblich Reputation. Die Entwicklung muss in ein leeres Areal gebaut werden.",
       "discardBlueprint": "Rachel wirft sie diese <b>Blaupause</b> ab:",
       "discardAgendaCard": "Abschließend wirft sie die oberste <b>Agendakarte</b> vom Stapel offen auf den Ablagestapel ab.",
       "actionExecutionSelection": {
