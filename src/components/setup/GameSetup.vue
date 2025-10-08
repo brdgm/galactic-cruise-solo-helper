@@ -42,49 +42,11 @@
     <li v-html="t('setupGame.bot.discardAgendaCard')"></li>
   </ol>
 
-  <div class="row">
-    <div class="col">
-      <div class="alert alert-success actionExecutedRules">
-        <h5>{{t('setupGame.bot.actionExecutionSelection.title')}}</h5>
-        <ul>
-          <li v-if="isEasyDifficultyLevel">
-            <AppIcon name="worker-same-action" extension="svg" class="workerIcon"/>
-            <AppIcon name="action" extension="svg" class="actionIcon"/>
-            <div v-html="t('setupGame.bot.actionExecutionSelection.workerSameAction')"></div>
-          </li>
-          <li v-else>
-            <AppIcon name="worker-same-action-connected" extension="svg" class="workerIcon"/>
-            <AppIcon name="action" extension="svg" class="actionIcon"/>
-            <div v-html="t('setupGame.bot.actionExecutionSelection.workerSameActionConnected')"></div>
-          </li>
-          <li>
-            <AppIcon name="action-other" extension="svg" class="actionOtherIcon"/>
-            <div v-html="t('setupGame.bot.actionExecutionSelection.otherLocation')"></div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="row" v-if="hasAdvancementsExpansion">
-    <div class="col">
-      <div class="alert alert-info">
-        <h5>{{t('setupGame.bot.advancementsExpansion.title')}}</h5>
-        <ul>
-          <li v-html="t('setupGame.bot.advancementsExpansion.locationBonus')"></li>
-          <li v-html="t('setupGame.bot.advancementsExpansion.progressCube')"></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
   <div class="row" v-if="hasAccommodationsExpansion">
     <div class="col">
       <div class="alert alert-info">
         <h5>{{t('setupGame.bot.accommodationsExpansion.title')}}</h5>
-        <ul>
-          <li v-html="t('setupGame.bot.accommodationsExpansion.startingUpgrades')"></li>
-        </ul>
+        <p v-html="t('setupGame.bot.accommodationsExpansion.startingUpgrades')"></p>
       </div>
     </div>
   </div>
@@ -107,7 +69,6 @@ import TechnologySelection from '../structure/TechnologySelection.vue'
 import WorkerLocationDisplay from '../structure/WorkerLocationDisplay.vue'
 import BlueprintSelection from '../structure/BlueprintSelection.vue'
 import getCardNumber from '@/util/getCardNumber'
-import DifficultyLevel from './DifficultyLevel.vue'
 import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
@@ -156,12 +117,6 @@ export default defineComponent({
     blueprintNumber() : number {
       return getCardNumber(this.supportCard, 5)
     },
-    isEasyDifficultyLevel() : boolean {
-      return (this.state.setup.difficultyLevel == DifficultyLevel.EASY)
-    },
-    hasAdvancementsExpansion() : boolean {
-      return this.state.setup.expansions.includes(Expansion.ADVANCEMENTS)
-    },
     hasAccommodationsExpansion() : boolean {
       return this.state.setup.expansions.includes(Expansion.ACCOMMODATIONS)
     }
@@ -178,34 +133,6 @@ export default defineComponent({
     width: 40px;
     margin-right: 8px;
     filter: drop-shadow(0.15rem 0.15rem 0.15rem #aaa);
-  }
-}
-.actionExecutedRules {
-  ul {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-  li {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .workerIcon {
-    height: 2.75rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.25rem;
-  }
-  .actionIcon {
-    height: 1.75rem;
-    margin-top: 0.5rem;
-    margin-right: 0.75rem;
-    margin-bottom: 0.25rem;
-  }
-  .actionOtherIcon {
-    height: 2.25rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.25rem;
-    margin-right: 0.75rem;
   }
 }
 </style>

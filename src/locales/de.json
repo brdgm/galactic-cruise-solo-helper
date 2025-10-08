@@ -44,17 +44,6 @@
       "firstDevelopment": "Rachel platziert ihre <b>erste Entwicklung</b> (aus der Nahrungs-Reihe) im Hauptquartier und erhält wie üblich Reputation. Die Entwicklung muss in ein leeres Areal gebaut werden.",
       "discardBlueprint": "Rachel wirft sie diese <b>Blaupause</b> ab:",
       "discardAgendaCard": "Abschließend wirft sie die oberste <b>Agendakarte</b> vom Stapel offen auf den Ablagestapel ab.",
-      "actionExecutionSelection": {
-        "title": "Rachels \"Aktion ausgeführt\"-Auswahl",
-        "workerSameAction": "Benutze die Schaltfläche mit diesem Symbol nach erfolgreichem Ausführen der Aktion, wenn sich Rachels Angestellter am selben Ort befindet, wie die soeben ausgeführte Aktion. Sie wird dann eine weitere Aktion ausführen.",
-        "workerSameActionConnected": "Benutze die Schaltfläche mit diesem Symbol nach erfolgreichem Ausführen der Aktion, wenn sich Rachels Angestellter am selben Ort befindet, wie die soeben ausgeführte Aktion, oder wenn die ausgeführte Aktion an den Einsatzort angrenzt und über mindestens eine Entwicklung verbunden ist. Sie wird dann eine weitere Aktion ausführen.",
-        "otherLocation": "Wenn sich Rachels Angestellter an einem anderen Ort befindet, benutze die Schaltfläche mit diesem Symbol. Sie wird <i>keine</i> weitere Aktion ausführen."
-      },
-      "advancementsExpansion": {
-        "title": "Errungenschaften-Erweiterung",
-        "locationBonus": "Wenn Rachel einen Angestellten an einen Ort mit aktivem Orts-Bonusmarker stellt, erhält sie Reputation, SP und Agendakarten (die abgeworfen werden) als Bonus. Statt Ressourcen, Werbung und Geld wird sie sich stattdessen jedoch jeweils 1 SP nehmen.",
-        "progressCube": "Immer wenn Rachel einem Fortschrittsplättchen (oder Überhangfeld) einen Würfel hinzufügt, schiebt sie den Anzeiger der Technologie, der auf dem niedrigsten Feld ist, um 1 Feld nach rechts. Gleichstände werden nach dem Zahlen-System aufgelöst."
-      },
       "accommodationsExpansion": {
         "title": "Unterkünfte-Erweiterung",
         "startingUpgrades": "Wenn du mit den Start-Aufwertungskarten spielst und nachdem du dir deine Karte ausgesucht hast, gib die andere an Rachel weiter. Rachel aktiviert sie zu Beginn ihres ersten Zuges und legt sie – ohne einen Bonus zu erhalten – auf den entsprechenden Platz ihres Tableaus. Wird ein Aufwertungsmarker mit Pausenbonus genutzt, nimmt Rachel den SP-Marker, egal was auf der Karte abgebildet ist. Ist einer der unteren 4 Marker des Startturms abgebildet, nimmt sie einen beliebigen aus dem unteren Bereich."
@@ -283,6 +272,33 @@
       "launchShips": "Starte <b>{count} verschiedene Schiffe</b>",
       "goalCompletion": "Immer wenn sie ein Ziel erfüllt, nimmt sie einen Würfel aus der Spalte über dem entsprechenden Ziel und legt ihn auf das aktuelle Fortschrittsplättchen und der Unternehmensziel-Anzeiger steigt auf den höchsten Wert, falls er sich dort nicht bereits befindet.",
       "note": "Anmerkung: Während ihre Errungenschaften dich beeinflussen, gilt das nicht andersrum. In anderen Worten: Wenn du dein linkes Ziel vor Rachels #1-Ziel erreichst, wird das ihre Anforderungen an gebaute Entwicklungen nicht erhöhen."
+    },
+    "networkActions": {
+      "title": "Hauptquartier & Aktionen",
+      "actionExecutionSelection": {
+        "title": "Rachels \"Aktion ausgeführt\"-Auswahl",
+        "workerSameAction": "Benutze die Schaltfläche mit diesem Symbol nach erfolgreichem Ausführen der Aktion, wenn sich Rachels Angestellter am selben Ort befindet, wie die soeben ausgeführte Aktion. Sie wird dann eine weitere Aktion ausführen.",
+        "workerSameActionConnected": "Benutze die Schaltfläche mit diesem Symbol nach erfolgreichem Ausführen der Aktion, wenn sich Rachels Angestellter am selben Ort befindet, wie die soeben ausgeführte Aktion, oder wenn die ausgeführte Aktion an den Einsatzort angrenzt und über mindestens eine Entwicklung verbunden ist. Sie wird dann eine weitere Aktion ausführen.",
+        "otherLocation": "Wenn sich Rachels Angestellter an einem anderen Ort befindet, benutze die Schaltfläche mit diesem Symbol. Sie wird <i>keine</i> weitere Aktion ausführen."
+      },
+      "otherDevelopments": {
+        "title": "Fremde Entwicklungen",
+        "useOtherDevelopments": "Wenn du eine neutrale, NPC- oder eine Entwicklung von Rachel im Hauptquartier oder bei den Technologien verwendest, musst du für <b>jede</b> von ihnen in diesem Areal in den Vorrat zahlen (abhängig von deiner Position auf der Reputationsleiste)."
+      },
+      "npcWorkerBumping": {
+        "title": "NPC Angestellte verdrängen",
+        "placingWorker": "Wenn du einen Angestellten auf einen Ort stellst, der von einem NPCAngestellten besetzt ist, verdrängst du diesen auf den nächsten Ort im Uhrzeigersinn:",
+        "locationEmpty": "<i>Wenn dieser Ort leer ist</i>: Der NPC-Angestellte bleibt dort stehen, bis er erneut verdrängt wird.",
+        "locationOccupiedByOpponent": "<i>Wenn dieser Ort von einem gegnerischen Angestellten besetzt ist</i>: Der NPC-Angestellte verdrängt den gegnerischen Angestellten von diesem Ort. Der gegnerische Angestellte kehrt in den gegnerischen Pausenraum zurück und löst wie gewohnt einen Pausenbonus aus.",
+        "locationOccupiedByNPC": "<i>Wenn dieser Ort von einem NPC-Angestellten besetzt ist</i>: Der NPCAngestellte überspringt diesen Ort und bewegt sich weiter zum nächsten Ort im Uhrzeigersinn.",
+        "locationOccupiedByYourself": "<i>Wenn dieser Ort von einem deiner eigenen Angestellten besetzt ist</i>: Der NPC-Angestellte wird deinen eigenen Angestellten nicht verdrängen, außer du besitzt die Fähigkeit, dass du dich selbst verdrängen darfst. Der NPC-Angestellte überspringt diesen Ort und bewegt sich weiter zum nächsten Ort im Uhrzeigersinn.",
+        "expertWorkers": "NPC-Experten funktionieren wie normale NPC-Angestellte, nur dass sie leere Orte ebenfalls überspringen, außer es gibt keinen anderen legalen Ort im Hauptquartier."
+      },
+      "advancementsExpansion": {
+        "title": "Errungenschaften-Erweiterung",
+        "locationBonus": "Wenn Rachel einen Angestellten an einen Ort mit aktivem Orts-Bonusmarker stellt, erhält sie Reputation, SP und Agendakarten (die abgeworfen werden) als Bonus. Statt Ressourcen, Werbung und Geld wird sie sich stattdessen jedoch jeweils 1 SP nehmen.",
+        "progressCube": "Immer wenn Rachel einem Fortschrittsplättchen (oder Überhangfeld) einen Würfel hinzufügt, schiebt sie den Anzeiger der Technologie, der auf dem niedrigsten Feld ist, um 1 Feld nach rechts. Gleichstände werden nach dem Zahlen-System aufgelöst."
+      }
     }
   },
   "difficultyLevel": {

@@ -2,11 +2,13 @@
   <div class="sidebar">
     {{t('sideBar.turn', {turn})}}
     <ul class="rules">
+      <li><a data-bs-toggle="modal" href="#networkActionsModal">{{t('rules.networkActions.title')}}</a></li>
       <li><a data-bs-toggle="modal" href="#companyGoalsModal">{{t('rules.companyGoals.title')}}</a></li>
     </ul>
   </div>
 
   <CompanyGoalsModal/>
+  <NetworkActionsModal/>
 </template>
 
 <script lang="ts">
@@ -15,11 +17,13 @@ import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import CompanyGoalsModal from '../rules/CompanyGoalsModal.vue'
+import NetworkActionsModal from '../rules/NetworkActionsModal.vue'
 
 export default defineComponent({
   name: 'SideBar',
   components: {
-    CompanyGoalsModal
+    CompanyGoalsModal,
+    NetworkActionsModal
   },
   setup() {
     const { t } = useI18n()
@@ -59,10 +63,11 @@ export default defineComponent({
 .rules {
   list-style-type: none;
   padding-left: 0;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   margin-bottom: 0;
   li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    line-height: 1.2;
     a {
       text-decoration-line: underline;
       text-decoration-style: dotted;
