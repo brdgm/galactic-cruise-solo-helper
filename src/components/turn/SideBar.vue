@@ -1,0 +1,86 @@
+<template>
+  <div class="sidebar">
+    {{t('sideBar.turn', {turn})}}
+    <ul class="rules">
+      <li><a data-bs-toggle="modal" href="#networkActionsModal">{{t('rules.networkActions.title')}}</a></li>
+      <li><a data-bs-toggle="modal" href="#companyGoalsModal">{{t('rules.companyGoals.title')}}</a></li>
+      <li><a data-bs-toggle="modal" href="#faqModal">{{t('rules.faq.title')}}</a></li>
+    </ul>
+  </div>
+
+  <CompanyGoalsModal/>
+  <NetworkActionsModal/>
+  <FAQModal/>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useStateStore } from '@/store/state'
+import NavigationState from '@/util/NavigationState'
+import CompanyGoalsModal from '../rules/CompanyGoalsModal.vue'
+import NetworkActionsModal from '../rules/NetworkActionsModal.vue'
+import FAQModal from '../rules/FAQModal.vue'
+
+export default defineComponent({
+  name: 'SideBar',
+  components: {
+    CompanyGoalsModal,
+    NetworkActionsModal,
+    FAQModal
+  },
+  setup() {
+    const { t } = useI18n()
+    const state = useStateStore()
+    return { t, state }
+  },
+  props: {
+    navigationState: {
+      type: NavigationState,
+      required: true
+    }
+  },
+  computed: {
+    turn() : number {
+      return this.navigationState.turn
+    }
+  }
+})
+</script>
+
+<style lang="scss" scoped>
+.sidebar {
+  float: right;
+  width: 150px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-right: -12px;
+  padding: 15px 10px 15px 15px;
+  background-color: #ddd;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  @media (max-width: 600px) {
+    font-size: 0.9rem;
+    width: 135px;
+  }
+}
+.rules {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  li {
+    margin-bottom: 10px;
+    line-height: 1.2;
+    a {
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      color: #333;
+      font-size: 0.9rem;
+      @media (max-width: 600px) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+</style>

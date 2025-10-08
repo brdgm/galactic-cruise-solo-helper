@@ -1,0 +1,338 @@
+{
+  "gameTitle": "Galactic Cruise",
+  "home": {
+    "title": "Galactic Cruise Solo Helper",
+    "play1": "Spiele den <a href='https://boardgamegeek.com/boardgame/391137/galactic-cruise' target='_blank' rel='noopener'><b>Galactic Cruise</b></a> Solomodus gegen Rachel, die Sologegnerin.",
+    "play2": "Diese Applikation ersetzt das Solokartendeck und führt dich durch den Spielablauf.",
+    "feedback": "Diskussion und Feedback:"
+  },
+  "setup": {
+    "title": "Konfiguration",
+    "difficultyLevel": {
+      "title": "Schwierigkeitsgrad",
+      "easy": "Leicht",
+      "hard": "Schwer"
+    },
+    "expansions": {
+      "title": "Erweiterungen",
+      "advancements": "Errungenschaften",
+      "accommodations": "Unterkünfte"
+    }
+  },
+  "setupGame": {
+    "title": "Spielaufbau",
+    "gameBoard": {
+      "title": "Spielbrett",
+      "twoPlayerGame": "Bereite das Spiel wie für <b>2 Personen</b> vor.",
+      "neutralDevelopments": "Lege die <b>neutralen Entwicklungen</b> in diese Bereiche jeweils auf den Platz mit dem Reputations-Symbol:",
+      "npcWorkers": "Platziere <b>2 NPC-Angestellte</b> auf diesen Orten:"
+    },
+    "bot": {
+      "title": "Rachel",
+      "playerBoard": "Rachel erhält ein <b>Tableau</b> und das gesamte Spielmaterial wie eine reguläre Person. Sie benötigt jedoch keine Ressourcen-Anzeiger und verwendet ausschließlich die Aufwertungsmarker des Grundspiels.",
+      "reputation": "Rachel wird an <b>2. Position der Zugreihenfolge</b> sein, setze ihren Reputationsmarker daher auf Feld 1.",
+      "soloTokens": {
+        "title": "Platziere Rachels <b>Solo-Plättchen</b> als Erinnerung für ihre Unternehmensziele auf die entsprechenden Plätze:",
+        "development": {
+          "7": "Lege dieses Plättchen auf die Entwicklung in ihrer Nahrungs-Reihe <b>ganz rechts</b>.",
+          "6": "Lege dieses Plättchen auf die <b>mittlere</b> Entwicklung der Treibstoff-Reihe.",
+          "5": "Lege dieses Plättchen auf die Entwicklung in ihrer Nahrungs-Reihe <b>ganz links</b>."
+        },
+        "segment": "Lege dieses Plättchen in der Nähe des Bereichs, in dem Rachels <b>Segment #{segment}</b> gebaut wird",
+        "ship": "Lege dieses Plättchen in die Nähe des Platzes, wo Rachels <b>Schiff #{ship}</b> gebaut wird."
+      },
+      "firstDevelopment": "Rachel platziert ihre <b>erste Entwicklung</b> (aus der Nahrungs-Reihe) im Hauptquartier und erhält wie üblich Reputation. Die Entwicklung muss in ein leeres Areal gebaut werden.",
+      "discardBlueprint": "Rachel wirft sie diese <b>Blaupause</b> ab:",
+      "discardAgendaCard": "Abschließend wirft sie die oberste <b>Agendakarte</b> vom Stapel offen auf den Ablagestapel ab.",
+      "accommodationsExpansion": {
+        "title": "Unterkünfte-Erweiterung",
+        "startingUpgrades": "Wenn du mit den Start-Aufwertungskarten spielst und nachdem du dir deine Karte ausgesucht hast, gib die andere an Rachel weiter. Rachel aktiviert sie zu Beginn ihres ersten Zuges und legt sie – ohne einen Bonus zu erhalten – auf den entsprechenden Platz ihres Tableaus. Wird ein Aufwertungsmarker mit Pausenbonus genutzt, nimmt Rachel den SP-Marker, egal was auf der Karte abgebildet ist. Ist einer der unteren 4 Marker des Startturms abgebildet, nimmt sie einen beliebigen aus dem unteren Bereich."
+      }
+    }
+  },
+  "turnPlayer": {
+    "title": "Spieler",
+    "takeTurn": "Führe deinen Zug aus.",
+    "choose": "Wähle:",
+    "assignWorker": "Angestellten einsetzen",
+    "launchShip": "Raumschiff starten",
+    "callMeeting": "Meeting einberufen",
+    "companyGoals": "Überprüfe deine Unternehmensziele.",
+    "lastRoundInfo": "<b>Letzte Runde:</b> Rachel und du holen alle Angestellten vom Hauptquartier zurück in den Pausenraum und erhalten wie üblich Pausenboni."
+  },
+  "turnBot": {
+    "title": "Rachel",
+    "placeWorker": "Platziere Angestellten",
+    "noWorkers": "Keine Angestellten verfügbar",
+    "actionExecuted": "Aktion ausgeführt",
+    "notPossible": "Nicht möglich",
+    "checkCompanyGoals": "Prüfe Rachels Unternehmensziele"
+  },
+  "sideBar": {
+    "turn": "Zug {turn}"
+  },
+  "endOfRound": {
+    "title": {
+      "1": "JHV A: Fortschrittswertung",
+      "2": "JHV B: Fortschrittswertung",
+      "3": "Spielende ausgelöst"
+    },
+    "instructions": {
+      "progressScoring": "Führe die Fortschrittswertung für Abschnitt {round} für Rachel und dich selbst durch.",
+      "buildNpcDevelopments": "NPC-Entwicklungen bauen:",
+      "skipIfColorExists": "Befindet sich schon eine NPC-Entwicklung auf diesem Areal, dann wirf die Entwicklung ungenutzt ab.",
+      "hireNpcExpert": "NPC-Experten anheuern",
+      "replaceFirstWorker": "Ersetze einen der NPC-Angestellten durch einen NPC-Experten.",
+      "chooseClosestWorker": "Wähle den Angestellten, der sich im Uhrzeigersinn am nächsten zum Areal oben in der Mitte befindet.",
+      "replaceSecondWorker": "Ersetze den anderen NPC-Angestellten durch den zweiten NPC-Experten."
+    },
+    "endGameTriggered": {
+      "title": "Das Spielende ist ausgelöst.",
+      "finishCurrentRound": "Die aktuelle Runde wird noch zuende gespielt, und dann folgt eine letzte Runde.",
+      "nextRoundFinalRound": "Die nächste Runde ist die letzte Runde."
+    },
+    "endRound": {
+      "title": "Spielfortschritt {round} abgeschlossen",
+      "endRoundConfirm": {
+        "1": "Wenn der letzte Würfel auf Fortschrittsplättchen 1 platziert wurde, wird die Jahreshauptversammlung (JHV) A abgehalten.",
+        "2": "Wenn der letzte Würfel auf Fortschrittsplättchen 1 platziert wurde, wird die Jahreshauptversammlung (JHV) B abgehalten.",
+        "3": "Wenn der letzte Würfel auf Fortschrittsplättchen 3 platziert wurde, wird das Spielende ausgelöst."
+      }
+    }
+  },
+  "endOfGameAdvanceShips": {
+    "title": "Raumschiff-Bewegung",
+    "lastMovement": "Alle dürfen (in Zugreihenfolge) ihre gestarteten Schiffe zu einem <b>beliebigen</b> Stopp der Reise bewegen und diesen wie gewöhnlich abhandeln.",
+    "botDestination": "Rachel wählt den letzten Stopp, der ihr die meisten SP bringt."
+  },
+  "endOfGame": {
+    "title": "Spielende",
+    "condition": "Bedingung",
+    "scoreTrack": "Siegpunktleiste",
+    "cockpit": "Cockpit",
+    "developments": "Entwicklungen",
+    "reputation": "Reputation",
+    "shipSegments": "Segment",
+    "progressSection3": "Fortschritt Abschnitt 3",
+    "supplies": "Vorräte",
+    "total": "Gesamt",
+    "botCockpitScoring": "Rachel wertet nur die aufgedruckte SP-Anzahl, plus die Punkte für jedes Segment (außerdem - 5SP wenn das Schiff nicht gestartet wurde)."
+  },
+  "rules": {
+    "advanceShips": {
+      "destination": {
+        "title": "Raumschiffe bewegen: Reiseziel"
+      },
+      "dayInSpace": {
+        "title": "Raumschiffe bewegen: Tag im Weltall"
+      },
+      "returningToEarth": {
+        "title": "Raumschiffe bewegen: Rückkehr zur Erde",
+        "returnWorker": "Stelle den Angestellten zurück in den Pausenraum.",
+        "discardCruiseAndGuests": "Wirf das Reiseplättchen ab und lege die Gäste in den Vorrat zurück."
+      }
+    },
+    "player": {
+      "advanceShips": {
+        "destination": {
+          "placeUpgradeToken": "Du kannst den Aufwertungsmarker auf dem Reiseziel ablegen.",
+          "payAdsForGuests": "Wähle, ob du Werbung für jeden Gast bezahlst, um Siegpunkte zu erhalten."
+        },
+        "dayInSpace": {
+          "gainGuestBonuses": "Für jeden Gast erhältst du den Bonus für jedes passende Symbol in deinem Raumschiff."
+        }
+      }
+    },
+    "bot": {
+      "advanceShips": {
+        "destination": {
+          "placeUpgradeToken": "Ist dies das erste Reiseziel der Reise, lädt Rachel ihren Aufwertungsmarker auf dem Feld am weitesten links des entsprechenden Reiseziels ab.",
+          "payAdsForGuests": "Dann wertet sie alle ihre Gäste, egal ob dies das erste Reiseziel ist oder nicht. Rachel muss keine Werbung bezahlen, um dies zu tun.",
+          "fourthToken": "Im seltenen Fall, dass Rachel 4 Mal im Spiel das gleiche erste Reiseziel besuchen würde, lädt sie den Marker erst beim zweiten Reiseziel ab. Gibt es auf der aktuellen Reise kein zweites, dann wirft sie es ab."
+        },
+        "dayInSpace": {
+          "gainGuestBonuses": "Rachel erhält 1 Reputation pro Gast unabhängig von der Farbe.",
+          "accommodationsIgnoreSpecialBlueprints": "<b>Unterkünfte-Erweiterung</b>: An einem Tag im Weltall ignoriert Rachel die Aktionen der spezialisierten Blaupausen und erhält wie üblich Reputation."
+        }
+      },
+      "action": {
+        "build-ship-segments": {
+          "title": "Segmente einbauen",
+          "takeBlueprints": "Rachel nimmt die 2 markierten Blaupausen aus der Auslage des Spielplans und legt sie direkt in ihre Schiffe.",
+          "freeBlueprints": "Beide Blaupausen sind für Rachel kostenlos. Sie baut sie direkt in ihre Schiffe ein, ohne Reputation zu verlieren.",
+          "maxSegments": "Wenn sie dabei das 3-Segmente-Limit eines Schiffs erreicht, nimmt sie sofort das markierte Paar aus Cockpit und Antrieb vom Spielplan und fährt mit dem Einbauen fort (Anmerkung: Wenn der Antrieb Reputation oder SP gewährt, nimmt Rachel diese; wenn sie eine Agendakarte nehmen müsste, wird die in der Cockpit-Auswahl markierte Karte abgeworfen).",
+          "shipLimit": "Rachel kann nur 3 Schiffe mit je 3 Segmenten besitzen. Sobald sie 8 Segmente eingebaut hat, wird sie bei ihrer letzten Aktion “Segmente einbauen” nur ein Segment einbauen.",
+          "noCabinMatch": "<b>Errungenschaften/Unterkünfte-Erweiterung</b>: Rachel muss keine passenden Kabinen bauen und baut ihre Segmente wie oben angeben ein."
+        },
+        "draw-agenda-cards": {
+          "title": "Agendakarten ziehen",
+          "selection": "Rachel wirft die markierten Agendakarten (oder die nächst verfügbaren) ab.",
+          "minCards": "Befinden sich 0 oder 1 Agendakarte in der offenen Auslage, führt sie die Aktion nicht aus."
+        },
+        "refill-agenda-cards": {
+          "title": "Agendakarten auffüllen",
+          "reputation": "Wenn Reputation ein sichtbarer Bonus ist, nimmt Rachel diesen.",
+          "refill": "Anschließend wirft sie alle Agendakarten von oben nach unten ab und füllt von unten nach oben die Auslage mit neuen Agendakarten wieder auf."
+        },
+        "gain-resources": {
+          "title": "Ressourcen erhalten",
+          "targetCards": "Beginne mit der markierten Agendakarte. Rachel reduziert die unten links abgebildete Ressource im Depot um 1 und geht von oben nach unten weiter zur nächsten Agendakarte, bis das Depot insgesamt um drei Ressourcen reduziert wurde. Ist sie bei der 4. Agendakarte angekommen und es wurden noch nicht 3 Ressourcen genommen, fängt sie wieder bei der obersten Karte der offenen Auslage an.",
+          "noCardsInDisplay": "Falls keine Agendakarte in der offenen Auslage liegt, versucht Rachel, 3x die Ressource der obersten offenen Karte des Ablagestapels zu nehmen.",
+          "cannotReduceAll": "Kann sie auf diese Weise nicht 3 Ressourcen nehmen, führt sie die Aktion nicht aus."
+        },
+        "refill-storage-silo": {
+          "title": "Depot auffüllen",
+          "selection": "Rachel füllt die erste Ressource, die sie während der (nicht durchgeführten) Aktion \"Ressourcen erhalten\" nicht nehmen konnte, auf ihr Maximum auf.",
+          "refill": "Sie erhält dafür 1 Reputation."
+        },
+        "advertise-cruise": {
+          "title": "Reise bewerben",
+          "select": "Rachel wählt das markierte Reiseplättchen und stellt 2 Gäste zu dieser Reise.",
+          "nextCruise": "Hat diese Reise bereits einen oder mehrere Gäste, wählt sie stattdessen die nächste.",
+          "addGuestsFromBottom": "Rachel platziert Gäste beginnend mit Gästen aus dem 1. Abschnitt (1 Werbung) in folgender Reihenfolge:",
+          "firstDestination": "Einen Gast, der zum ersten Reiseziel der Reise passt (falls verfügbar).",
+          "secondDestination": "Einen Gast, der zum zweiten Reiseziel der Reise passt (falls verfügbar).",
+          "thirdDestination": "Einen Gast, der zum dritten Reiseziel der Reise passt (falls verfügbar)",
+          "repeatSteps": "Wiederhole die obigen Schritte, falls nötig, bis 2 Gäste platziert wurden.",
+          "addFromMiddle": "Sollte Rachel auf diese Weise keine 2 Gäste hinzufügen können, wiederholt sie obigen Ablauf und benutzt dazu den zweiten Abschnitt (2 Werbung), bis insgesamt 2 Gäste hinzugefügt wurden.",
+          "addFromTop": "Sollte Rachel auch so noch keine 2 Gäste hinzufügen können, wiederholt sie obigen Ablauf und benutzt dazu den dritten Abschnitt (3 Werbung), bis insgesamt 2 Gäste hinzugefügt wurden.",
+          "addFromSupply": "Sollte auch das nicht möglich sein, wiederholt Rachel den obigen Ablauf und nimmt dazu Gäste aus dem Vorrat, bis insgesamt 2 Gäste hinzugefügt wurden.",
+          "gainReputation": "Sobald 2 Gäste hinzugefügt wurden, erhält Rachel <b>2 Reputation</b>."
+        },
+        "build-development-network": {
+          "title": "Entwicklung bauen (im Hauptquartier)",
+          "startingPosition": "Rachel baut eine Entwicklung im Hauptquartier an der markierten Stelle und geht dabei solange im Uhrzeigersinn von Areal zu Areal, bis eines erreicht ist, an dem sie noch Reputation durch die Platzierung erhält.",
+          "allAreasFilled": "Rachel baut eine Entwicklung im Hauptquartier gemäß des Zahlen-Systems und geht dabei solange im Uhrzeigersinn von Areal zu Areal, bis eines erreicht ist, an dem sie noch Reputation durch die Platzierung erhält.",
+          "buildingOrder": "Rachel nimmt die Entwicklungen von ihrem Tableau von oben nach unten und von links nach rechts. Sie baut also zuerst alle Entwicklungen der ersten Spalte, bevor sie mit der nächsten fortfährt."
+        },
+        "build-development-technology": {
+          "title": "Entwicklung bauen (als Technologie)",
+          "startingPosition": "Rachel baut eine Entwicklung auf einer Technologie an der markierten Stelle und geht dabei von links nach rechts von Areal zu Areal, bis ein Areal erreicht ist, an dem sie noch Reputation durch die Platzierung erhält.",
+          "allAreasFilled": "Rachel baut eine Entwicklung auf einer Technologie gemäß des Zahlen-Systems und geht dabei von links nach rechts von Areal zu Areal, bis ein Areal erreicht ist, an dem sie noch Reputation durch die Platzierung erhält.",
+          "buildingOrder": "Rachel nimmt die Entwicklungen von ihrem Tableau von oben nach unten und von links nach rechts. Sie baut also zuerst alle Entwicklungen der ersten Spalte, bevor sie mit der nächsten fortfährt."
+        },
+        "hire-expert-worker-bot": {
+          "title": "Experten anheuern",
+          "firstExpert": "Rachel heuert ihren ersten Experten nur an, wenn einer der beiden 6 Geld oder weniger kostet. Falls beide Experten 6 Geld oder weniger kosten, wählt sie zuerst den linken Experten (neben dem Startturm).",
+          "addToBreakRoom": "Sie stellt den Experten in ihren Pausenraum und nimmt sich den Pausenbonus.",
+          "secondExpert": "Rachel heuert ihren zweiten Experten nur an, wenn dieser 3 Geld oder weniger kostet.",
+          "easyDifficulty": "Rachels Experten haben keine besondere Fähigkeit und funktionieren wie normale Angestellte.",
+          "normalDifficulty": "Rachels Experten erhalten einen zusätzlichen Pausenbonus, wenn sie in ihren Pausenraum zurückkehren."
+        },
+        "refresh-blueprints": {
+          "title": "Blaupausen auffüllen",
+          "refresh": "Rachel gibt 1 Reputation aus, wirft alle Blaupausen aus der offenen Auslage ab und füllt diese mit 5 neuen Blaupausen auf."
+        },
+        "launch-ship": {
+          "title": "Raumschiff starten",
+          "shipSelection": "Rachel führt diese Aktion aus, wenn sie ein Raumschiff mit <b>{shipSize}+ Segmenten</b> verfügbar hat. Wenn Rachel mehrere passende Raumschiffe hat, priorisiert sie wie folgt:",
+          "shipSelectionPriority1": "Ein Schiff, das im Spielverlauf noch nicht gestartet wurde.",
+          "shipSelectionPriority2": "Ein Schiff, das die meisten SP bringt.",
+          "shipSelectionPriority3": "Das Schiff, das am weitesten rechts liegt.",
+          "step5Title": "5. Boarding der Gäste",
+          "step5Cruise": "Rachel wählt das markierte Reiseplättchen und legt es oben an das gewählte Schiff an. Sie kann keine Reise nehmen, die du reserviert hast.",
+          "step5Guests": "Dann nimmt sie Gäste, die ggfs. bereits ein Ticket für die Reise haben (neben dem Reiseplättchen stehen) und fügt sie ihrem Schiff hinzu. Wurden keinen Gästen im Vorfeld Tickets für diese Reise verkauft, nimmt Rachel diese in einem Last Minute Sale und füllt damit ihre Kabinen. Dabei folgt sie denselben Regeln wie bei ihrer Aktion “Reise bewerben”, erhält jedoch keine Reputation.",
+          "step5Overflow": "Hat sie nur eine Kabine, aber 2 Tickets wurden an Gäste im Vorfeld verkauft, legt Rachel einen zufälligen Gast zurück ans Ende der Warteschlange (Abschnitt 3 Werbung) und verliert 2 Reputation.",
+          "step4Title": "4. Würfel platzieren",
+          "step4Cube": "Sie fügt einen Fortschrittswürfel aus ihrem Vorrat dem aktuellen Fortschrittsplättchen hinzu.",
+          "step3Title": "3. Ressourcen bezahlen",
+          "step3Compare": "Vergleiche die auf dem Reiseplättchen abgedruckten Treibstoffkosten mit der Treibstoff-Reihe von Rachels Tableau. Der höchste sichtbare Wert ist ihre Treibstoffkapazität.",
+          "step3Reputation": "Sind die Kosten der Reise höher als ihre Kapazität, wird Rachel den fehlenden Treibstoff besorgen, indem sie auf der Reputationsleiste so weit zurückgeht, bis sie die erforderliche Menge an Ressourcen erreicht hat.",
+          "step3ZeroReputation": "Befindet sich ihr Marker auf 0, startet sie dennoch und verliert pro noch nicht vorhandenem Treibstoff 1 SP.",
+          "step2Title": "2. Cockpit werten",
+          "step2Score": "Rachel wertet das Cockpit, indem sie nur den abgebildeten SP-Wert des Cockpits nimmt und dazu alle Punkte von Segmenten addiert.",
+          "step2FirstTime": "Ist dies das erste Mal, dass sie dieses Schiff startet, dreht sie das Cockpit auf die andere Seite um (und entfernt so das -5 SP).",
+          "step1Title": "1. Einladen",
+          "step1Upgrade": "Rachel dreht einen Aufwertungsmarker um, ohne den Bonus zu erhalten und lädt diesen direkt in ihren Antrieb ein.",
+          "step1Order": "Dabei priorisiert sie Marker wie folgt: Zunächst die unteren 4 Marker (in beliebiger Reihenfolge), bis sie den linken Experten angeheuert hat, danach den SP-Marker und als letzte die übrigen Marker (müssen nicht 3 sein, wenn sie irgendwann den linken angeheuert hat).",
+          "step0Title": "0. Abflug!",
+          "step0Action": "Stelle einen ihrer Angestellten ins Cockpit und fülle anschließend die offene Auslage mit einem neuen Reiseplättchen auf.",
+          "step0SecondAction": "Startet sie als zweite Aktion ein Schiff, nimmt Rachel den Angestellten, mit dem sie die erste Aktion durchgeführt hat und dieser fungiert als Pilot."
+        },
+        "call-meeting": {
+          "title": "Ein Meeting einberufen",
+          "returnWorkers": "Rachel ruft alle Arbeiter zurück und erhält SP pro Angestelltem als Pausenbonus für das Zurücknehmen."
+        },
+        "place-worker": {
+          "title": "Angestellten platzieren",
+          "placeWorker": "Platziere einen von Rachels Angestellten (wenn möglich immer zuerst einen Experten) im Hauptquartier an der markierten Stelle.",
+          "nextLocation": "Wenn dieser Ort bereits von ihr besetzt ist, wählt sie den nächsten Ort im Uhrzeigersinn, an dem sich kein eigener Angestellter befindet."
+        }
+      }
+    },
+    "companyGoals": {
+      "title": "Unternehmensziele",
+      "check": "Hat Rachel am Ende ihres Zuges eines ihrer Unternehmensziele erreicht, legt sie den entsprechenden Würfel auf das unterste Fortschrittsplättchen, das noch Platz für Würfel hat.",
+      "rachelGoals": "Rachels Ziele:",
+      "leftGoal": "Linkes Ziel",
+      "middleGoal": "Mittleres Ziel",
+      "rightGoal": "Rechtes Ziel",
+      "buildDevelopments": "Baue <b>{count} Entwicklungen</b>",
+      "buildSegments": "Baue <b>{count} Segmente</b>",
+      "launchShips": "Starte <b>{count} verschiedene Schiffe</b>",
+      "goalCompletion": "Immer wenn sie ein Ziel erfüllt, nimmt sie einen Würfel aus der Spalte über dem entsprechenden Ziel und legt ihn auf das aktuelle Fortschrittsplättchen und der Unternehmensziel-Anzeiger steigt auf den höchsten Wert, falls er sich dort nicht bereits befindet.",
+      "note": "Anmerkung: Während ihre Errungenschaften dich beeinflussen, gilt das nicht andersrum. In anderen Worten: Wenn du dein linkes Ziel vor Rachels #1-Ziel erreichst, wird das ihre Anforderungen an gebaute Entwicklungen nicht erhöhen."
+    },
+    "networkActions": {
+      "title": "Hauptquartier & Aktionen",
+      "actionExecutionSelection": {
+        "title": "Rachels \"Aktion ausgeführt\"-Auswahl",
+        "workerSameAction": "Benutze die Schaltfläche mit diesem Symbol nach erfolgreichem Ausführen der Aktion, wenn sich Rachels Angestellter am selben Ort befindet, wie die soeben ausgeführte Aktion. Sie wird dann eine weitere Aktion ausführen.",
+        "workerSameActionConnected": "Benutze die Schaltfläche mit diesem Symbol nach erfolgreichem Ausführen der Aktion, wenn sich Rachels Angestellter am selben Ort befindet, wie die soeben ausgeführte Aktion, oder wenn die ausgeführte Aktion an den Einsatzort angrenzt und über mindestens eine Entwicklung verbunden ist. Sie wird dann eine weitere Aktion ausführen.",
+        "otherLocation": "Wenn sich Rachels Angestellter an einem anderen Ort befindet, benutze die Schaltfläche mit diesem Symbol. Sie wird <i>keine</i> weitere Aktion ausführen."
+      },
+      "otherDevelopments": {
+        "title": "Fremde Entwicklungen",
+        "useOtherDevelopments": "Wenn du eine neutrale, NPC- oder eine Entwicklung von Rachel im Hauptquartier oder bei den Technologien verwendest, musst du für <b>jede</b> von ihnen in diesem Areal in den Vorrat zahlen (abhängig von deiner Position auf der Reputationsleiste)."
+      },
+      "npcWorkerBumping": {
+        "title": "NPC Angestellte verdrängen",
+        "placingWorker": "Wenn du einen Angestellten auf einen Ort stellst, der von einem NPCAngestellten besetzt ist, verdrängst du diesen auf den nächsten Ort im Uhrzeigersinn:",
+        "locationEmpty": "<i>Wenn dieser Ort leer ist</i>: Der NPC-Angestellte bleibt dort stehen, bis er erneut verdrängt wird.",
+        "locationOccupiedByOpponent": "<i>Wenn dieser Ort von einem gegnerischen Angestellten besetzt ist</i>: Der NPC-Angestellte verdrängt den gegnerischen Angestellten von diesem Ort. Der gegnerische Angestellte kehrt in den gegnerischen Pausenraum zurück und löst wie gewohnt einen Pausenbonus aus.",
+        "locationOccupiedByNPC": "<i>Wenn dieser Ort von einem NPC-Angestellten besetzt ist</i>: Der NPCAngestellte überspringt diesen Ort und bewegt sich weiter zum nächsten Ort im Uhrzeigersinn.",
+        "locationOccupiedByYourself": "<i>Wenn dieser Ort von einem deiner eigenen Angestellten besetzt ist</i>: Der NPC-Angestellte wird deinen eigenen Angestellten nicht verdrängen, außer du besitzt die Fähigkeit, dass du dich selbst verdrängen darfst. Der NPC-Angestellte überspringt diesen Ort und bewegt sich weiter zum nächsten Ort im Uhrzeigersinn.",
+        "expertWorkers": "NPC-Experten funktionieren wie normale NPC-Angestellte, nur dass sie leere Orte ebenfalls überspringen, außer es gibt keinen anderen legalen Ort im Hauptquartier."
+      },
+      "advancementsExpansion": {
+        "title": "Errungenschaften-Erweiterung",
+        "locationBonus": "Wenn Rachel einen Angestellten an einen Ort mit aktivem Orts-Bonusmarker stellt, erhält sie Reputation, SP und Agendakarten (die abgeworfen werden) als Bonus. Statt Ressourcen, Werbung und Geld wird sie sich stattdessen jedoch jeweils 1 SP nehmen.",
+        "progressCube": "Immer wenn Rachel einem Fortschrittsplättchen (oder Überhangfeld) einen Würfel hinzufügt, schiebt sie den Anzeiger der Technologie, der auf dem niedrigsten Feld ist, um 1 Feld nach rechts. Gleichstände werden nach dem Zahlen-System aufgelöst."
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "botRuleModifications": "Regeländerungen für Rachel"
+    }
+  },
+  "difficultyLevel": {
+    "1": "Einfach",
+    "2": "Mittel",
+    "3": "Schwer"
+  },
+  "notfound": {
+    "title": "Nicht Gefunden"
+  },
+  "action": {
+    "playGame": "Spielen",
+    "startGame": "Spiel starten",
+    "next": "Weiter",
+    "nextRound": "Nächste Runde",
+    "abortGame": "Spiel abbrechen",
+    "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist du sicher?",
+    "endGame": "Spiel beenden",
+    "endGameConfirm": "Dieses Spiel wird beendet - bist du sicher?",
+    "cancel": "Abbrechen",
+    "backToHome": "Zurück zum Anfang",
+    "back": "Zurück",
+    "close": "Schließen",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Applikation neu laden",
+    "notice": "Die Applikation wurde aktualisiert - möchtest du die Seite neu laden um die neueste Version zu nutzen?"
+  }
+}
