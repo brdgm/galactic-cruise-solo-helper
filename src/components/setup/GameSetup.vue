@@ -31,7 +31,6 @@
         <span v-html="t('setupGame.bot.soloTokens.ship', {ship:difficultyLevelSettings.differentShipsLaunchedGoal})"></span>
       </li>
     </ul>
-    <li v-html="t('setupGame.bot.soloWorkerCard')"></li>
     <li>
       <span v-html="t('setupGame.bot.firstDevelopment')"></span><br/>
       <NetworkLocationDisplay :networkLocation="botFirstDevelopmentNetworkLocation" />
@@ -40,6 +39,7 @@
       <span v-html="t('setupGame.bot.discardBlueprint')"></span>
       <BlueprintSelection :position="blueprintNumber" />
     </li>
+    <li v-html="t('setupGame.bot.discardAgendaCard')"></li>
   </ol>
 
   <div class="row">

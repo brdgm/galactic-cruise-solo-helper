@@ -41,9 +41,9 @@
         "segment": "Place this around the area where Rachel's <b>Segment #{segment}</b> will be built.",
         "ship": "Place this above the area where Rachel's <b>Ship #{ship}</b> will be."
       },
-      "soloWorkerCard": "Place the <b>Solo Worker Card</b> of your chosen difficulty next to the Action Cards (this will help you to remember to Call a Meeting if she has no Workers). This is her Break Room—place her Workers here instead of on her Player Board.",
       "firstDevelopment": "Rachel places her <b>first Development</b> (from the Food row) in the Network. This placement must be in an area with no other Developments as usual.",
       "discardBlueprint": "She then discards this <b>Blueprint</b>:",
+      "discardAgendaCard": "Finally, she discards the top card of the <b>Agenda</b> deck into the faceup discard pile.",
       "actionExecutionSelection": {
         "title": "Rachel \"Action Executed\" Selection",
         "workerSameAction": "After successfully executing Rachel's action, use the button with this icon if Rachel’s Worker is at the location that displays the actual action she took. She will then execute another action.",
