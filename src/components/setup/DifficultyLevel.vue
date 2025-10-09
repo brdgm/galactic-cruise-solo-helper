@@ -20,6 +20,19 @@
       </i>
     </div>
   </div>
+  <div class="row mt-2">
+    <div class="col-3 col-sm-2 col-md-1 d-flex justify-content-center">
+      <DifficultyLevelIcon/>
+    </div>
+    <div class="col-9 col-sm-10 col-md-11">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="difficultyLevelPlus" :value="true" v-model="state.setup.difficultyLevelPlus">
+        <label class="form-check-label" for="difficultyLevelPlus">
+          {{t('setup.difficultyLevel.plus')}}
+        </label>
+      </div>
+    </div>
+  </div>
 
 </template>
 
@@ -27,9 +40,13 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
+import DifficultyLevelIcon from '../structure/DifficultyLevelIcon.vue'
 
 export default defineComponent({
   name: 'DifficultyLevel',
+  components: {
+    DifficultyLevelIcon
+  },
   setup() {
     const { t } = useI18n()
     const state = useStateStore()
