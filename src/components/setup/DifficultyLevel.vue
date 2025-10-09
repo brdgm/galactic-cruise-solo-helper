@@ -22,7 +22,7 @@
   </div>
   <div class="row mt-2">
     <div class="col-3 col-sm-2 col-md-1 d-flex justify-content-center">
-      <AppIcon type="difficulty-level" :name="iconName" extension="svg" class="icon"/>
+      <DifficultyLevelIcon/>
     </div>
     <div class="col-9 col-sm-10 col-md-11">
       <div class="form-check form-switch">
@@ -40,12 +40,12 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
-import AppIcon from '../structure/AppIcon.vue';
+import DifficultyLevelIcon from '../structure/DifficultyLevelIcon.vue'
 
 export default defineComponent({
   name: 'DifficultyLevel',
   components: {
-    AppIcon
+    DifficultyLevelIcon
   },
   setup() {
     const { t } = useI18n()
@@ -68,9 +68,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style lang="scss" scoped>
-.icon {
-  height: 2rem;
-}
-</style>
