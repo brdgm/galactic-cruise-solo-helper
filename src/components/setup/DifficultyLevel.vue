@@ -20,6 +20,19 @@
       </i>
     </div>
   </div>
+  <div class="row mt-2">
+    <div class="col-3 col-sm-2 col-md-1 d-flex justify-content-center">
+      <AppIcon type="difficulty-level" :name="iconName" extension="svg" class="icon"/>
+    </div>
+    <div class="col-9 col-sm-10 col-md-11">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="difficultyLevelPlus" :value="true" v-model="state.setup.difficultyLevelPlus">
+        <label class="form-check-label" for="difficultyLevelPlus">
+          {{t('setup.difficultyLevel.plus')}}
+        </label>
+      </div>
+    </div>
+  </div>
 
 </template>
 
@@ -27,9 +40,13 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
+import AppIcon from '../structure/AppIcon.vue';
 
 export default defineComponent({
   name: 'DifficultyLevel',
+  components: {
+    AppIcon
+  },
   setup() {
     const { t } = useI18n()
     const state = useStateStore()
@@ -43,6 +60,17 @@ export default defineComponent({
       this.difficultyLevel = Number.parseInt((event.target as HTMLInputElement).value)
       this.state.setup.difficultyLevel = this.difficultyLevel
     }
+  },
+  computed: {
+    iconName(): string {
+      return `${this.state.setup.difficultyLevel}${this.state.setup.difficultyLevelPlus ? '-plus' : ''}`
+    }
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.icon {
+  height: 2rem;
+}
+</style>

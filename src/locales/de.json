@@ -11,7 +11,8 @@
     "difficultyLevel": {
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
-      "hard": "Schwer"
+      "hard": "Schwer",
+      "plus": "Schwierigkeit+: Experten erhalten einen zusätzlichen Pausenbonus."
     },
     "expansions": {
       "title": "Erweiterungen",

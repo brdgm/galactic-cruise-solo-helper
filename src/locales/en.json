@@ -11,7 +11,8 @@
     "difficultyLevel": {
       "title": "Difficulty Level",
       "easy": "Easy",
-      "hard": "Hard"
+      "hard": "Hard",
+      "plus": "Difficulty+: Experts gain an additional Funding Bonus."
     },
     "expansions": {
       "title": "Expansions",
