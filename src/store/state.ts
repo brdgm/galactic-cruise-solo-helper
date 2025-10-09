@@ -15,6 +15,7 @@ export const useStateStore = defineStore(`${name}.state`, {
       baseFontSize: 1,
       setup: {
         difficultyLevel: DifficultyLevel.EASY,
+        difficultyLevelPlus: false,
         expansions: []
       },
       turns: []
@@ -46,6 +47,7 @@ export interface State {
 }
 export interface Setup {
   difficultyLevel: DifficultyLevel
+  difficultyLevelPlus?: boolean
   expansions: Expansion[]
   initialCardDeck?: CardDeckPersistence
   actionSetup?: ActionSetup[]
