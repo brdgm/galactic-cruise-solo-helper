@@ -32,6 +32,10 @@
       </li>
     </ul>
     <li>
+      <span v-html="t('setupGame.bot.soloWorkerCard')"></span><br/>
+      <DifficultyLevelIcon class="m-2" />
+    </li>
+    <li>
       <span v-html="t('setupGame.bot.firstDevelopment')"></span><br/>
       <NetworkLocationDisplay :networkLocation="botFirstDevelopmentNetworkLocation" />
     </li>
@@ -70,6 +74,7 @@ import WorkerLocationDisplay from '../structure/WorkerLocationDisplay.vue'
 import BlueprintSelection from '../structure/BlueprintSelection.vue'
 import getCardNumber from '@/util/getCardNumber'
 import Expansion from '@/services/enum/Expansion'
+import DifficultyLevelIcon from '../structure/DifficultyLevelIcon.vue'
 
 export default defineComponent({
   name: 'GameSetup',
@@ -78,7 +83,8 @@ export default defineComponent({
     NetworkLocationDisplay,
     WorkerLocationDisplay,
     BlueprintSelection,
-    AppIcon
+    AppIcon,
+    DifficultyLevelIcon
   },
   setup() {
     const { t } = useI18n()

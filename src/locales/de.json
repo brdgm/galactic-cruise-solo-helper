@@ -42,6 +42,7 @@
         "segment": "Lege dieses Plättchen in der Nähe des Bereichs, in dem Rachels <b>Segment #{segment}</b> gebaut wird",
         "ship": "Lege dieses Plättchen in die Nähe des Platzes, wo Rachels <b>Schiff #{ship}</b> gebaut wird."
       },
+      "soloWorkerCard": "Lege die <b>Solo-Angestellten-Karte</b> des gewählten Schwierigkeitsgrades neben die Aktionskarten. Sie dient als Rachels Pausenraum: stelle ihre Angestellten hier ab, anstatt sie auf ihrem Tableau zu platzieren.",
       "firstDevelopment": "Rachel platziert ihre <b>erste Entwicklung</b> (aus der Nahrungs-Reihe) im Hauptquartier und erhält wie üblich Reputation. Die Entwicklung muss in ein leeres Areal gebaut werden.",
       "discardBlueprint": "Rachel wirft sie diese <b>Blaupause</b> ab:",
       "discardAgendaCard": "Abschließend wirft sie die oberste <b>Agendakarte</b> vom Stapel offen auf den Ablagestapel ab.",

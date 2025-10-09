@@ -60,11 +60,6 @@ export default defineComponent({
       this.difficultyLevel = Number.parseInt((event.target as HTMLInputElement).value)
       this.state.setup.difficultyLevel = this.difficultyLevel
     }
-  },
-  computed: {
-    iconName(): string {
-      return `${this.state.setup.difficultyLevel}${this.state.setup.difficultyLevelPlus ? '-plus' : ''}`
-    }
   }
 })
 </script>
