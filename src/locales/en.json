@@ -253,7 +253,8 @@
         },
         "call-meeting": {
           "title": "Call a Meeting",
-          "returnWorkers": "Rachel returns all Workers and gains VP for each Worker recalled based on her VP Funding Bonus."
+          "returnWorkers": "Rachel returns all Workers and gains VP for each Worker recalled based on her VP Funding Bonus.",
+          "expertWorkersPlus": "Experts gain an additional Funding Bonus when returned to Rachel’s Break Room."
         },
         "place-worker": {
           "title": "Place a Worker",
