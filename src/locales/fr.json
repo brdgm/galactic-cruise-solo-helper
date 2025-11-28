@@ -1,0 +1,341 @@
+{
+  "gameTitle": "Galactic Cruise",
+  "home": {
+    "title": "Assistant Solo Galactic Cruise",
+    "play1": "Jouez aune partie de <a href='https://boardgamegeek.com/boardgame/391137/galactic-cruise' target='_blank' rel='noopener'><b>Galactic Cruise</b></a> solo contre Rachel, l'adversaire solo.",
+    "play2": "Cette application remplace le deck de cartes solo et vous guide durant le déroulement de la partie.",
+    "feedback": "Discussion et Retours:"
+  },
+  "setup": {
+    "title": "Configuration",
+    "difficultyLevel": {
+      "title": "Niveau de Difficulté",
+      "easy": "Facile",
+      "hard": "Difficile",
+      "plus": "Difficile +: Les Experts de Rachel reçoivent un bonus de financement supplémentaire."
+    },
+    "expansions": {
+      "title": "Extensions",
+      "advancements": "Innovations",
+      "accommodations": "Adaptations"
+    }
+  },
+  "setupGame": {
+    "title": "Mise en Place",
+    "gameBoard": {
+      "title": "Plateau de Jeu",
+      "twoPlayerGame": "Mettez en place une partie pour <b>2 joueurs</b>.",
+      "neutralDevelopments": "Placez les <b>Développements Neutres</b> sur les icônes Réputation de ces emplacements:",
+      "npcWorkers": "Placez <b>2 Ouvriers CNJ</b> sur ces emplacements:"
+    },
+    "bot": {
+      "title": "Rachel",
+      "playerBoard": "Rachel reçoit un <b>Plateau Joueur</b> et le met en place comme un joueur humain. Elle n'a pas besoin de curseurs ressources et utilise toujours les jetons Amélioration du jeu de base.",
+      "reputation": "Elle joue en tant que <b>2ème joueur</b>, placez son pion Réputation sur la case 1 de la piste de Réputation.",
+      "soloTokens": {
+        "title": "Placez les <b>Jetons Solo</b> (seuils d'objectifs d'entreprise que doit atteindre Rachel) sur ces emplacements:",
+        "development": {
+          "7": "Placez ce jeton sur <b>le développement le plus à droite</b> de la piste Nourriture.",
+          "6": "Placez ce jeton sur <b>le développement du milieu</b> de la piste Carburant.",
+          "5": "Placez ce jeton sur <b>le développement du milieu</b> de la piste Oxygène."
+        },
+        "segment": "Placez ce jeton près de la zone où Rachel construira son <b>#{segment} segment</b>.",
+        "ship": "Placez ce jeton au dessus de la zone où Rachel construira son <b>#{ship} Vaisseau</b>."
+      },
+      "soloWorkerCard": "Placez la <b>Carte Ouvrier Solo</b> de la difficulté choisie à coté des cartes Action.Il s'agit de sa Salle de Pause —Placez ses ouvriers ici et non sur son plateau joueur.",
+      "firstDevelopment": "Rachel place le <b>premier Developpement</b> (de la rangée Nourriture) dans le Réseau et gagne la réputation correspondante. Ce developpement ne peut être placé dans une zone qui en comporte déjà (comme d'habitude).",
+      "discardBlueprint": "Elle défausse ensuite ce <b>Plan</b> :",
+      "discardAgendaCard": "Enfin, elle défausse la première carte du <b>Conseil d'Administration</b> dans la pile de défausse face visible .",
+      "accommodationsExpansion": {
+        "title": "Extension Adaptations",
+        "startingUpgrades": "Lorsque vous jouez avec les cartes Améliorations de départ, choisissez d'abord votre carte Améliorations de départ, puis donnez l'autre à Rachel. Rachel l'activera au début de son premier tour en plaçant le jeton Améliorations indiqué (sans en gagner le bonus) sur la zone d'amélioration correspondante. Si la carte indique un jeton d'Amélioration de bonus, elle retire celui qui lui rapporte des PV (quelle que soit la carte en question). Si la carte indique un jeton gris, elle retire n'importe quel jeton gris."
+      }
+    }
+  },
+  "turnPlayer": {
+    "title": "Joueur",
+    "takeTurn": "Jouez votre tour.",
+    "choose": "Choisissez:",
+    "assignWorker": "Affecter un Ouvrier",
+    "launchShip": "Lancer un Vaisseau",
+    "callMeeting": "Organiser une Réunion",
+    "companyGoals": "Accomplir un Objectif d'Entreprise.",
+    "lastRoundInfo": "<b>Dernier Tour:</b> Rachel et vous récuperez tous vos Ouvriers du Réseau vers la Salle de Pause et gagnez un bonus de financement pour chacun, comme d'habitude."
+  },
+  "turnBot": {
+    "title": "Rachel",
+    "placeWorker": "Affecter un Ouvrier",
+    "noWorkers": "Pas d'ouvrier disponible",
+    "actionExecuted": "Action effectuée",
+    "notPossible": "Impossible",
+    "checkCompanyGoals": "Accomplir les Objectifs d'Entreprise de Rachel"
+  },
+  "sideBar": {
+    "turn": "Turn {turn}"
+  },
+  "endOfRound": {
+    "title": {
+      "1": "RGA A: Décompte Progression",
+      "2": "RGA B: Décompte Progression",
+      "3": "Déclenchement de la fin de Partie"
+    },
+    "instructions": {
+      "progressScoring": "Effectuer le décompte de progression de la section {round} pour Rachel et vous.",
+      "buildNpcDevelopments": "Construire les développements CNJ:",
+      "skipIfColorExists": "Si il y a déjà un developpement de cette couleur dans la zone indiquée, défaussez le nouveau développement.",
+      "hireNpcExpert": "Engager un expert CNJ",
+      "replaceFirstWorker": "Remplacer un ouvrier CNJ par un ouvrier expert CNJ.",
+      "chooseClosestWorker": "Choisir l'ouvrier CNJ le plus proche de l'emplacement du mileu de la rangée superieure dans le sens des aiguilles d'une montre.",
+      "replaceSecondWorker": "Remplacer l'autre ouvrier CNJ par un ouvrier expert CNJ."
+    },
+    "endGameTriggered": {
+      "title": "Fin de partie déclenchée.",
+      "finishCurrentRound": "Finir le tour en cours, puis jouer un dernier tour.",
+      "nextRoundFinalRound": "Le prochain tour est le tour final."
+    },
+    "endRound": {
+      "title": "Piste de Progression {round} completée",
+      "endRoundConfirm": {
+        "1": "Si le dernier cube a été placé sur la piste de progression 1, la Réunion Générale Annuelle  (RGA) A a lieu.",
+        "2": "Si le dernier cube a été placé sur la piste de progression 2, la Réunion Générale Annuelle  (RGA) B a lieu.",
+        "3": "Si le dernier cube a été placé sur la piste de progression 3, la fin de partie est déclenchée."
+      }
+    }
+  },
+  "endOfGameAdvanceShips": {
+    "title": "Faire Avancer les Vaisseaux",
+    "lastMovement": "Dans l'ordre du tour, faire avancer une dernière fois tous vos vaisseaux en croisière, jusqu'à <b>n'importe quelle</b> étape suivante de la croisière, resolvez ensuite cette étape normalement.",
+    "botDestination": "Rachel choisit l'étape qui lui rapporte le plus de PV."
+  },
+  "endOfGame": {
+    "title": "Fin de Partie",
+    "condition": "Condition",
+    "scoreTrack": "Piste de Score",
+    "cockpit": "Cockpit",
+    "developments": "Developpements",
+    "reputation": "Reputation",
+    "shipSegments": "Segments de Vaisseau",
+    "progressSection3": "Section 3 de la Piste de Progression",
+    "supplies": "Ressources",
+    "total": "Total",
+    "botCockpitScoring": "Rachel marque les PV inscrits sur chaque cockpit, plus les PV de chaque segment. (-5 PV pour chaque vaisseau non lancé.)"
+  },
+  "rules": {
+    "advanceShips": {
+      "destination": {
+        "title": "Faire Avancer les Vaisseaux: Destination"
+      },
+      "dayInSpace": {
+        "title": "Faire Avancer les Vaisseaux: Espace"
+      },
+      "returningToEarth": {
+        "title": "Faire Avancer les Vaisseaux: Retour sur Terre",
+        "returnWorker": "Placer votre ouvrier dans votre Salle de Pause.",
+        "discardCruiseAndGuests": "Défausser la croisière face cachée et tous les clients dans la réserve."
+      }
+    },
+    "player": {
+      "advanceShips": {
+        "destination": {
+          "placeUpgradeToken": "Vous pouvez placer le jeton Amélioration sur une des cases amélioration de votre plateau joueur correspondant au type de déstination où votre pilote se trouve.",
+          "payAdsForGuests": "Vous pouver marquer des PV pour les clients de votre vaisseau en dépensant le coût requis en pubs pour chacun."
+        },
+        "dayInSpace": {
+          "gainGuestBonuses": "Chaque client vous rapporte son bonus pour chaque icone correspondante du vaisseau."
+        }
+      }
+    },
+    "bot": {
+      "advanceShips": {
+        "destination": {
+          "placeUpgradeToken": "S'il s'agit de la première destination de la croisière, Rachel pose son jeton sur l'emplacemnt libre le plus à gauche de la section correspondante, augmentant le nombre de PV obtenus ici de 1 PV.",
+          "payAdsForGuests": "Ensuite, qu'il s'agisse ou non de la première destination, elle marque les points de victoire pour ses clients pour cette destination. Rachel ne dépense ni ne gagne de pubs pour faire cela.",
+          "fourthToken": "Dans les rares cas où Rachel visiterai 4 fois la même première destination, elle place le jeton Amélioration sur la section correspondant à la destination suivante de la croisière. Si il n'y a pas d'autre destination sur la croisière, le jeton est défaussé."
+        },
+        "dayInSpace": {
+          "gainGuestBonuses": "Rachel gagne 1 réputation par client de la croisière, quel que soit son type.",
+          "accommodationsIgnoreSpecialBlueprints": "<b>Extension Adaptations</b>: Lors de l'étape Espace, Rachel ignore les actions des plans spécialisés, elle gagne à la place de la réputation comme d'habitude."
+        }
+      },
+      "action": {
+        "build-ship-segments": {
+          "title": "Construire des Segments de Vaisseaux",
+          "takeBlueprints": "Rachel prend les 2 plans indiqués depuis les bureaux de conception et les place en tant que segments dans son ou ses vaisseaux.",
+          "freeBlueprints": "Rachel ajoute immédiatement ces plans sous forme de segments à son ou ses vaisseaux, sans voir à payer quoi que ce soit ni perdre de réputation.",
+          "maxSegments": "Si elle atteint la limite de 3 segments, elle prend immediatement le cockpit et le moteur indiqués et y place les segments supplémentaires (remarque: si le moteur offre de la réputation ou des PV, elle les gagne; si il offre une carte projet, elle en défausse une depuis le conseil d'administration en utilisant le système des numeros, comme pour les cockipts).",
+          "shipLimit": "Rachel ne peut avoir que 3 vaisseaux de 3 segments chacun. Une fois qu'elle aura construit 8 segments, sa dernière action de construction n'ajoutera qu'un seul et dernier segment à son dernier vaisseau.",
+          "noCabinMatch": "<b>Extensions Innovations et Adaptations</b>: Rachel n'a pas besoin d'aligner les moitiés de cabine des plans spécialisés, elle construit les segments comme indiqué précedement."
+        },
+        "draw-agenda-cards": {
+          "title": "Piocher des Cartes projet",
+          "selection": "Rachel défausse la carte indiquée ainsi que celle du dessous (si il n'y a aucune carte en dessous, repartez du haut de la colonne).",
+          "minCards": "Si il ne reste que 0 ou 1 carte dans la colonne, Rachel ne fait pas cette action."
+        },
+        "refill-agenda-cards": {
+          "title": "Recompléter les Cartes Projet",
+          "reputation": "Si l'icône Réputation du Conseil d'Administration est visible, Rachel gagne 1 Réputation.",
+          "refill": "Elle defausse ensuite les Cartes Projet restantes de haut en bas et pioche 4 nouvelles Cartes Projet pour les remplacer également de haut en bas."
+        },
+        "gain-resources": {
+          "title": "Gagner des Ressources",
+          "targetCards": "Rachel reduit de 1 la resources de la Carte Projet indiquée. Elle passe ensuite à la carte suivante (de haut en bas, en repartant du haut si necessaire) et ainsi de suite jusqu'à avoir effectué l'action 3 fois. Il peut arriver qu'elle cible plusieurs fois la même carte.",
+          "noCardsInDisplay": "Si il n'y a pas de cartes au Conseil d'Administration, elle cible 3 fois de suite la carte du dessus de la défausse. Si il n'y a aucune carte au Conseil d'Administration, ni dans la défausse, elle ne fait pas cette action.",
+          "cannotReduceAll": "Si il n'y pas assez de ressources pour qu'elle puisse les réduire 3 fois, elle ne fait pas cette action."
+        },
+        "refill-storage-silo": {
+          "title": "Remplir le Silo de Stockage",
+          "selection": "Rachel remet à son maximum le première ressource qu'elle n'a pas pu réduire lors de l'action Gagner des Ressources qu'elle vient d'essayer de faire.",
+          "refill": "Elle gagne aussi 1 Réputation."
+        },
+        "advertise-cruise": {
+          "title": "Faire de la Publicité pour une Croisière",
+          "select": "Rachel choisit la croisière indiquée et y ajoute 2 clients.",
+          "nextCruise": "Si cette croisière comprend déjà un ou des clients, elle choisira la prochaine croisière disponible.",
+          "addGuestsFromBottom": "Rachel ajoute des clients à la croisière selectionnée en partant de la section inférieure de la file d'attente (1 Pub) dans cet ordre :",
+          "firstDestination": "Un client qui correspond à la première destination de la croisière (si possible).",
+          "secondDestination": "Un client qui correspond à la deuxième destination de la croisière (si possible).",
+          "thirdDestination": "Un client qui correspond à la troisième destination de la croisière (si possible).",
+          "repeatSteps": "Répéter l'ordre de priorité ci-dessus jusqu'à ce que deux clients aient été ajoutés.",
+          "addFromMiddle": "si Rachel n'arrive pas à ajouter 2 clients à la croisière depuis la section inférieure de la file d'attente, elle ajoute des clients depuis la section du milieu (2 Pubs) en utilisant le même ordre de priorité qu'indiqué ci-dessus jusqu'à avoir ajouté un total de 2 clients.",
+          "addFromTop": "Si il n'y a toujours pas suffisament de clients, elle les ajoute depuis la section supérieure (3 Pubs) dans le même ordre jusqu'à un total de 2 clients.",
+          "addFromSupply": "En dernier recours, elle ajoute des clients depouis la réserve, dans le même ordre, jusquà un total de 2 .",
+          "gainReputation": "Une fois que 2 clients ont été ajoutés à la croisière choisie, Rachel gagne <b>2 Réputation</b>."
+        },
+        "build-development-network": {
+          "title": "Construire un Développement (Réseau)",
+          "startingPosition": "Rachel construit un développement dans le reseau, en commençant par le couloir indiqué puis dans le sens horaire, en ignorant tout couloir qui ne rapporte pas de Réputation.",
+          "allAreasFilled": "Si il y a au moins 1 développement dans tous les couloirs, elle part du couloir indiqué et place un développement dans le premier couloir où elle n'en a pas déjà placé un, dans le sens horaire .",
+          "buildingOrder": "Rachel construit les développements de son plateau joueur colonne par colonne, de haut en bas et de gauche à droite."
+        },
+        "build-development-technology": {
+          "title": "Construire un Développement (Technologie)",
+          "startingPosition": "Rachel construit un développement sous une technologie, en commençant par la zone indiquée, de gauche à droite en evitant les zones quine lui rapportent pas de réputation.",
+          "allAreasFilled": "Si il y a au moins 1 développement dans tous les couloirs, elle part de la zone indiqué et et un développement dans la première zone où elle n'en a pas deja placé un, de gauche à droite .",
+          "buildingOrder": "Rachel construit les développements de son plateau joueur colonne par colonne, de haut en bas et de gauche à droite."
+        },
+        "hire-expert-worker-bot": {
+          "title": "Recruter un Ouvrier Expert",
+          "firstExpert": "Rachel recrute son premier Expert uniquement lorsque son prix est tombé à 7 crédits. Si les 2 Experts coûtent moins de 7 crédits, elle recrute en priorité celui de gauche (celui qui est associé à la tour de lancement).",
+          "addToBreakRoom": "Elle ajoute cet Expert à sa salle de pause et gagne un bonus de financement comme d'habitude.",
+          "secondExpert": "qrachel recrute son second Expert uniquement lorsque son prix tombe à moins de 4 crédits.",
+          "easyDifficulty": "Les Experts de Rachel n'ont aucune capacité spéciale et fonctionnent exactement comme un ouvrier ordinaire.",
+          "normalDifficulty": "Les Experts de Rachel gagnent un bonus de financement supplémentaire lorsqu'ils regagnent leur salle de pause."
+        },
+        "refresh-blueprints": {
+          "title": "Renouveler l'Offre des Bureaux",
+          "refresh": "Rachel perd 1 Réputation, défausse toutes les tuiles Plan des Bureaux de Conception, et ajoute 5 nouvelles tuiles Plan depuis le casier."
+        },
+        "launch-ship": {
+          "title": "Lancer un Vaisseau",
+          "shipSelection": "Rachel execute cette action seulement si un vaisseau de <b>plus de {shipSize} segments</b> est disponible. Si plusieurs de ses vaisseaux répondent à ce critère, elle choisit le vaisseau à lancer dans cet ordre :",
+          "shipSelectionPriority1": "Un vaisseau qui n'a pas été lancé.",
+          "shipSelectionPriority2": "Le vaisseau quirapporte le plus de PV.",
+          "shipSelectionPriority3": "Le vaisseau le plus à droite.",
+          "step5Title": "5.Assigner et Embarquer",
+          "step5Cruise": "Rachel choisit la croisière indiquée et la place au dessus de ce vaisseau. Elle ne peux pas choisir une croisière que vous avez planifiée.",
+          "step5Guests": "Elle prend ensuite les clients qui se trouvaient à côté de la croisière et les ajoute à son vaisseau ; Si il n'y a aucun client avec billet, elle effectue des ventes de dernière minute pour aller chercher des clients dans la file d'attente et remplir ses cabines (en respectant les règles de l'action Faire de la Publicité pour une Croisière).",
+          "step5Overflow": "Si elle n'a qu'une seule cabine mais doit embarquer deux clients avec billets, elle en remet un au hasard dans la section supérieure de la file d'attente (3 pubs) et perd 2 Réputation (comme un joueur humain le ferait).",
+          "step4Title": "4. Placer un Cube de Progression",
+          "step4Cube": "Rachel ajoute un cube de Progression de sa réserve à la piste de Progression.",
+          "step3Title": "3. Payer les Ressources",
+          "step3Compare": "Comparer le coût en carburant de la croisière à la rangée Carburant du plateau Joueur de Rachel. Le chiffre le plus élevé visible de cette rangée est sa capacité en carburant.",
+          "step3Reputation": "Si le coût en carburant de la croisière est supérieur à sa capacité, elle perd de la réputation pour générer le carburant manquant, en franchissant autant d'icônes Carburant que nécessaire.",
+          "step3ZeroReputation": "Si sa réputation est à \"0,\" elle effectue quand même le lancement, mais perd 1 PV par unité de carburant manquante.",
+          "step2Title": "2. Marquer le Cockpit",
+          "step2Score": "Rachel ajoute les PV du Cockpit à tous les PV des Segments du vaisseau.",
+          "step2FirstTime": "Si c'est la première fois que le vaisseau décolle, retourner le cockpit pour masquer la pénalité -5 PV.",
+          "step1Title": "1. Charger le Jeton",
+          "step1Upgrade": "Rachel retourne un Jeton Amélioration de sa Tour de Lancement (sans en gagner le bonus) et le place sur son moteur.",
+          "step1Order": "Elle retire les jetons de sa tour dans l'ordre suivant : les 4 jetons du bas (dans n'importe quel ordre) jusqu'au recrutement de l'Expert, puis le jeton bonus de financement 1 PV. Puis les autres jetons dans n'importe quel ordre.",
+          "step0Title": "0. Décollage!",
+          "step0Action": "Placer l'ouvrier de Rachel dans le cockpit du vaisseau, puis ajouter une nouvelle croisière au plateau Marketing, comme d'habitude.",
+          "step0SecondAction": "Si c'est sa seconde action du  tour, elle prend l'ouvrier de sa première action du tour pour le placer dans l'ascenceur."
+        },
+        "call-meeting": {
+          "title": "Organiser une Réunion",
+          "returnWorkers": "Rachel récupère tous ses ouvriers dans sa salle de pause et gagne des PV pour chacun, en fonction de son Bonus de Financement de PV .",
+          "expertWorkersPlus": "Les Ouvriers Experts gagnent un Bonus de Financement supplémentaire lorsqu'ils regagnent la Salle de Pause."
+        },
+        "place-worker": {
+          "title": "Affecter un Ouvrier",
+          "placeWorker": "Placer un des Ouvriers de Rachel (Expert si disponible) dans le Réseau à l'emplacement indiqué.",
+          "nextLocation": "Si elle occupe déjà cet emplacement, elle place son ouvrier sur le premier emplacement disponible dans le sens horaire."
+        }
+      }
+    },
+    "companyGoals": {
+      "title": "Objectifs d'Entreprise",
+      "check": "Si, à la fin du tour, Rachel a accompli un plusieurs des ses objectifs d'entreprise, elle déplace le cube correspondant sur la Piste de Progression.",
+      "rachelGoals": "Objectifs de Rachel:",
+      "leftGoal": "Objectif de gauche",
+      "middleGoal": "Objectif central",
+      "rightGoal": "Objectif de droite",
+      "buildDevelopments": "Construire <b>{count} Développements</b>",
+      "buildSegments": "Construire <b>{count} Segments</b>",
+      "launchShips": "Lancer <b>{count} Vaisseaux Différents</b>",
+      "goalCompletion": "Lorsque Rachel accompli un Objectif d'Entreprise, elle retire son cube de l'objectif correspondant et le place sur la Piste de Progression, le curseur d'Objectif d'Entreprise correspondant monte alors d'un cran, si possible.",
+      "note": "Remarque: Le fait que Rachel réalise ses objectifs fait augmenter la difficulté des votres, mais l'inverse n'est pas vrai. En d'autres termes, si vous accomplissez votre objectif de gauche avant que Rachel n'accomplisse son objectif #1, cela ne change pas le nombre de développements qu'elle devra construire."
+    },
+    "networkActions": {
+      "title": "Réseau & Actions",
+      "actionExecutionSelection": {
+        "title": "\"Action Effectuée\" par Rachel",
+        "workerSameAction": "Après avoir effectué avec succès l'action de Rachel, utilisez le bouton avec cette icône si son ouvrier se trouve sur l'emplacement correspondant à l'action qu'il a effectuée. Rachel effectue alors une action supplémentaire.",
+        "workerSameActionConnected": "Après avoir effectué avec succès l'action de Rachel, utilisez le bouton avec cette icône si son ouvrier se trouve sur l'emplacement correspondant à l'action qu'il a effectuée, où sur un emplacement adjacent connecté par au moins un développement. Rachel effectue alors une action supplémentaire. Elle vous paie les crédits depuis la réserve en fonction de sa position sur la Piste de Réputation pour utiliser vos développements. Elle peut utiliser les développements neutres normalement,  mais n'a pas besoin de payer la réserve puisqu'elle ne gagne ni ne dépense de crédits.",
+        "otherLocation": "Si l'ouvrier de Rachel se trouve sur un emplacement différent de l'action qu'il a effectuée, utilisez le bouton avec cette icône. Rachel n'effectue <i>pas</i> d'action supplémentaire."
+      },
+      "otherDevelopments": {
+        "title": "Développements des autres joueurs",
+        "useOtherDevelopments": "Si vous utilisez un développement neutre, du CNJ ou de Rachel dans le Réseau ou sous une Technologie, vous devez payer à la réserve pour <b>chaque</b> développement à cet emplacement (en fonction de votre position sur la Piste de Réputation)."
+      },
+      "npcWorkerBumping": {
+        "title": "Ejection d'Ouvriers CNJ",
+        "placingWorker": "Lorsque vous placez un ouvrier sur un emplacement occupé par un ouvrier CNJ, vous éjectez cet ouvrier vers le prochain bâtiment dans le sens horaire:",
+        "locationEmpty": "<i>Si ce bâtiment est vide</i>: l'ouvrier CNJ y reste jusqu'à être de nouveau éjecté.",
+        "locationOccupiedByOpponent": "<i>Si ce bâtiment est occupé par un ouvrier adverse</i>: L'ouvier CNJ ejecte l'ouvrier qui occupait ce bâtiment. L'ouvrier adverse est donc renvoyé dans sa salle de pause, comme si votre propre ouvrier l'avait éjecté.",
+        "locationOccupiedByNPC": "<i>Si ce bâtiment est occupé par un ouvrier CNJ</i>: L'ouvrier CNJ éjecté ignore ce bâtiment et passe au suivant dans le sens horaire.",
+        "locationOccupiedByYourself": "<i>Si ce bâtiment est occupé par un de vos ouvriers</i>: L'ouvrier CNJ n'éjecte pas votre ouvrier, sauf si vous avez la capacité de vous éjecter vous-même. Il ignore ce bâtiment et passe au suivant dans le sens horaire.",
+        "expertWorkers": "Les ouvriers experts CNJ fonctionnent de la même manière, sauf que, lorsqu'ils sont éjectés, ils ignorent tout bâtiment vide sauf s'ils n'ont pas d'autre option."
+      },
+      "advancementsExpansion": {
+        "title": "Extension Innovations",
+        "locationBonus": "Si Rachel place un ouvrier sur un bâtiment avec un jeton Bonus de bâtiment actif, elle gagne les bonus en PV, réputation ou cartes Projet comme un joueur humain le ferait. En revanche, elle gagne ni ressources, ni pubs, ni crédits, et touche 1 PV à la place.",
+        "progressCube": "Lorsque Rachel ajoute un cube de Progression à la Piste de Progression, elle fait avancer le curseur de la Technologie la moins avancée. Le système des numéros départage les égalités."
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "botRuleModifications": "Modifications de règles pour Rachel"
+    }
+  },
+  "difficultyLevel": {
+    "1": "Facile",
+    "2": "Moyen",
+    "3": "Difficile"
+  },
+  "notfound": {
+    "title": "Non trouvé"
+  },
+  "action": {
+    "playGame": "Jouer",
+    "startGame": "Commencer la Partie",
+    "next": "Suivant",
+    "nextRound": "Tour Suivant",
+    "abortGame": "Abandonner la Partie",
+    "abortGameConfirm": "Abandonner la partie - êtes-vous sûr ?",
+    "endGame": "Fin de la Partie",
+    "endGameConfirm": "Mettre fin à la partie et retourner à l'ecran d'accueil - are you sure êtes-vous sûr?",
+    "cancel": "Annuler",
+    "backToHome": "Retour à l'Accueil",
+    "back": "Retour",
+    "close": "Fermer",
+    "ok": "OK"
+  },
+  "footer": {
+    "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Mise à jour Disponible",
+    "notice": "L'application a été mise à jour, voulez-vous la recharger pour profiter de la mise à jour ?"
+  }
+}
