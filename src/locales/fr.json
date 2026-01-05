@@ -2,7 +2,7 @@
   "gameTitle": "Galactic Cruise",
   "home": {
     "title": "Assistant Solo Galactic Cruise",
-    "play1": "Jouez aune partie de <a href='https://boardgamegeek.com/boardgame/391137/galactic-cruise' target='_blank' rel='noopener'><b>Galactic Cruise</b></a> solo contre Rachel, l'adversaire solo.",
+    "play1": "Jouez une partie de <a href='https://boardgamegeek.com/boardgame/391137/galactic-cruise' target='_blank' rel='noopener'><b>Galactic Cruise</b></a> solo contre Rachel, l'adversaire solo.",
     "play2": "Cette application remplace le deck de cartes solo et vous guide durant le déroulement de la partie.",
     "feedback": "Discussion et Retours:"
   },
@@ -24,7 +24,7 @@
     "title": "Mise en Place",
     "gameBoard": {
       "title": "Plateau de Jeu",
-      "twoPlayerGame": "Mettez en place une partie pour <b>2 joueurs</b>.",
+      "twoPlayerGame": "Mettez en place une partie à <b>2 joueurs</b>.",
       "neutralDevelopments": "Placez les <b>Développements Neutres</b> sur les icônes Réputation de ces emplacements:",
       "npcWorkers": "Placez <b>2 Ouvriers CNJ</b> sur ces emplacements:"
     },
@@ -42,7 +42,7 @@
         "segment": "Placez ce jeton près de la zone où Rachel construira son <b>#{segment} segment</b>.",
         "ship": "Placez ce jeton au dessus de la zone où Rachel construira son <b>#{ship} Vaisseau</b>."
       },
-      "soloWorkerCard": "Placez la <b>Carte Ouvrier Solo</b> de la difficulté choisie à coté des cartes Action.Il s'agit de sa Salle de Pause —Placez ses ouvriers ici et non sur son plateau joueur.",
+      "soloWorkerCard": "Placez la <b>Carte Ouvrier Solo</b> de la difficulté choisie à coté des cartes Action.Il s'agit de sa Salle de Pause — Placez ses ouvriers ici et non sur son plateau joueur.",
       "firstDevelopment": "Rachel place le <b>premier Developpement</b> (de la rangée Nourriture) dans le Réseau et gagne la réputation correspondante. Ce developpement ne peut être placé dans une zone qui en comporte déjà (comme d'habitude).",
       "discardBlueprint": "Elle défausse ensuite ce <b>Plan</b> :",
       "discardAgendaCard": "Enfin, elle défausse la première carte du <b>Conseil d'Administration</b> dans la pile de défausse face visible .",
@@ -71,7 +71,7 @@
     "checkCompanyGoals": "Accomplir les Objectifs d'Entreprise de Rachel"
   },
   "sideBar": {
-    "turn": "Turn {turn}"
+    "turn": "Tour {turn}"
   },
   "endOfRound": {
     "title": {
@@ -80,17 +80,17 @@
       "3": "Déclenchement de la fin de Partie"
     },
     "instructions": {
-      "progressScoring": "Effectuer le décompte de progression de la section {round} pour Rachel et vous.",
-      "buildNpcDevelopments": "Construire les développements CNJ:",
+      "progressScoring": "Effectuez le décompte de progression de la section {round} pour Rachel et vous.",
+      "buildNpcDevelopments": "Construisez les développements CNJ:",
       "skipIfColorExists": "Si il y a déjà un developpement de cette couleur dans la zone indiquée, défaussez le nouveau développement.",
-      "hireNpcExpert": "Engager un expert CNJ",
-      "replaceFirstWorker": "Remplacer un ouvrier CNJ par un ouvrier expert CNJ.",
-      "chooseClosestWorker": "Choisir l'ouvrier CNJ le plus proche de l'emplacement du mileu de la rangée superieure dans le sens des aiguilles d'une montre.",
-      "replaceSecondWorker": "Remplacer l'autre ouvrier CNJ par un ouvrier expert CNJ."
+      "hireNpcExpert": "Engagez un expert CNJ",
+      "replaceFirstWorker": "Remplacez un ouvrier CNJ par un ouvrier expert CNJ.",
+      "chooseClosestWorker": "Choisissez l'ouvrier CNJ le plus proche de l'emplacement du milieu de la rangée superieure dans le sens horaire.",
+      "replaceSecondWorker": "Remplacez le deuxième ouvrier CNJ par un ouvrier expert CNJ."
     },
     "endGameTriggered": {
       "title": "Fin de partie déclenchée.",
-      "finishCurrentRound": "Finir le tour en cours, puis jouer un dernier tour.",
+      "finishCurrentRound": "Finissez le tour en cours, puis jouez un dernier tour.",
       "nextRoundFinalRound": "Le prochain tour est le tour final."
     },
     "endRound": {
@@ -103,8 +103,8 @@
     }
   },
   "endOfGameAdvanceShips": {
-    "title": "Faire Avancer les Vaisseaux",
-    "lastMovement": "Dans l'ordre du tour, faire avancer une dernière fois tous vos vaisseaux en croisière, jusqu'à <b>n'importe quelle</b> étape suivante de la croisière, resolvez ensuite cette étape normalement.",
+    "title": "Avancer les Vaisseaux",
+    "lastMovement": "Dans l'ordre du tour, faitesavancer une dernière fois tous vos vaisseaux en croisière, jusqu'à <b>n'importe quelle</b> étape suivante de la croisière, resolvez ensuite cette étape normalement.",
     "botDestination": "Rachel choisit l'étape qui lui rapporte le plus de PV."
   },
   "endOfGame": {
@@ -123,22 +123,22 @@
   "rules": {
     "advanceShips": {
       "destination": {
-        "title": "Faire Avancer les Vaisseaux: Destination"
+        "title": "Avancer les Vaisseaux: Destination"
       },
       "dayInSpace": {
-        "title": "Faire Avancer les Vaisseaux: Espace"
+        "title": "Avancer les Vaisseaux: Espace"
       },
       "returningToEarth": {
-        "title": "Faire Avancer les Vaisseaux: Retour sur Terre",
-        "returnWorker": "Placer votre ouvrier dans votre Salle de Pause.",
-        "discardCruiseAndGuests": "Défausser la croisière face cachée et tous les clients dans la réserve."
+        "title": "Avancer les Vaisseaux : Retour sur Terre",
+        "returnWorker": "Placez votre ouvrier dans votre Salle de Pause.",
+        "discardCruiseAndGuests": "Défaussez la croisière face cachée et tous les clients dans la réserve."
       }
     },
     "player": {
       "advanceShips": {
         "destination": {
-          "placeUpgradeToken": "Vous pouvez placer le jeton Amélioration sur une des cases amélioration de votre plateau joueur correspondant au type de déstination où votre pilote se trouve.",
-          "payAdsForGuests": "Vous pouver marquer des PV pour les clients de votre vaisseau en dépensant le coût requis en pubs pour chacun."
+          "placeUpgradeToken": "Vous pouvez placer le jeton Amélioration sur une des cases amélioration de votre plateau joueur correspondant au type de destination sur laquelle votre pilote se trouve.",
+          "payAdsForGuests": "Vous pouvez marquer des PV pour les clients de votre vaisseau en dépensant le coût requis en pubs pour chacun."
         },
         "dayInSpace": {
           "gainGuestBonuses": "Chaque client vous rapporte son bonus pour chaque icone correspondante du vaisseau."
@@ -150,7 +150,7 @@
         "destination": {
           "placeUpgradeToken": "S'il s'agit de la première destination de la croisière, Rachel pose son jeton sur l'emplacemnt libre le plus à gauche de la section correspondante, augmentant le nombre de PV obtenus ici de 1 PV.",
           "payAdsForGuests": "Ensuite, qu'il s'agisse ou non de la première destination, elle marque les points de victoire pour ses clients pour cette destination. Rachel ne dépense ni ne gagne de pubs pour faire cela.",
-          "fourthToken": "Dans les rares cas où Rachel visiterai 4 fois la même première destination, elle place le jeton Amélioration sur la section correspondant à la destination suivante de la croisière. Si il n'y a pas d'autre destination sur la croisière, le jeton est défaussé."
+          "fourthToken": "Dans les rares cas où Rachel visiterait 4 fois la même première destination, elle place le jeton Amélioration sur la section correspondant à la destination suivante de la croisière. Si il n'y a pas d'autre destination sur la croisière, le jeton est défaussé."
         },
         "dayInSpace": {
           "gainGuestBonuses": "Rachel gagne 1 réputation par client de la croisière, quel que soit son type.",
@@ -198,7 +198,7 @@
           "repeatSteps": "Répéter l'ordre de priorité ci-dessus jusqu'à ce que deux clients aient été ajoutés.",
           "addFromMiddle": "si Rachel n'arrive pas à ajouter 2 clients à la croisière depuis la section inférieure de la file d'attente, elle ajoute des clients depuis la section du milieu (2 Pubs) en utilisant le même ordre de priorité qu'indiqué ci-dessus jusqu'à avoir ajouté un total de 2 clients.",
           "addFromTop": "Si il n'y a toujours pas suffisament de clients, elle les ajoute depuis la section supérieure (3 Pubs) dans le même ordre jusqu'à un total de 2 clients.",
-          "addFromSupply": "En dernier recours, elle ajoute des clients depouis la réserve, dans le même ordre, jusquà un total de 2 .",
+          "addFromSupply": "En dernier recours, elle ajoute des clients depuis la réserve, dans le même ordre, jusquà un total de 2 .",
           "gainReputation": "Une fois que 2 clients ont été ajoutés à la croisière choisie, Rachel gagne <b>2 Réputation</b>."
         },
         "build-development-network": {
@@ -217,7 +217,7 @@
           "title": "Recruter un Ouvrier Expert",
           "firstExpert": "Rachel recrute son premier Expert uniquement lorsque son prix est tombé à 7 crédits. Si les 2 Experts coûtent moins de 7 crédits, elle recrute en priorité celui de gauche (celui qui est associé à la tour de lancement).",
           "addToBreakRoom": "Elle ajoute cet Expert à sa salle de pause et gagne un bonus de financement comme d'habitude.",
-          "secondExpert": "qrachel recrute son second Expert uniquement lorsque son prix tombe à moins de 4 crédits.",
+          "secondExpert": "Rachel recrute son second Expert uniquement lorsque son prix tombe à moins de 4 crédits.",
           "easyDifficulty": "Les Experts de Rachel n'ont aucune capacité spéciale et fonctionnent exactement comme un ouvrier ordinaire.",
           "normalDifficulty": "Les Experts de Rachel gagnent un bonus de financement supplémentaire lorsqu'ils regagnent leur salle de pause."
         },
@@ -231,7 +231,7 @@
           "shipSelectionPriority1": "Un vaisseau qui n'a pas été lancé.",
           "shipSelectionPriority2": "Le vaisseau quirapporte le plus de PV.",
           "shipSelectionPriority3": "Le vaisseau le plus à droite.",
-          "step5Title": "5.Assigner et Embarquer",
+          "step5Title": "5. Assigner et Embarquer",
           "step5Cruise": "Rachel choisit la croisière indiquée et la place au dessus de ce vaisseau. Elle ne peux pas choisir une croisière que vous avez planifiée.",
           "step5Guests": "Elle prend ensuite les clients qui se trouvaient à côté de la croisière et les ajoute à son vaisseau ; Si il n'y a aucun client avec billet, elle effectue des ventes de dernière minute pour aller chercher des clients dans la file d'attente et remplir ses cabines (en respectant les règles de l'action Faire de la Publicité pour une Croisière).",
           "step5Overflow": "Si elle n'a qu'une seule cabine mais doit embarquer deux clients avec billets, elle en remet un au hasard dans la section supérieure de la file d'attente (3 pubs) et perd 2 Réputation (comme un joueur humain le ferait).",
@@ -241,8 +241,8 @@
           "step3Compare": "Comparer le coût en carburant de la croisière à la rangée Carburant du plateau Joueur de Rachel. Le chiffre le plus élevé visible de cette rangée est sa capacité en carburant.",
           "step3Reputation": "Si le coût en carburant de la croisière est supérieur à sa capacité, elle perd de la réputation pour générer le carburant manquant, en franchissant autant d'icônes Carburant que nécessaire.",
           "step3ZeroReputation": "Si sa réputation est à \"0,\" elle effectue quand même le lancement, mais perd 1 PV par unité de carburant manquante.",
-          "step2Title": "2. Marquer le Cockpit",
-          "step2Score": "Rachel ajoute les PV du Cockpit à tous les PV des Segments du vaisseau.",
+          "step2Title": "2. Marquer les points de Cockpit et de Segments",
+          "step2Score": "Rachel ajoute les PV du Cockpit àet tous les PV des Segments du vaisseau à sa piste de score.",
           "step2FirstTime": "Si c'est la première fois que le vaisseau décolle, retourner le cockpit pour masquer la pénalité -5 PV.",
           "step1Title": "1. Charger le Jeton",
           "step1Upgrade": "Rachel retourne un Jeton Amélioration de sa Tour de Lancement (sans en gagner le bonus) et le place sur son moteur.",
@@ -292,7 +292,7 @@
         "title": "Ejection d'Ouvriers CNJ",
         "placingWorker": "Lorsque vous placez un ouvrier sur un emplacement occupé par un ouvrier CNJ, vous éjectez cet ouvrier vers le prochain bâtiment dans le sens horaire:",
         "locationEmpty": "<i>Si ce bâtiment est vide</i>: l'ouvrier CNJ y reste jusqu'à être de nouveau éjecté.",
-        "locationOccupiedByOpponent": "<i>Si ce bâtiment est occupé par un ouvrier adverse</i>: L'ouvier CNJ ejecte l'ouvrier qui occupait ce bâtiment. L'ouvrier adverse est donc renvoyé dans sa salle de pause, comme si votre propre ouvrier l'avait éjecté.",
+        "locationOccupiedByOpponent": "<i>Si ce bâtiment est occupé par un ouvrier adverse</i>: L'ouvier CNJ éjecte l'ouvrier qui occupait ce bâtiment. L'ouvrier adverse est donc renvoyé dans sa salle de pause, comme si votre propre ouvrier l'avait éjecté.",
         "locationOccupiedByNPC": "<i>Si ce bâtiment est occupé par un ouvrier CNJ</i>: L'ouvrier CNJ éjecté ignore ce bâtiment et passe au suivant dans le sens horaire.",
         "locationOccupiedByYourself": "<i>Si ce bâtiment est occupé par un de vos ouvriers</i>: L'ouvrier CNJ n'éjecte pas votre ouvrier, sauf si vous avez la capacité de vous éjecter vous-même. Il ignore ce bâtiment et passe au suivant dans le sens horaire.",
         "expertWorkers": "Les ouvriers experts CNJ fonctionnent de la même manière, sauf que, lorsqu'ils sont éjectés, ils ignorent tout bâtiment vide sauf s'ils n'ont pas d'autre option."
