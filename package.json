@@ -1,6 +1,6 @@
 {
   "name": "@brdgm/galactic-cruise-solo-helper",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": true,
   "description": "Galactic Cruise Solo Helper",
   "appDeployName": "galactic-cruise",
