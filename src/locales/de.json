@@ -44,7 +44,7 @@
       },
       "soloWorkerCard": "Lege die <b>Solo-Angestellten-Karte</b> des gewählten Schwierigkeitsgrades neben die Aktionskarten. Sie dient als Rachels Pausenraum: stelle ihre Angestellten hier ab, anstatt sie auf ihrem Tableau zu platzieren.",
       "firstDevelopment": "Rachel platziert ihre <b>erste Entwicklung</b> (aus der Nahrungs-Reihe) im Hauptquartier und erhält wie üblich Reputation. Die Entwicklung muss in ein leeres Areal gebaut werden.",
-      "discardBlueprint": "Rachel wirft sie diese <b>Blaupause</b> ab:",
+      "discardBlueprint": "Rachel wirft diese <b>Blaupause</b> ab:",
       "discardAgendaCard": "Abschließend wirft sie die oberste <b>Agendakarte</b> vom Stapel offen auf den Ablagestapel ab.",
       "accommodationsExpansion": {
         "title": "Unterkünfte-Erweiterung",
@@ -97,7 +97,7 @@
       "title": "Spielfortschritt {round} abgeschlossen",
       "endRoundConfirm": {
         "1": "Wenn der letzte Würfel auf Fortschrittsplättchen 1 platziert wurde, wird die Jahreshauptversammlung (JHV) A abgehalten.",
-        "2": "Wenn der letzte Würfel auf Fortschrittsplättchen 1 platziert wurde, wird die Jahreshauptversammlung (JHV) B abgehalten.",
+        "2": "Wenn der letzte Würfel auf Fortschrittsplättchen 2 platziert wurde, wird die Jahreshauptversammlung (JHV) B abgehalten.",
         "3": "Wenn der letzte Würfel auf Fortschrittsplättchen 3 platziert wurde, wird das Spielende ausgelöst."
       }
     }
@@ -290,10 +290,10 @@
       },
       "npcWorkerBumping": {
         "title": "NPC Angestellte verdrängen",
-        "placingWorker": "Wenn du einen Angestellten auf einen Ort stellst, der von einem NPCAngestellten besetzt ist, verdrängst du diesen auf den nächsten Ort im Uhrzeigersinn:",
+        "placingWorker": "Wenn du einen Angestellten auf einen Ort stellst, der von einem NPC-Angestellten besetzt ist, verdrängst du diesen auf den nächsten Ort im Uhrzeigersinn:",
         "locationEmpty": "<i>Wenn dieser Ort leer ist</i>: Der NPC-Angestellte bleibt dort stehen, bis er erneut verdrängt wird.",
         "locationOccupiedByOpponent": "<i>Wenn dieser Ort von einem gegnerischen Angestellten besetzt ist</i>: Der NPC-Angestellte verdrängt den gegnerischen Angestellten von diesem Ort. Der gegnerische Angestellte kehrt in den gegnerischen Pausenraum zurück und löst wie gewohnt einen Pausenbonus aus.",
-        "locationOccupiedByNPC": "<i>Wenn dieser Ort von einem NPC-Angestellten besetzt ist</i>: Der NPCAngestellte überspringt diesen Ort und bewegt sich weiter zum nächsten Ort im Uhrzeigersinn.",
+        "locationOccupiedByNPC": "<i>Wenn dieser Ort von einem NPC-Angestellten besetzt ist</i>: Der NPC-Angestellte überspringt diesen Ort und bewegt sich weiter zum nächsten Ort im Uhrzeigersinn.",
         "locationOccupiedByYourself": "<i>Wenn dieser Ort von einem deiner eigenen Angestellten besetzt ist</i>: Der NPC-Angestellte wird deinen eigenen Angestellten nicht verdrängen, außer du besitzt die Fähigkeit, dass du dich selbst verdrängen darfst. Der NPC-Angestellte überspringt diesen Ort und bewegt sich weiter zum nächsten Ort im Uhrzeigersinn.",
         "expertWorkers": "NPC-Experten funktionieren wie normale NPC-Angestellte, nur dass sie leere Orte ebenfalls überspringen, außer es gibt keinen anderen legalen Ort im Hauptquartier."
       },
