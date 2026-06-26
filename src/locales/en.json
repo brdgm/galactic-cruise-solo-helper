@@ -26,7 +26,7 @@
       "title": "Game Board",
       "twoPlayerGame": "Set up the game for a <b>2-player game</b>.",
       "neutralDevelopments": "Place the <b>neutral Developments</b> in these areas, covering the Reputation icon:",
-      "npcWorkers": "Place <b>2 NPC Workers</b> on this locations:"
+      "npcWorkers": "Place <b>2 NPC Workers</b> on these locations:"
     },
     "bot": {
       "title": "Rachel",
@@ -227,7 +227,7 @@
         },
         "launch-ship": {
           "title": "Launch Ship",
-          "shipSelection": "Rachel executes this action if she has a ship with <b>{shipSize}+ Segments</b> available. If Rachel has multiple Ships that fits the criteria, she will choose a Ship to launch prioritizing the following:",
+          "shipSelection": "Rachel executes this action if she has a ship with <b>{shipSize}+ Segments</b> available. If Rachel has multiple Ships that fit the criteria, she will choose a Ship to launch prioritizing the following:",
           "shipSelectionPriority1": "A Ship that hasn't been launched.",
           "shipSelectionPriority2": "A Ship that will score the most VP.",
           "shipSelectionPriority3": "The rightmost Ship.",
@@ -265,7 +265,7 @@
     },
     "companyGoals": {
       "title": "Company Goals",
-      "check": "If, at the end of Rachels turn, she has accomplished one of her Company Goals, she moves the corresponding cube to the Progress Track.",
+      "check": "If, at the end of Rachel's turn, she has accomplished one of her Company Goals, she moves the corresponding cube to the Progress Track.",
       "rachelGoals": "Rachel's Goals:",
       "leftGoal": "Left Goal",
       "middleGoal": "Middle Goal",
@@ -274,7 +274,7 @@
       "buildSegments": "Build <b>{count} Segments</b>",
       "launchShips": "Launch <b>{count} Different Ships</b>",
       "goalCompletion": "Whenever she completes a Company Goal, she removes her cube from above that corresponding goal and places it on the Progress Track, and the corresponding Company Goal tracker raises to the top level, if it isn't already there.",
-      "note": "Note: While her achievement of goals affect you, yours do not affect her. In other words, if you accomplish your leftmost Company Goal before she accomplishes her #1 goal, her required number of Developments built does not change."
+      "note": "Note: While her achievement of goals affects you, yours do not affect her. In other words, if you accomplish your leftmost Company Goal before she accomplishes her #1 goal, her required number of Developments built does not change."
     },
     "networkActions": {
       "title": "Network & Actions",
